@@ -868,6 +868,75 @@
             font-size: 0.9rem;
         }
 
+        /* Impact-focused modal styles */
+        .impact-hero {
+            background: linear-gradient(135deg, rgba(168, 181, 160, 0.1) 0%, rgba(212, 197, 226, 0.1) 100%);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: -0.5rem -0.5rem 2rem -0.5rem;
+        }
+
+        .impact-hero .ic-section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .impact-card {
+            background: var(--white);
+            padding: 1.25rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(61, 61, 61, 0.06);
+        }
+
+        .impact-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-stat {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--sage-dark);
+            line-height: 1.2;
+        }
+
+        .impact-desc {
+            font-size: 0.8rem;
+            color: var(--charcoal-light);
+            margin-top: 0.25rem;
+            line-height: 1.4;
+        }
+
+        .personal-note {
+            background: rgba(212, 197, 226, 0.15);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border-left: 4px solid var(--lavender);
+        }
+
+        .personal-note .ic-section-title {
+            color: #8B7BA0;
+        }
+
+        .personal-note .ic-section-title::before {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* About Section */
         .about {
             background: var(--white);
@@ -1148,11 +1217,11 @@
             </p>
             <div class="hero-stats">
                 <div class="stat">
-                    <div class="stat-number">6</div>
+                    <div class="stat-number">2</div>
                     <div class="stat-label">Companies Analyzed</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">3</div>
+                    <div class="stat-number">2</div>
                     <div class="stat-label">Focus Sectors</div>
                 </div>
                 <div class="stat">
@@ -1213,24 +1282,24 @@
             <div class="portfolio-card" data-category="sustainability" onclick="openModal('baron')">
                 <div class="portfolio-card-header">
                     <div class="company-info">
-                        <div class="company-logo" style="background: linear-gradient(135deg, #D4A574, #8B6914);">B</div>
+                        <div class="company-logo" style="background: linear-gradient(135deg, #8B9F7A, #5A7A5C);">B</div>
                         <div>
                             <div class="company-name">Bar.on</div>
-                            <div class="company-tagline">Molecular Beer Technology</div>
+                            <div class="company-tagline">Planet-Friendly Beer in Seconds</div>
                         </div>
                     </div>
                     <span class="sector-icon">♻️</span>
                 </div>
                 <div class="portfolio-card-body">
-                    <p class="portfolio-description">Belgian startup creating the world's first molecular beer printer—making planet-friendly beer in seconds using tap water and flavor cartridges.</p>
+                    <p class="portfolio-description">What if we stopped shipping water around the world? Bar.on's molecular beer technology creates any beer style using tap water and flavor cartridges—potentially reducing beer's carbon footprint by 50-70%.</p>
                     <div class="portfolio-tags">
-                        <span class="tag">FoodTech</span>
                         <span class="tag">Sustainability</span>
+                        <span class="tag">FoodTech</span>
                         <span class="tag">Seed</span>
                     </div>
                 </div>
                 <div class="portfolio-card-footer">
-                    <span class="view-thesis">View IC Memo →</span>
+                    <span class="view-thesis">View Impact Thesis →</span>
                     <div class="impact-score">
                         <span class="impact-label">Impact</span>
                         <div class="impact-dots">
@@ -1244,168 +1313,28 @@
                 </div>
             </div>
 
-            <!-- Oatly -->
-            <div class="portfolio-card" data-category="sustainability" onclick="openModal('oatly')">
+            <!-- NeuroHarmonics -->
+            <div class="portfolio-card" data-category="health" onclick="openModal('neuroharmonics')">
                 <div class="portfolio-card-header">
                     <div class="company-info">
-                        <div class="company-logo" style="background: linear-gradient(135deg, #5A7A5C, #8CB28E);">O</div>
+                        <div class="company-logo" style="background: linear-gradient(135deg, #7B68A6, #A890C4);">N</div>
                         <div>
-                            <div class="company-name">Oatly</div>
-                            <div class="company-tagline">Plant-Based Dairy Alternative</div>
-                        </div>
-                    </div>
-                    <span class="sector-icon">♻️</span>
-                </div>
-                <div class="portfolio-card-body">
-                    <p class="portfolio-description">Swedish oat milk company revolutionizing dairy alternatives with sustainability at its core and iconic brand positioning.</p>
-                    <div class="portfolio-tags">
-                        <span class="tag">Alt Protein</span>
-                        <span class="tag">Sustainability</span>
-                        <span class="tag">Public</span>
-                    </div>
-                </div>
-                <div class="portfolio-card-footer">
-                    <span class="view-thesis">View IC Memo →</span>
-                    <div class="impact-score">
-                        <span class="impact-label">Impact</span>
-                        <div class="impact-dots">
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Clue -->
-            <div class="portfolio-card" data-category="health" onclick="openModal('clue')">
-                <div class="portfolio-card-header">
-                    <div class="company-info">
-                        <div class="company-logo" style="background: linear-gradient(135deg, #E07A7A, #F0A8A8);">C</div>
-                        <div>
-                            <div class="company-name">Clue</div>
-                            <div class="company-tagline">Period & Cycle Tracking</div>
+                            <div class="company-name">NeuroHarmonics</div>
+                            <div class="company-tagline">Non-Invasive Deep Brain Therapy</div>
                         </div>
                     </div>
                     <span class="sector-icon">🌿</span>
                 </div>
                 <div class="portfolio-card-body">
-                    <p class="portfolio-description">Science-backed period tracking app with strong privacy stance and commitment to reproductive health education.</p>
+                    <p class="portfolio-description">What if treating brain disorders didn't require brain surgery? NeuroHarmonics uses focused ultrasound to stimulate deep brain regions with 1000x more precision than conventional methods—no incisions needed.</p>
                     <div class="portfolio-tags">
-                        <span class="tag">Femtech</span>
-                        <span class="tag">Privacy-First</span>
-                        <span class="tag">Series B</span>
+                        <span class="tag">NeuroTech</span>
+                        <span class="tag">MedTech</span>
+                        <span class="tag">UCL Spinout</span>
                     </div>
                 </div>
                 <div class="portfolio-card-footer">
-                    <span class="view-thesis">View IC Memo →</span>
-                    <div class="impact-score">
-                        <span class="impact-label">Impact</span>
-                        <div class="impact-dots">
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- The Dodo -->
-            <div class="portfolio-card" data-category="animal" onclick="openModal('dodo')">
-                <div class="portfolio-card-header">
-                    <div class="company-info">
-                        <div class="company-logo" style="background: linear-gradient(135deg, #4A90A4, #7ABFCC);">D</div>
-                        <div>
-                            <div class="company-name">The Dodo</div>
-                            <div class="company-tagline">Animal-Focused Media</div>
-                        </div>
-                    </div>
-                    <span class="sector-icon">🐾</span>
-                </div>
-                <div class="portfolio-card-body">
-                    <p class="portfolio-description">Digital media brand dedicated to animal stories, driving awareness and empathy through viral content and advocacy.</p>
-                    <div class="portfolio-tags">
-                        <span class="tag">Animal Welfare</span>
-                        <span class="tag">Media</span>
-                        <span class="tag">Vox Media</span>
-                    </div>
-                </div>
-                <div class="portfolio-card-footer">
-                    <span class="view-thesis">View IC Memo →</span>
-                    <div class="impact-score">
-                        <span class="impact-label">Impact</span>
-                        <div class="impact-dots">
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Allbirds -->
-            <div class="portfolio-card" data-category="sustainability" onclick="openModal('allbirds')">
-                <div class="portfolio-card-header">
-                    <div class="company-info">
-                        <div class="company-logo" style="background: linear-gradient(135deg, #8B9F7A, #B5C9A5);">A</div>
-                        <div>
-                            <div class="company-name">Allbirds</div>
-                            <div class="company-tagline">Sustainable Footwear</div>
-                        </div>
-                    </div>
-                    <span class="sector-icon">♻️</span>
-                </div>
-                <div class="portfolio-card-body">
-                    <p class="portfolio-description">Pioneering sustainable footwear using natural materials like merino wool and eucalyptus, with carbon footprint labeling.</p>
-                    <div class="portfolio-tags">
-                        <span class="tag">Sustainability</span>
-                        <span class="tag">Consumer</span>
-                        <span class="tag">Public</span>
-                    </div>
-                </div>
-                <div class="portfolio-card-footer">
-                    <span class="view-thesis">View IC Memo →</span>
-                    <div class="impact-score">
-                        <span class="impact-label">Impact</span>
-                        <div class="impact-dots">
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Elvie -->
-            <div class="portfolio-card" data-category="health" onclick="openModal('elvie')">
-                <div class="portfolio-card-header">
-                    <div class="company-info">
-                        <div class="company-logo" style="background: linear-gradient(135deg, #B8A0C8, #D4C0E0);">E</div>
-                        <div>
-                            <div class="company-name">Elvie</div>
-                            <div class="company-tagline">Women's Tech Products</div>
-                        </div>
-                    </div>
-                    <span class="sector-icon">🌿</span>
-                </div>
-                <div class="portfolio-card-body">
-                    <p class="portfolio-description">Award-winning smart technology for women, including silent breast pumps and pelvic floor trainers that destigmatize women's health.</p>
-                    <div class="portfolio-tags">
-                        <span class="tag">Femtech</span>
-                        <span class="tag">Hardware</span>
-                        <span class="tag">Series C</span>
-                    </div>
-                </div>
-                <div class="portfolio-card-footer">
-                    <span class="view-thesis">View IC Memo →</span>
+                    <span class="view-thesis">View Impact Thesis →</span>
                     <div class="impact-score">
                         <span class="impact-label">Impact</span>
                         <div class="impact-dots">
@@ -1525,172 +1454,56 @@
         const companies = {
             baron: {
                 name: 'Bar.on',
-                tagline: 'Molecular Beer Technology',
+                tagline: 'Planet-Friendly Beer in Seconds',
                 logo: 'B',
-                logoGradient: 'linear-gradient(135deg, #D4A574, #8B6914)',
-                overview: 'Bar.on is a Belgian startup that has developed the world\'s first molecular beer printer. Using molecular-level flavor compounds, different beer styles can be constructed and customized in seconds—no fermentation required. Founded by serial entrepreneur Dirk Standaert and innovation expert Valentijn Destoop, in partnership with Professor Kevin Verstrepen at VIB-KU Leuven, whose lab has spent over a decade researching beer at the molecular level.',
-                market: {
-                    text: 'The global beer market is valued at $787B in 2024, projected to reach $1.2T by 2032. Non-alcoholic beer is the fastest-growing segment at 7%+ CAGR, reaching $21B in 2024. Beer is 90% water being shipped globally—a massive sustainability problem. Packaging accounts for 40% of beer\'s carbon footprint. Bar.on addresses both the sustainability crisis and the booming NA beer market where traditional dealcoholization destroys flavor.',
-                    metrics: [
-                        { value: '$787B', label: 'Global Beer Market' },
-                        { value: '7%+', label: 'NA Beer CAGR' },
-                        { value: '50-70%', label: 'Potential CO2 Reduction' }
+                logoGradient: 'linear-gradient(135deg, #8B9F7A, #5A7A5C)',
+                category: 'sustainability',
+                overview: 'Bar.on is reimagining how we make and consume beer. Their molecular beer technology creates any style of beer in seconds using tap water and flavor cartridges—no fermentation, no shipping heavy bottles across the world, no mountains of packaging waste. It sounds like science fiction, but it\'s backed by a decade of research from one of the world\'s leading beer science labs at KU Leuven in Belgium.',
+                impactStory: {
+                    headline: 'What if we stopped shipping water around the world?',
+                    content: 'Here\'s a fact that changed how I think about beer: it\'s 90% water. The same water that comes out of your tap. Yet every year, we ship billions of liters of "branded water" across oceans, burn fuel trucking it to stores, and wrap it in glass, aluminum, and cardboard that mostly ends up in landfills. Bar.on asks a simple question: what if we just shipped the flavor instead?',
+                    impacts: [
+                        { icon: '🌍', stat: '50-70%', description: 'potential reduction in beer\'s carbon footprint by eliminating water shipping and most packaging' },
+                        { icon: '💧', stat: '90%', description: 'of beer is water—Bar.on uses local tap water instead of shipping it globally' },
+                        { icon: '📦', stat: '40%', description: 'of beer\'s environmental impact comes from packaging alone' },
+                        { icon: '🍺', stat: '3B+', description: 'people drink beer worldwide—even small % adoption means massive impact' }
                     ]
                 },
-                team: 'Dirk Standaert (CEO) is a serial entrepreneur specializing in nurturing technological breakthroughs. Valentijn Destoop (CPO) brings digital software development and innovation management expertise. Professor Kevin Verstrepen (Scientific Partner) is an international expert on yeast evolution with 10+ years of beer research at VIB-KU Leuven. The team has molecularly characterized 250+ beers.',
-                whyInvest: [
-                    'First-mover in molecular beer—no direct competitors doing full molecular reconstruction',
-                    'Strong scientific moat: 10+ years of research, patent-pending technology, 250+ beers characterized',
-                    'Massive sustainability impact: could reduce beer\'s carbon footprint by 50-70% (no shipping water, minimal packaging)',
-                    'Perfect timing for NA beer boom—solves the biggest NA problem (flavor loss in traditional methods)',
-                    'Multiple revenue streams: B2C devices, B2B (bars/restaurants), licensing to breweries, recurring cartridge sales',
-                    'Belgian heritage provides instant credibility in the beer world'
-                ],
+                whyThisMatters: 'The beer industry isn\'t going away. People have been brewing and drinking beer for thousands of years, and they\'ll continue. The question is: can we enjoy it without the environmental cost? Bar.on isn\'t asking people to give up beer—they\'re making it possible to have your beer and drink it too, guilt-free. That\'s the kind of solution that actually scales.',
+                team: 'Founded by serial entrepreneur Dirk Standaert and innovation expert Valentijn Destoop, with deep scientific partnership from Professor Kevin Verstrepen at VIB-KU Leuven. The Verstrepen lab has spent over a decade researching beer at the molecular level, characterizing 250+ beers and publishing "Belgian Beer – Tested and Tasted." This isn\'t a startup playing scientist—it\'s scientists becoming entrepreneurs.',
+                funding: '€1.8M seed from Astanor Ventures, Exceptional Ventures, Thia Ventures, and others. Currently raising Series A.',
+                personalNote: 'What I love about Bar.on is that they\'re not asking consumers to sacrifice anything. The beer tastes good (blind taste tests prove it), you can customize it exactly how you like it, AND you\'re dramatically reducing environmental impact. That\'s the holy grail of sustainable products.',
                 risks: [
-                    { level: 'High', text: 'Consumer acceptance risk—beer purists may reject "printed" beer. Mitigation: blind taste tests reportedly positive; focus on NA market first where quality expectations are lower' },
-                    { level: 'Medium', text: 'Hardware business is capital intensive with longer payback periods. Mitigation: cartridge/consumables model provides recurring revenue like Nespresso' },
-                    { level: 'Medium', text: 'Competition from big brewers if concept proves successful. Mitigation: IP protection + 10 years of R&D creates significant moat; could also license to them' },
-                    { level: 'Low', text: 'Regulatory uncertainty around what can be called "beer". Mitigation: uses natural compounds; partnering with traditional breweries for credibility' }
+                    { level: 'High', text: 'Consumer perception: Will beer lovers accept "molecular" beer? Early blind taste tests are positive, but cultural attachment to traditional brewing is strong.' },
+                    { level: 'Medium', text: 'Hardware scaling: Building consumer devices at scale is capital-intensive. The Nespresso-style cartridge model should help with unit economics.' },
+                    { level: 'Low', text: 'Big brewer competition: If successful, large brewers could enter the space—but that\'s also a potential exit through licensing or acquisition.' }
                 ]
             },
-            oatly: {
-                name: 'Oatly',
-                tagline: 'Plant-Based Dairy Revolution',
-                logo: 'O',
-                logoGradient: 'linear-gradient(135deg, #5A7A5C, #8CB28E)',
-                overview: 'Oatly is a Swedish company that produces oat-based alternatives to dairy. Founded on food science innovation from Lund University, they\'ve built one of the most distinctive brands in CPG while championing sustainability as a core business driver.',
-                market: {
-                    text: 'Global plant-based milk market expected to reach $21B by 2026. Oat milk is the fastest-growing segment at 20%+ CAGR. Dairy industry produces 4% of global greenhouse gases—consumer awareness driving shift. Barista channel proved critical for premiumization and brand building.',
-                    metrics: [
-                        { value: '$21B', label: 'Alt Milk Market 2026' },
-                        { value: '20%+', label: 'Oat Milk CAGR' },
-                        { value: '4%', label: 'Dairy GHG Emissions' }
+            neuroharmonics: {
+                name: 'NeuroHarmonics',
+                tagline: 'Non-Invasive Deep Brain Therapy',
+                logo: 'N',
+                logoGradient: 'linear-gradient(135deg, #7B68A6, #A890C4)',
+                category: 'health',
+                overview: 'NeuroHarmonics is building a wearable device that can precisely stimulate deep brain regions using focused ultrasound—no surgery required. Their technology, published in Nature Communications, can target areas 1,000x smaller than conventional ultrasound and 30x smaller than any previous deep brain device. For millions of people with Parkinson\'s, depression, and other neurological conditions, this could mean effective treatment without drilling into their skull.',
+                impactStory: {
+                    headline: 'What if treating brain disorders didn\'t require brain surgery?',
+                    content: 'Deep brain stimulation works. For people with severe Parkinson\'s, it can stop tremors and restore quality of life. The problem? It requires drilling a hole in your skull and implanting electrodes in your brain. It\'s expensive, risky, and only available at specialized centers. Most people who could benefit never get treated. NeuroHarmonics is developing ultrasound technology that achieves similar precision—through the skull, no surgery needed.',
+                    impacts: [
+                        { icon: '🧠', stat: '3B+', description: 'people worldwide affected by neurological conditions—1 in 2 will develop one by age 75' },
+                        { icon: '💉', stat: '0', description: 'surgeries required—their ultrasound helmet works through the skull non-invasively' },
+                        { icon: '🎯', stat: '1000x', description: 'more precise than conventional ultrasound, targeting brain structures just millimeters wide' },
+                        { icon: '⏱️', stat: '40+ min', description: 'of sustained brain activity changes demonstrated in human trials' }
                     ]
                 },
-                team: 'Toni Petersson (CEO) transformed Oatly from academic project to cultural phenomenon with guerrilla marketing genius. John Schoolcraft (CCO) built the irreverent brand voice. Swedish heritage provides authenticity in sustainability claims.',
-                whyInvest: [
-                    'Category-defining brand that turned oat milk from commodity to lifestyle choice',
-                    'Proprietary enzyme technology creates superior taste/texture vs competitors',
-                    'Sustainability baked into business model—climate reporting on every product',
-                    'B2B (barista) strategy created premium positioning before retail expansion',
-                    'First-mover in China plant-based dairy with local manufacturing'
-                ],
+                whyThisMatters: 'Neurological conditions are the leading cause of disability worldwide. Depression alone affects 280 million people. Parkinson\'s affects 10 million. Current treatments are either inadequate (drugs with side effects) or extreme (brain surgery). NeuroHarmonics sits in the middle: a treatment that\'s both effective AND accessible. If this works at scale, it could fundamentally change how we treat brain disorders.',
+                team: 'This is a team I know personally from my time at UCL Business. Brad Treeby (CEO) was a Professor of Biomedical Ultrasound at UCL—he left academia because he believed this technology was too important to stay in the lab. The founding team includes PhDs in ultrasound engineering, neuroscience, and computational acoustics. Their advisors include Professor Charlotte Stagg from Oxford, a leading expert in brain stimulation. This is genuine deep tech, not a pitch deck with a dream.',
+                funding: 'Backed by Speedinvest and UCL Tech Fund. The technology was developed over 8 years with funding from EPSRC and Wellcome Trust before spinning out.',
+                personalNote: 'I helped NeuroHarmonics during my time at UCL Business, and I\'ve seen firsthand how exceptional this team is. They\'re not just smart—they genuinely care about patients. Brad talks about family members affected by neurological conditions as a driving motivation. When founders have personal stakes in the problem they\'re solving, you know they\'ll push through the hard parts.',
                 risks: [
-                    { level: 'High', text: 'Increased competition from dairy giants (Danone, Nestlé) and private label; margin pressure intensifying' },
-                    { level: 'Medium', text: 'Supply chain challenges and oat sourcing constraints as demand scales' },
-                    { level: 'High', text: 'Stock has declined significantly from IPO highs; execution on path to profitability critical' }
-                ]
-            },
-            clue: {
-                name: 'Clue',
-                tagline: 'Period & Cycle Tracking',
-                logo: 'C',
-                logoGradient: 'linear-gradient(135deg, #E07A7A, #F0A8A8)',
-                overview: 'Clue is a Berlin-based period tracking app built on science, not pink stereotypes. With 12M+ monthly users, they\'ve become a trusted source of reproductive health information while maintaining an industry-leading stance on data privacy.',
-                market: {
-                    text: 'Period tracking app market growing at 18% CAGR. 800M women globally menstruate, yet cycle health remains poorly understood and undersupported. Post-Roe, privacy-first period trackers gaining share from data-harvesting competitors. Clue\'s European base provides regulatory advantage.',
-                    metrics: [
-                        { value: '12M+', label: 'Monthly Active Users' },
-                        { value: '800M', label: 'Menstruating Women' },
-                        { value: '18%', label: 'Market CAGR' }
-                    ]
-                },
-                team: 'Ida Tin (Co-founder) coined the term "femtech" and has been a thought leader in reproductive health for a decade. Carrie Walter (CEO) brings healthcare experience. Science team collaborates with universities on cycle research.',
-                whyInvest: [
-                    'Trusted brand built on science and privacy—critical differentiator post-Roe',
-                    'GDPR-compliant, Germany-based: regulatory moat vs US competitors',
-                    'Massive engaged user base generating proprietary health data for research',
-                    'Expanding into fertility, pregnancy, and perimenopause tracking',
-                    'Subscription model with premium features driving monetization'
-                ],
-                risks: [
-                    { level: 'Low', text: 'Privacy regulations could impact data monetization opportunities, though Clue\'s stance aligns with regulatory direction' },
-                    { level: 'Medium', text: 'Apple and Google health app integration could commoditize basic tracking features' },
-                    { level: 'Medium', text: 'Monetization historically challenging in period tracking; premium conversion rates critical' }
-                ]
-            },
-            dodo: {
-                name: 'The Dodo',
-                tagline: 'Animal-Focused Digital Media',
-                logo: 'D',
-                logoGradient: 'linear-gradient(135deg, #4A90A4, #7ABFCC)',
-                overview: 'The Dodo is the largest and most engaged animal-focused media brand, reaching over 90M followers across platforms. Part of Vox Media, they\'ve proven that animal content drives massive engagement while advancing welfare causes.',
-                market: {
-                    text: 'Digital media for good is a growing category as consumers seek purpose-driven content. Pet industry is $100B+ and growing. Animal content consistently outperforms other categories in engagement and shareability. Platform-native content creation is the new media model.',
-                    metrics: [
-                        { value: '90M+', label: 'Social Followers' },
-                        { value: '$100B+', label: 'Pet Industry Size' },
-                        { value: '#1', label: 'Animal Media Brand' }
-                    ]
-                },
-                team: 'YuJung Kim (GM) grew The Dodo into Vox Media\'s most-watched brand. Editorial team balances heartwarming content with investigative animal welfare journalism. Strong video production capabilities across platforms.',
-                whyInvest: [
-                    'Massive, highly engaged audience that\'s difficult to replicate',
-                    'Authentic mission alignment—team genuinely cares about animal welfare',
-                    'Platform diversification: strong on Facebook, YouTube, TikTok, Instagram',
-                    'Commerce and licensing opportunities in pet industry ($100B+)',
-                    'Advocacy partnerships drive impact beyond content (shelter adoptions, legislation)'
-                ],
-                risks: [
-                    { level: 'High', text: 'Digital media economics are challenging; reliance on platform algorithms and ad rates' },
-                    { level: 'Medium', text: 'Part of Vox Media—not independently investable; subject to parent company decisions' },
-                    { level: 'Low', text: 'Animal content is defensible category with consistent demand across economic cycles' }
-                ]
-            },
-            allbirds: {
-                name: 'Allbirds',
-                tagline: 'Sustainable Footwear Pioneer',
-                logo: 'A',
-                logoGradient: 'linear-gradient(135deg, #8B9F7A, #B5C9A5)',
-                overview: 'Allbirds makes sustainably-produced footwear using natural materials like merino wool, eucalyptus fiber, and sugarcane. They pioneered carbon footprint labeling on products and have committed to halving their per-product footprint by 2025.',
-                market: {
-                    text: 'Global footwear market is $365B with athletic/comfort growing fastest. Sustainable fashion is 3x growth of overall apparel. Gen Z and Millennials pay 10%+ premium for sustainable products. DTC brands disrupting legacy sneaker companies.',
-                    metrics: [
-                        { value: '$365B', label: 'Footwear Market' },
-                        { value: '3x', label: 'Sustainable Growth Rate' },
-                        { value: '10%+', label: 'Sustainability Premium' }
-                    ]
-                },
-                team: 'Tim Brown (Co-founder) is former NZ soccer player who identified wool as superior material. Joey Zwillinger (Co-founder/CEO) is biotech engineer bringing materials science expertise. B-Corp certified leadership committed to transparency.',
-                whyInvest: [
-                    'Materials innovation moat: proprietary SweetFoam, Tree fiber, wool processing',
-                    'First footwear company to label carbon footprint on products—transparency leader',
-                    'Strong brand affinity with target demo (tech, creative professionals)',
-                    'B-Corp certification provides authenticity that\'s hard to replicate',
-                    'Adidas partnership validates materials innovation for licensing revenue'
-                ],
-                risks: [
-                    { level: 'High', text: 'Stock down 90%+ from IPO; significant execution risk on path to profitability' },
-                    { level: 'High', text: 'Competition from Nike, Adidas launching sustainability lines with greater resources' },
-                    { level: 'Medium', text: 'Single-category focus (footwear) limits TAM; apparel expansion has been slow' }
-                ]
-            },
-            elvie: {
-                name: 'Elvie',
-                tagline: 'Smart Technology for Women',
-                logo: 'E',
-                logoGradient: 'linear-gradient(135deg, #B8A0C8, #D4C0E0)',
-                overview: 'Elvie creates award-winning technology products for women, including the world\'s first silent wearable breast pump and app-connected pelvic floor trainer. They\'re destigmatizing women\'s health through beautiful, functional design.',
-                market: {
-                    text: 'Breast pump market alone is $3B and growing as working mothers increase. Pelvic floor health affects 1 in 3 women. Women\'s health devices historically underdesigned—Elvie brings Apple-level design to category. Insurance coverage expanding for breast pumps.',
-                    metrics: [
-                        { value: '$3B+', label: 'Breast Pump Market' },
-                        { value: '1 in 3', label: 'Women w/ Pelvic Issues' },
-                        { value: '80%', label: 'Insurance Coverage' }
-                    ]
-                },
-                team: 'Tania Boler (Founder/CEO) has PhD in women\'s health and founded charity before Elvie. Engineering team has Apple, Dyson alumni. Design-led culture with Red Dot and CES Innovation awards.',
-                whyInvest: [
-                    'Category-creating products that set new standard for women\'s health devices',
-                    'Strong IP portfolio around silent pump technology and wearable design',
-                    'Premium pricing with insurance reimbursement driving accessibility',
-                    'Expanding product line: pump, trainer, and future devices in pipeline',
-                    'Mission-driven founder with domain expertise and vision'
-                ],
-                risks: [
-                    { level: 'Medium', text: 'Hardware margins are challenging; requires scale for profitability' },
-                    { level: 'Medium', text: 'Competition from Willow and legacy players (Medela, Spectra) with more resources' },
-                    { level: 'Low', text: 'Consumer hardware investment requires patience; product development cycles are long' }
+                    { level: 'High', text: 'Regulatory pathway: Medical devices for brain treatment face rigorous approval processes. This is a multi-year journey through clinical trials.' },
+                    { level: 'Medium', text: 'Capital intensity: Developing medical hardware requires significant funding. Strong investor backing helps, but they\'ll need more capital.' },
+                    { level: 'Medium', text: 'Clinical efficacy: While published results are promising, larger trials are needed to prove therapeutic benefit at scale.' }
                 ]
             }
         };
@@ -1710,34 +1523,38 @@
             `;
 
             body.innerHTML = `
-                <div class="ic-section">
-                    <h3 class="ic-section-title">Company Overview</h3>
-                    <p>${company.overview}</p>
-                </div>
-                <div class="ic-section">
-                    <h3 class="ic-section-title">Market Opportunity</h3>
-                    <p>${company.market.text}</p>
-                    <div class="ic-metrics">
-                        ${company.market.metrics.map(m => `
-                            <div class="ic-metric">
-                                <div class="ic-metric-value">${m.value}</div>
-                                <div class="ic-metric-label">${m.label}</div>
+                <div class="ic-section impact-hero">
+                    <h3 class="ic-section-title">${company.impactStory.headline}</h3>
+                    <p>${company.impactStory.content}</p>
+                    <div class="impact-grid">
+                        ${company.impactStory.impacts.map(impact => `
+                            <div class="impact-card">
+                                <div class="impact-icon">${impact.icon}</div>
+                                <div class="impact-stat">${impact.stat}</div>
+                                <div class="impact-desc">${impact.description}</div>
                             </div>
                         `).join('')}
                     </div>
                 </div>
                 <div class="ic-section">
-                    <h3 class="ic-section-title">Team Assessment</h3>
+                    <h3 class="ic-section-title">Why This Matters</h3>
+                    <p>${company.whyThisMatters}</p>
+                </div>
+                <div class="ic-section">
+                    <h3 class="ic-section-title">The Company</h3>
+                    <p>${company.overview}</p>
+                </div>
+                <div class="ic-section">
+                    <h3 class="ic-section-title">The Team</h3>
                     <p>${company.team}</p>
+                    <p style="margin-top: 1rem;"><strong>Funding:</strong> ${company.funding}</p>
+                </div>
+                <div class="ic-section personal-note">
+                    <h3 class="ic-section-title">💜 My Take</h3>
+                    <p>${company.personalNote}</p>
                 </div>
                 <div class="ic-section">
-                    <h3 class="ic-section-title">Why I Would Invest</h3>
-                    <ul class="ic-list">
-                        ${company.whyInvest.map(reason => `<li>${reason}</li>`).join('')}
-                    </ul>
-                </div>
-                <div class="ic-section">
-                    <h3 class="ic-section-title">Key Risks & Mitigants</h3>
+                    <h3 class="ic-section-title">Key Risks</h3>
                     ${company.risks.map(risk => `
                         <div class="risk-item">
                             <span class="risk-level risk-${risk.level.toLowerCase()}">${risk.level}</span>
@@ -1876,35 +1693,40 @@
             }
             
             // Add sections
-            addSection('Company Overview', company.overview);
+            addSection('The Impact Question', company.impactStory.headline);
+            addSection('Why This Matters', company.impactStory.content);
             
-            addSection('Market Opportunity', company.market.text);
-            
-            // Metrics box
-            if (y > 240) {
+            // Impact metrics box
+            if (y > 220) {
                 doc.addPage();
                 y = 20;
             }
             doc.setFillColor(...cream);
-            doc.roundedRect(marginLeft, y, contentWidth, 25, 3, 3, 'F');
+            doc.roundedRect(marginLeft, y, contentWidth, 35, 3, 3, 'F');
             
-            const metricWidth = contentWidth / 3;
-            company.market.metrics.forEach((metric, i) => {
-                const x = marginLeft + (metricWidth * i) + (metricWidth / 2);
+            const metricWidth = contentWidth / 2;
+            company.impactStory.impacts.slice(0, 4).forEach((impact, i) => {
+                const row = Math.floor(i / 2);
+                const col = i % 2;
+                const x = marginLeft + (metricWidth * col) + (metricWidth / 2);
+                const yPos = y + 8 + (row * 15);
                 doc.setTextColor(...sage);
-                doc.setFontSize(14);
+                doc.setFontSize(12);
                 doc.setFont('helvetica', 'bold');
-                doc.text(metric.value, x, y + 10, { align: 'center' });
+                doc.text(`${impact.icon} ${impact.stat}`, x, yPos, { align: 'center' });
                 doc.setTextColor(...charcoalLight);
-                doc.setFontSize(8);
+                doc.setFontSize(7);
                 doc.setFont('helvetica', 'normal');
-                doc.text(metric.label, x, y + 18, { align: 'center' });
+                const descLines = doc.splitTextToSize(impact.description, metricWidth - 10);
+                doc.text(descLines[0], x, yPos + 5, { align: 'center' });
             });
-            y += 35;
+            y += 45;
             
-            addSection('Team Assessment', company.team);
+            addSection('The Company', company.overview);
             
-            addSection('Investment Rationale', company.whyInvest, true);
+            addSection('Team & Funding', company.team + ' Funding: ' + company.funding);
+            
+            addSection('My Take', company.personalNote);
             
             // Risks section
             if (y > 220) {
