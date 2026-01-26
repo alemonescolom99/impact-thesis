@@ -411,6 +411,387 @@
             line-height: 1.7;
         }
 
+        /* Framework CTA */
+        .framework-cta {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(168, 181, 160, 0.1) 0%, rgba(212, 197, 226, 0.1) 100%);
+            border-radius: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .framework-cta h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+        }
+
+        .framework-cta p {
+            font-size: 0.95rem;
+            color: var(--charcoal-light);
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .framework-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+            color: var(--white);
+            border: none;
+            border-radius: 2rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(168, 181, 160, 0.3);
+        }
+
+        .framework-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(168, 181, 160, 0.4);
+        }
+
+        /* SDG Tags */
+        .sdg-tag {
+            background: linear-gradient(135deg, rgba(168, 181, 160, 0.3), rgba(212, 197, 226, 0.3));
+            color: var(--sage-dark);
+            font-weight: 600;
+        }
+
+        .score-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .score-badge.impact {
+            background: rgba(168, 181, 160, 0.2);
+            color: var(--sage-dark);
+        }
+
+        .score-badge.financial {
+            background: rgba(212, 197, 226, 0.2);
+            color: #8B7BA0;
+        }
+
+        /* Five Dimensions Analysis */
+        .five-dimensions {
+            background: linear-gradient(135deg, rgba(168, 181, 160, 0.08) 0%, rgba(212, 197, 226, 0.08) 100%);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .dimension-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(168, 181, 160, 0.15);
+        }
+
+        .dimension-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .dimension-item:first-child {
+            padding-top: 0;
+        }
+
+        .dimension-label {
+            font-weight: 600;
+            color: var(--sage-dark);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .dimension-content {
+            font-size: 0.9rem;
+            color: var(--charcoal-light);
+            line-height: 1.6;
+        }
+
+        /* SDG Badges in Modal */
+        .sdg-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .sdg-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .sdg-badge.sdg-3 {
+            background: rgba(76, 175, 80, 0.15);
+            color: #2E7D32;
+        }
+
+        .sdg-badge.sdg-9 {
+            background: rgba(244, 81, 30, 0.15);
+            color: #D84315;
+        }
+
+        .sdg-badge.sdg-12 {
+            background: rgba(158, 119, 66, 0.2);
+            color: #795548;
+        }
+
+        .sdg-badge.sdg-13 {
+            background: rgba(63, 122, 77, 0.2);
+            color: #2E7D32;
+        }
+
+        /* Financial Assessment Grid */
+        .financial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .financial-item {
+            background: var(--cream);
+            padding: 1rem;
+            border-radius: 0.75rem;
+        }
+
+        .financial-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--charcoal-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .financial-value {
+            font-size: 0.9rem;
+            color: var(--charcoal);
+            line-height: 1.5;
+        }
+
+        /* Assessment Summary */
+        .assessment-summary {
+            background: linear-gradient(135deg, rgba(168, 181, 160, 0.15) 0%, rgba(212, 197, 226, 0.15) 100%);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-top: 1rem;
+        }
+
+        .assessment-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .assessment-item {
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 0.75rem;
+        }
+
+        .assessment-score {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--sage-dark);
+        }
+
+        .assessment-label {
+            font-size: 0.8rem;
+            color: var(--charcoal-light);
+            margin-top: 0.25rem;
+        }
+
+        .verdict {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(168, 181, 160, 0.2);
+        }
+
+        .verdict-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: var(--sage-dark);
+            color: var(--white);
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .verdict-note {
+            font-size: 0.85rem;
+            color: var(--charcoal-light);
+            margin-top: 0.75rem;
+        }
+
+        /* Framework Modal */
+        .framework-modal .modal {
+            max-width: 800px;
+        }
+
+        .framework-content {
+            padding: 2rem 3rem 3rem;
+        }
+
+        .framework-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .framework-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .framework-section h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--sage);
+            display: inline-block;
+        }
+
+        .framework-section p {
+            font-size: 0.95rem;
+            color: var(--charcoal-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .framework-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .framework-list li {
+            padding: 0.75rem 0 0.75rem 2rem;
+            position: relative;
+            font-size: 0.95rem;
+            color: var(--charcoal-light);
+            border-bottom: 1px solid rgba(168, 181, 160, 0.15);
+        }
+
+        .framework-list li:last-child {
+            border-bottom: none;
+        }
+
+        .framework-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--sage-dark);
+            font-weight: 600;
+        }
+
+        .framework-list li strong {
+            color: var(--charcoal);
+        }
+
+        .dimension-box {
+            background: var(--cream);
+            padding: 1rem 1.25rem;
+            border-radius: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--charcoal-light);
+        }
+
+        .dimension-box:last-child {
+            margin-bottom: 0;
+        }
+
+        .dimension-box strong {
+            color: var(--sage-dark);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .decision-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .decision-card {
+            background: var(--cream);
+            padding: 1rem;
+            border-radius: 0.75rem;
+            text-align: center;
+        }
+
+        .decision-card.strong {
+            background: rgba(168, 181, 160, 0.2);
+            border: 1px solid var(--sage);
+        }
+
+        .decision-card.conditional {
+            background: rgba(212, 197, 226, 0.2);
+            border: 1px solid var(--lavender);
+        }
+
+        .decision-card.diligence {
+            background: rgba(232, 196, 184, 0.2);
+            border: 1px solid var(--soft-coral);
+        }
+
+        .decision-card.pass {
+            background: rgba(200, 100, 100, 0.1);
+            border: 1px solid rgba(200, 100, 100, 0.3);
+        }
+
+        .decision-label {
+            font-weight: 600;
+            color: var(--charcoal);
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .decision-criteria {
+            font-size: 0.8rem;
+            color: var(--charcoal-light);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(168, 181, 160, 0.1) 0%, rgba(212, 197, 226, 0.1) 100%);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-top: 1rem;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .assessment-grid, .financial-grid, .decision-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Portfolio Section */
         .portfolio {
             background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
@@ -1259,6 +1640,17 @@
                 <p>Championing businesses that transform our relationship with animals—from alternative proteins to cruelty-free beauty. A kinder world for all species is a better world for us.</p>
             </div>
         </div>
+        
+        <div class="framework-cta">
+            <h3>How I Make Investment Decisions</h3>
+            <p>I use a structured framework combining industry-standard impact measurement (Five Dimensions of Impact, IRIS+, SDG alignment) with rigorous financial analysis. Every company I evaluate goes through the same systematic process.</p>
+            <button class="framework-btn" onclick="openFrameworkModal()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="18" height="18">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                View My Full Framework
+            </button>
+        </div>
     </section>
 
     <section id="portfolio" class="portfolio">
@@ -1293,22 +1685,18 @@
                 <div class="portfolio-card-body">
                     <p class="portfolio-description">What if we stopped shipping water around the world? Bar.on's molecular beer technology creates any beer style using tap water and flavor cartridges—potentially reducing beer's carbon footprint by 50-70%.</p>
                     <div class="portfolio-tags">
+                        <span class="tag sdg-tag">SDG 12</span>
+                        <span class="tag sdg-tag">SDG 13</span>
                         <span class="tag">Sustainability</span>
-                        <span class="tag">FoodTech</span>
-                        <span class="tag">Seed</span>
+                        <span class="tag">Consumer Hardware</span>
+                        <span class="tag">Series A</span>
                     </div>
                 </div>
                 <div class="portfolio-card-footer">
-                    <span class="view-thesis">View Impact Thesis →</span>
+                    <span class="view-thesis">View Full Analysis →</span>
                     <div class="impact-score">
-                        <span class="impact-label">Impact</span>
-                        <div class="impact-dots">
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                        </div>
+                        <span class="score-badge impact">Impact: 5/5</span>
+                        <span class="score-badge financial">Financial: 4/5</span>
                     </div>
                 </div>
             </div>
@@ -1328,22 +1716,18 @@
                 <div class="portfolio-card-body">
                     <p class="portfolio-description">What if treating brain disorders didn't require brain surgery? NeuroHarmonics uses focused ultrasound to stimulate deep brain regions with 1000x more precision than conventional methods—no incisions needed.</p>
                     <div class="portfolio-tags">
-                        <span class="tag">NeuroTech</span>
-                        <span class="tag">MedTech</span>
-                        <span class="tag">UCL Spinout</span>
+                        <span class="tag sdg-tag">SDG 3</span>
+                        <span class="tag sdg-tag">SDG 9</span>
+                        <span class="tag">Health & Wellbeing</span>
+                        <span class="tag">Deep Tech</span>
+                        <span class="tag">Seed</span>
                     </div>
                 </div>
                 <div class="portfolio-card-footer">
-                    <span class="view-thesis">View Impact Thesis →</span>
+                    <span class="view-thesis">View Full Analysis →</span>
                     <div class="impact-score">
-                        <span class="impact-label">Impact</span>
-                        <div class="impact-dots">
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                            <span class="impact-dot filled"></span>
-                        </div>
+                        <span class="score-badge impact">Impact: 5/5</span>
+                        <span class="score-badge financial">Financial: 4/5</span>
                     </div>
                 </div>
             </div>
@@ -1447,6 +1831,134 @@
         </div>
     </div>
 
+    <!-- Framework Modal -->
+    <div class="modal-overlay framework-modal" id="frameworkModalOverlay" onclick="closeFrameworkModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeFrameworkModal()">×</button>
+                <div class="modal-company-header">
+                    <div class="modal-company-logo" style="background: linear-gradient(135deg, var(--sage), var(--lavender));">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" width="28" height="28">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="modal-company-name">My Investment Framework</div>
+                        <div class="modal-company-tagline">How I evaluate impact investment opportunities</div>
+                    </div>
+                </div>
+            </div>
+            <div class="framework-content">
+                <div class="framework-section">
+                    <h3>My Philosophy</h3>
+                    <p>I believe impact investing should target market-rate returns. This isn't about accepting lower returns for "doing good"—it's about identifying companies where <strong>commercial success and positive impact are the same thing</strong>.</p>
+                    <p>According to GIIN's 2024 report, 75% of impact investors target market-rate returns, and 94% of impact investments meet or exceed financial expectations. Impact and returns aren't a trade-off—they're aligned when you pick the right companies.</p>
+                </div>
+
+                <div class="framework-section">
+                    <h3>Impact Assessment: Five Dimensions</h3>
+                    <p>I use the Impact Management Project's Five Dimensions framework—the industry standard for measuring impact. For each company, I assess:</p>
+                    <div class="dimension-box">
+                        <strong>WHAT</strong>
+                        What outcome is the company creating? How important is it to the stakeholders experiencing it?
+                    </div>
+                    <div class="dimension-box">
+                        <strong>WHO</strong>
+                        Who experiences the outcome? How underserved are they in relation to this outcome?
+                    </div>
+                    <div class="dimension-box">
+                        <strong>HOW MUCH</strong>
+                        How many people experience it? How significant is the change? How long does it last?
+                    </div>
+                    <div class="dimension-box">
+                        <strong>CONTRIBUTION</strong>
+                        What is the company's contribution? Would this happen anyway without this investment?
+                    </div>
+                    <div class="dimension-box">
+                        <strong>RISK</strong>
+                        What is the risk that the impact doesn't happen as expected?
+                    </div>
+                </div>
+
+                <div class="framework-section">
+                    <h3>SDG Alignment</h3>
+                    <p>Every company I evaluate is mapped to the UN Sustainable Development Goals. This provides a common language for describing impact and helps compare opportunities across sectors.</p>
+                    <p>I focus primarily on:</p>
+                    <ul class="framework-list">
+                        <li><strong>SDG 3:</strong> Good Health & Well-being</li>
+                        <li><strong>SDG 9:</strong> Industry, Innovation & Infrastructure</li>
+                        <li><strong>SDG 12:</strong> Responsible Consumption & Production</li>
+                        <li><strong>SDG 13:</strong> Climate Action</li>
+                    </ul>
+                </div>
+
+                <div class="framework-section">
+                    <h3>Financial Assessment</h3>
+                    <p>Impact without financial sustainability doesn't scale. For every company, I evaluate:</p>
+                    <ul class="framework-list">
+                        <li><strong>Market Size:</strong> TAM, SAM, SOM—is this market large enough to support a venture-scale outcome?</li>
+                        <li><strong>Business Model:</strong> Unit economics, path to profitability, recurring revenue potential</li>
+                        <li><strong>Competitive Moat:</strong> IP, network effects, switching costs, regulatory advantages</li>
+                        <li><strong>Team:</strong> Domain expertise, track record, ability to execute</li>
+                        <li><strong>Exit Path:</strong> Realistic acquirers, timeline to liquidity, comparable exits</li>
+                    </ul>
+                </div>
+
+                <div class="framework-section">
+                    <h3>The Integration Question</h3>
+                    <p>The most important question I ask: <strong>Is impact core to the business model, or bolted on?</strong></p>
+                    <p>The best impact investments are ones where financial success and impact success are the same thing. If the company makes money, it creates impact. If it creates impact, it makes money. When these are misaligned, something eventually breaks.</p>
+                    <div class="highlight-box">
+                        <p>"If the business model succeeds, does impact automatically follow? If the company fails financially, what happens to the impact?"</p>
+                    </div>
+                </div>
+
+                <div class="framework-section">
+                    <h3>Decision Framework</h3>
+                    <p>Every company must pass these gates:</p>
+                    <ul class="framework-list">
+                        <li>Is impact core to the business model? <strong>Must be YES</strong></li>
+                        <li>Is there a path to financial sustainability? <strong>Must be YES</strong></li>
+                        <li>Does the team have relevant expertise? <strong>Must be YES</strong></li>
+                        <li>Is the market large enough? <strong>Must be YES</strong></li>
+                        <li>Is there a realistic exit path? <strong>Must be YES</strong></li>
+                    </ul>
+                    <p style="margin-top: 1.5rem;">Then I score on a 1-5 scale for both Impact and Financial potential:</p>
+                    <div class="decision-grid">
+                        <div class="decision-card strong">
+                            <div class="decision-label">Strong Conviction</div>
+                            <div class="decision-criteria">Both Impact & Financial ≥ 4</div>
+                        </div>
+                        <div class="decision-card conditional">
+                            <div class="decision-label">Invest with Conditions</div>
+                            <div class="decision-criteria">One ≥ 4, other ≥ 3</div>
+                        </div>
+                        <div class="decision-card diligence">
+                            <div class="decision-label">More Diligence Needed</div>
+                            <div class="decision-criteria">Both ≥ 3</div>
+                        </div>
+                        <div class="decision-card pass">
+                            <div class="decision-label">Pass</div>
+                            <div class="decision-criteria">Either < 3</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="framework-section">
+                    <h3>Why This Matters</h3>
+                    <p>This framework demonstrates that I understand:</p>
+                    <ul class="framework-list">
+                        <li>Professional impact investing targets <strong>market-rate returns</strong></li>
+                        <li>I can use <strong>industry-standard frameworks</strong> (Five Dimensions, IRIS+, SDGs)</li>
+                        <li>I can conduct <strong>rigorous financial analysis</strong> (market sizing, unit economics, exits)</li>
+                        <li>I understand the <strong>integration of impact and financial performance</strong></li>
+                        <li>I can <strong>make decisions with clear reasoning</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>
         const { jsPDF } = window.jspdf;
@@ -1458,17 +1970,39 @@
                 logo: 'B',
                 logoGradient: 'linear-gradient(135deg, #8B9F7A, #5A7A5C)',
                 category: 'sustainability',
-                overview: 'Bar.on is reimagining how we make and consume beer. Their molecular beer technology creates any style of beer in seconds using tap water and flavor cartridges—no fermentation, no shipping heavy bottles across the world, no mountains of packaging waste. It sounds like science fiction, but it\'s backed by a decade of research from one of the world\'s leading beer science labs at KU Leuven in Belgium.',
+                sdgs: [
+                    { number: 12, name: 'Responsible Consumption & Production', class: 'sdg-12' },
+                    { number: 13, name: 'Climate Action', class: 'sdg-13' }
+                ],
+                overview: 'Bar.on is reimagining how we make and consume beer. Their molecular beer technology creates any style of beer in seconds using tap water and flavor cartridges—no fermentation, no shipping heavy bottles across the world, no mountains of packaging waste. It\'s backed by a decade of research from one of the world\'s leading beer science labs at KU Leuven in Belgium.',
                 impactStory: {
                     headline: 'What if we stopped shipping water around the world?',
                     content: 'Here\'s a fact that changed how I think about beer: it\'s 90% water. The same water that comes out of your tap. Yet every year, we ship billions of liters of "branded water" across oceans, burn fuel trucking it to stores, and wrap it in glass, aluminum, and cardboard that mostly ends up in landfills. Bar.on asks a simple question: what if we just shipped the flavor instead?',
                     impacts: [
-                        { icon: '🌍', stat: '50-70%', description: 'potential reduction in beer\'s carbon footprint by eliminating water shipping and most packaging' },
-                        { icon: '💧', stat: '90%', description: 'of beer is water—Bar.on uses local tap water instead of shipping it globally' },
-                        { icon: '📦', stat: '40%', description: 'of beer\'s environmental impact comes from packaging alone' },
-                        { icon: '🍺', stat: '3B+', description: 'people drink beer worldwide—even small % adoption means massive impact' }
+                        { icon: '🌍', stat: '50-70%', description: 'potential reduction in beer\'s carbon footprint' },
+                        { icon: '💧', stat: '90%', description: 'of beer is water—Bar.on uses local tap water' },
+                        { icon: '📦', stat: '40%', description: 'of beer\'s impact is packaging alone' },
+                        { icon: '🍺', stat: '3B+', description: 'people drink beer worldwide' }
                     ]
                 },
+                fiveDimensions: {
+                    what: 'Reduces carbon emissions in beverage production and distribution. Eliminates packaging waste. Makes non-alcoholic beer taste as good as traditional beer (solving a real consumer problem).',
+                    who: 'Beer consumers globally (3B+ people), plus the planet. Secondary: bars, restaurants, and retailers looking to reduce their environmental footprint.',
+                    howMuch: 'Massive scale potential—beer is a $787B market. Even 1% adoption = billions of liters of water not shipped, millions of tons of packaging eliminated. Each device could prevent ~500kg CO2/year per household.',
+                    contribution: 'High. No one else has successfully commercialized molecular beverage technology. Traditional brewers can\'t easily replicate this—it requires deep scientific IP. The counterfactual is continued water shipping.',
+                    risk: 'Medium. Consumer perception ("is this real beer?") is the key risk. Early blind taste tests are positive, but cultural attachment to traditional brewing is strong. Hardware scaling also presents execution risk.'
+                },
+                financial: {
+                    market: '$787B beer market (2024) → $1.2T (2032). NA beer segment: $21.6B → $36.4B (2034), growing 9% annually while overall beer declined 1%.',
+                    model: 'Nespresso-style: Hardware (One Tap devices) + recurring consumables (flavor cartridges). High-margin cartridge sales after device placement.',
+                    moat: '10+ years R&D with Prof. Kevin Verstrepen\'s lab (VIB-KU Leuven). 250+ beers molecularly characterized. Deep IP in flavor compound isolation and reconstitution.',
+                    team: 'Dirk Standaert (CEO, serial entrepreneur), Valentijn Destoop (CPO, innovation expert). Scientific backing from one of the world\'s top beer research labs.',
+                    exit: '5-8 year timeline. Logical acquirers: AB InBev, Heineken, Carlsberg (strategic), or Nespresso/De\'Longhi (hardware). Comp: Nespresso sold for $27B.',
+                    returnCategory: 'Market-rate'
+                },
+                scores: { impact: 5, financial: 4 },
+                verdict: 'Strong Conviction',
+                verdictNote: 'Impact is core to the business—environmental savings scale directly with revenue. Consumer hardware + recurring revenue model is venture-proven.',
                 whyThisMatters: 'The beer industry isn\'t going away. People have been brewing and drinking beer for thousands of years, and they\'ll continue. The question is: can we enjoy it without the environmental cost? Bar.on isn\'t asking people to give up beer—they\'re making it possible to have your beer and drink it too, guilt-free. That\'s the kind of solution that actually scales.',
                 team: 'Founded by serial entrepreneur Dirk Standaert and innovation expert Valentijn Destoop, with deep scientific partnership from Professor Kevin Verstrepen at VIB-KU Leuven. The Verstrepen lab has spent over a decade researching beer at the molecular level, characterizing 250+ beers and publishing "Belgian Beer – Tested and Tasted." This isn\'t a startup playing scientist—it\'s scientists becoming entrepreneurs.',
                 funding: '€1.8M seed from Astanor Ventures, Exceptional Ventures, Thia Ventures, and others. Currently raising Series A.',
@@ -1485,17 +2019,39 @@
                 logo: 'N',
                 logoGradient: 'linear-gradient(135deg, #7B68A6, #A890C4)',
                 category: 'health',
+                sdgs: [
+                    { number: 3, name: 'Good Health & Well-being', class: 'sdg-3' },
+                    { number: 9, name: 'Industry, Innovation & Infrastructure', class: 'sdg-9' }
+                ],
                 overview: 'NeuroHarmonics is building a wearable device that can precisely stimulate deep brain regions using focused ultrasound—no surgery required. Their technology, published in Nature Communications, can target areas 1,000x smaller than conventional ultrasound and 30x smaller than any previous deep brain device. For millions of people with Parkinson\'s, depression, and other neurological conditions, this could mean effective treatment without drilling into their skull.',
                 impactStory: {
                     headline: 'What if treating brain disorders didn\'t require brain surgery?',
                     content: 'Deep brain stimulation works. For people with severe Parkinson\'s, it can stop tremors and restore quality of life. The problem? It requires drilling a hole in your skull and implanting electrodes in your brain. It\'s expensive, risky, and only available at specialized centers. Most people who could benefit never get treated. NeuroHarmonics is developing ultrasound technology that achieves similar precision—through the skull, no surgery needed.',
                     impacts: [
-                        { icon: '🧠', stat: '3B+', description: 'people worldwide affected by neurological conditions—1 in 2 will develop one by age 75' },
-                        { icon: '💉', stat: '0', description: 'surgeries required—their ultrasound helmet works through the skull non-invasively' },
-                        { icon: '🎯', stat: '1000x', description: 'more precise than conventional ultrasound, targeting brain structures just millimeters wide' },
-                        { icon: '⏱️', stat: '40+ min', description: 'of sustained brain activity changes demonstrated in human trials' }
+                        { icon: '🧠', stat: '3B+', description: 'people affected by neurological conditions' },
+                        { icon: '💉', stat: '0', description: 'surgeries required—works through the skull' },
+                        { icon: '🎯', stat: '1000x', description: 'more precise than conventional ultrasound' },
+                        { icon: '⏱️', stat: '40+ min', description: 'sustained brain activity changes in trials' }
                     ]
                 },
+                fiveDimensions: {
+                    what: 'Treats neurological conditions (Parkinson\'s, depression, essential tremor, epilepsy) without surgery. Provides precise deep brain stimulation non-invasively. Enables research into previously inaccessible brain regions.',
+                    who: '3B+ people affected by neurological conditions. 1 in 2 people will develop a neurological condition by age 75. Current treatments are either inadequate (drugs with side effects) or extreme (brain surgery).',
+                    howMuch: 'Transformative depth of impact—could restore quality of life for people who currently have no good options. 40+ minutes of sustained brain activity changes demonstrated in human trials. Potential to treat millions globally.',
+                    contribution: 'Very high. No one else has achieved this level of precision with non-invasive ultrasound. 8 years of academic research at UCL, published in Nature Communications. The counterfactual is continued undertreatment of neurological conditions.',
+                    risk: 'Medium-high. Regulatory pathway is long (medical device for brain treatment). Larger clinical trials needed to prove therapeutic benefit at scale. Capital-intensive development.'
+                },
+                financial: {
+                    market: 'Neuromodulation: $6.26B (2024) → $10.68B (2030), 9.4% CAGR. Deep brain stimulation: $1.4B → $2.5B (2030). Massive TAM if including depression, anxiety, and other indications.',
+                    model: 'Medical device sales to hospitals + research tools to universities. Potential for treatment-as-a-service model (like dialysis). Recurring revenue from consumables and software updates.',
+                    moat: '8 years of R&D. Nature Communications publication. 256-element phased array patent portfolio. Team includes world-leading experts in biomedical ultrasound. Academic credibility from UCL.',
+                    team: 'Brad Treeby (CEO, former UCL Professor of Biomedical Ultrasound), Michael Brown (CSO), Antonio Stanziola (CTO), Eleanor Martin. Advisors from Oxford including Prof Charlotte Stagg.',
+                    exit: '7-10 year timeline (medical device pathway). Logical acquirers: Medtronic, Boston Scientific, Abbott (strategic). Comp: Nevro acquired for $1.75B.',
+                    returnCategory: 'Market-rate'
+                },
+                scores: { impact: 5, financial: 4 },
+                verdict: 'Strong Conviction',
+                verdictNote: 'Clinical efficacy = commercial success = impact. If the technology works (and Nature publication suggests it does), all three align perfectly.',
                 whyThisMatters: 'Neurological conditions are the leading cause of disability worldwide. Depression alone affects 280 million people. Parkinson\'s affects 10 million. Current treatments are either inadequate (drugs with side effects) or extreme (brain surgery). NeuroHarmonics sits in the middle: a treatment that\'s both effective AND accessible. If this works at scale, it could fundamentally change how we treat brain disorders.',
                 team: 'This is a team I know personally from my time at UCL Business. Brad Treeby (CEO) was a Professor of Biomedical Ultrasound at UCL—he left academia because he believed this technology was too important to stay in the lab. The founding team includes PhDs in ultrasound engineering, neuroscience, and computational acoustics. Their advisors include Professor Charlotte Stagg from Oxford, a leading expert in brain stimulation. This is genuine deep tech, not a pitch deck with a dream.',
                 funding: 'Backed by Speedinvest and UCL Tech Fund. The technology was developed over 8 years with funding from EPSRC and Wellcome Trust before spinning out.',
@@ -1536,6 +2092,99 @@
                         `).join('')}
                     </div>
                 </div>
+
+                <div class="ic-section">
+                    <h3 class="ic-section-title">SDG Alignment</h3>
+                    <p>This company contributes to the following UN Sustainable Development Goals:</p>
+                    <div class="sdg-container">
+                        ${company.sdgs.map(sdg => `
+                            <div class="sdg-badge ${sdg.class}">
+                                <strong>SDG ${sdg.number}</strong> ${sdg.name}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <div class="ic-section">
+                    <h3 class="ic-section-title">Impact Analysis: Five Dimensions</h3>
+                    <div class="five-dimensions">
+                        <div class="dimension-item">
+                            <div class="dimension-label">What</div>
+                            <div class="dimension-content">${company.fiveDimensions.what}</div>
+                        </div>
+                        <div class="dimension-item">
+                            <div class="dimension-label">Who</div>
+                            <div class="dimension-content">${company.fiveDimensions.who}</div>
+                        </div>
+                        <div class="dimension-item">
+                            <div class="dimension-label">How Much</div>
+                            <div class="dimension-content">${company.fiveDimensions.howMuch}</div>
+                        </div>
+                        <div class="dimension-item">
+                            <div class="dimension-label">Contribution</div>
+                            <div class="dimension-content">${company.fiveDimensions.contribution}</div>
+                        </div>
+                        <div class="dimension-item">
+                            <div class="dimension-label">Risk</div>
+                            <div class="dimension-content">${company.fiveDimensions.risk}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ic-section">
+                    <h3 class="ic-section-title">Financial Assessment</h3>
+                    <div class="financial-grid">
+                        <div class="financial-item">
+                            <div class="financial-label">Market Size</div>
+                            <div class="financial-value">${company.financial.market}</div>
+                        </div>
+                        <div class="financial-item">
+                            <div class="financial-label">Business Model</div>
+                            <div class="financial-value">${company.financial.model}</div>
+                        </div>
+                        <div class="financial-item">
+                            <div class="financial-label">Competitive Moat</div>
+                            <div class="financial-value">${company.financial.moat}</div>
+                        </div>
+                        <div class="financial-item">
+                            <div class="financial-label">Team</div>
+                            <div class="financial-value">${company.financial.team}</div>
+                        </div>
+                        <div class="financial-item">
+                            <div class="financial-label">Exit Path</div>
+                            <div class="financial-value">${company.financial.exit}</div>
+                        </div>
+                        <div class="financial-item">
+                            <div class="financial-label">Return Category</div>
+                            <div class="financial-value">${company.financial.returnCategory}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ic-section">
+                    <h3 class="ic-section-title">Assessment Summary</h3>
+                    <div class="assessment-summary">
+                        <div class="assessment-grid">
+                            <div class="assessment-item">
+                                <div class="assessment-score">${company.scores.impact}/5</div>
+                                <div class="assessment-label">Impact Score</div>
+                            </div>
+                            <div class="assessment-item">
+                                <div class="assessment-score">${company.scores.financial}/5</div>
+                                <div class="assessment-label">Financial Score</div>
+                            </div>
+                            <div class="assessment-item">
+                                <div class="assessment-score">${company.scores.impact + company.scores.financial}/10</div>
+                                <div class="assessment-label">Combined</div>
+                            </div>
+                        </div>
+                        <div class="verdict">
+                            <div class="verdict-badge">${company.verdict}</div>
+                            <p class="verdict-note">${company.verdictNote}</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="ic-section">
                     <h3 class="ic-section-title">Why This Matters</h3>
                     <p>${company.whyThisMatters}</p>
@@ -1591,9 +2240,25 @@
             document.body.style.overflow = '';
         }
 
+        function openFrameworkModal() {
+            const overlay = document.getElementById('frameworkModalOverlay');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFrameworkModal(event) {
+            if (event && event.target !== event.currentTarget) return;
+            const overlay = document.getElementById('frameworkModalOverlay');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
         // Close modal on Escape key
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModal();
+            if (e.key === 'Escape') {
+                closeModal();
+                closeFrameworkModal();
+            }
         });
 
         function downloadMemo(companyId) {
