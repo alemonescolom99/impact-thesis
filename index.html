@@ -539,14 +539,34 @@
             font-weight: 500;
         }
 
+        .sdg-badge.sdg-2 {
+            background: rgba(221, 166, 58, 0.2);
+            color: #BF8B2E;
+        }
+
         .sdg-badge.sdg-3 {
             background: rgba(76, 175, 80, 0.15);
             color: #2E7D32;
         }
 
+        .sdg-badge.sdg-5 {
+            background: rgba(255, 63, 52, 0.15);
+            color: #E53935;
+        }
+
+        .sdg-badge.sdg-8 {
+            background: rgba(162, 25, 66, 0.15);
+            color: #A21942;
+        }
+
         .sdg-badge.sdg-9 {
             background: rgba(244, 81, 30, 0.15);
             color: #D84315;
+        }
+
+        .sdg-badge.sdg-10 {
+            background: rgba(221, 19, 103, 0.15);
+            color: #DD1367;
         }
 
         .sdg-badge.sdg-12 {
@@ -1599,11 +1619,11 @@
             </p>
             <div class="hero-stats">
                 <div class="stat">
-                    <div class="stat-number">2</div>
+                    <div class="stat-number">4</div>
                     <div class="stat-label">Companies Analyzed</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">2</div>
+                    <div class="stat-number">4</div>
                     <div class="stat-label">Focus Sectors</div>
                 </div>
                 <div class="stat">
@@ -1732,6 +1752,68 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Flexa -->
+            <div class="portfolio-card" data-category="sustainability" onclick="openModal('flexa')">
+                <div class="portfolio-card-header">
+                    <div class="company-info">
+                        <div class="company-logo" style="background: linear-gradient(135deg, #E87E6D, #D4C5E2);">F</div>
+                        <div>
+                            <div class="company-name">Flexa</div>
+                            <div class="company-tagline">Verified Flexible Work Platform</div>
+                        </div>
+                    </div>
+                    <span class="sector-icon">🌿</span>
+                </div>
+                <div class="portfolio-card-body">
+                    <p class="portfolio-description">The founder was fired for asking to work from home with a chronic illness. Now she's built the only platform that verifies companies' flexibility claims—serving 3M+ users, 67% women.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag sdg-tag">SDG 5</span>
+                        <span class="tag sdg-tag">SDG 8</span>
+                        <span class="tag sdg-tag">SDG 10</span>
+                        <span class="tag">Future of Work</span>
+                        <span class="tag">Seed</span>
+                    </div>
+                </div>
+                <div class="portfolio-card-footer">
+                    <span class="view-thesis">View Full Analysis →</span>
+                    <div class="impact-score">
+                        <span class="score-badge impact">Impact: 4/5</span>
+                        <span class="score-badge financial">Financial: 4/5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ENOUGH -->
+            <div class="portfolio-card" data-category="sustainability" onclick="openModal('enough')">
+                <div class="portfolio-card-header">
+                    <div class="company-info">
+                        <div class="company-logo" style="background: linear-gradient(135deg, #7CB342, #558B2F);">E</div>
+                        <div>
+                            <div class="company-name">ENOUGH</div>
+                            <div class="company-tagline">Sustainable Protein at Scale</div>
+                        </div>
+                    </div>
+                    <span class="sector-icon">🌿</span>
+                </div>
+                <div class="portfolio-card-body">
+                    <p class="portfolio-description">Growing protein like we brew beer. ENOUGH's mycoprotein uses 97% less water and feed than beef, backed by Cargill, supplying Unilever and M&S. This is what I look for at Seed stage.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag sdg-tag">SDG 2</span>
+                        <span class="tag sdg-tag">SDG 12</span>
+                        <span class="tag sdg-tag">SDG 13</span>
+                        <span class="tag">Alt Protein</span>
+                        <span class="tag">Series C</span>
+                    </div>
+                </div>
+                <div class="portfolio-card-footer">
+                    <span class="view-thesis">View Full Analysis →</span>
+                    <div class="impact-score">
+                        <span class="score-badge impact">Impact: 4/5</span>
+                        <span class="score-badge financial">Financial: 4/5</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1772,7 +1854,7 @@
             <h2>Hi, I'm Alejandra 👋</h2>
             <p>
                 I'm the COO of a climate tech startup, but my path here was anything but linear. 
-                I studied Medical Sciences and Engineering at UCL (yes, both, I couldn't choose), 
+                I studied Medical Sciences and Engineering at UCL (yes, both—I couldn't choose), 
                 then did my MRes in Medical Device Design and Entrepreneurship at Imperial. There, 
                 I helped develop the business plan for a lateral flow test to detect recurrent ovarian cancer. 
                 Turns out, I really liked the "making science actually reach people" part.
@@ -1792,7 +1874,7 @@
             <p style="margin-bottom: 0.5rem;"><strong>Things to know about me:</strong></p>
             <p style="margin-top: 0;">
                 I like to challenge myself, so you'll probably find me climbing walls (literally), 
-                dog-sitting every pup in my neighbourhood, or enrolling in yet another random course, last 
+                dog-sitting every pup in my neighbourhood, or enrolling in yet another random course—last 
                 month it was acupuncture, this month it's marketing. I contain multitudes. 🐕 🧗‍♀️ 📚
             </p>
             <div class="about-values">
@@ -1874,15 +1956,15 @@
                     </div>
                     <div>
                         <div class="modal-company-name">My Investment Framework</div>
-                        <div class="modal-company-tagline">How I evaluate investment opportunities</div>
+                        <div class="modal-company-tagline">How I evaluate impact investment opportunities</div>
                     </div>
                 </div>
             </div>
             <div class="framework-content">
                 <div class="framework-section">
                     <h3>My Philosophy</h3>
-                    <p>I focus on <strong>early-stage companies </strong> where capital can be catalytic—where the right investment at the right time can determine whether a world-changing idea actually reaches the world.</p>
-                    <p>I believe impact investing should target market-rate returns. This isn't about accepting lower returns for "doing good", it's about identifying companies where <strong>commercial success and positive impact are the same thing</strong>.</p>
+                    <p>I focus on <strong>early-stage companies (Seed to Series A)</strong> where capital can be catalytic—where the right investment at the right time can determine whether a world-changing idea actually reaches the world.</p>
+                    <p>I believe impact investing should target market-rate returns. This isn't about accepting lower returns for "doing good"—it's about identifying companies where <strong>commercial success and positive impact are the same thing</strong>.</p>
                     <p>At early stages, you're betting on founders and vision more than metrics. That's where I thrive—understanding what people are trying to build and whether they have what it takes to get there.</p>
                 </div>
 
@@ -2102,6 +2184,107 @@
                     { level: 'Medium', text: 'Capital intensity: Developing medical hardware requires significant funding. Strong investor backing helps, but they\'ll need more capital.' },
                     { level: 'Medium', text: 'Clinical efficacy: While published results are promising, larger trials are needed to prove therapeutic benefit at scale.' }
                 ]
+            },
+            flexa: {
+                name: 'Flexa',
+                tagline: 'Verified Flexible Work Platform',
+                logo: 'F',
+                logoGradient: 'linear-gradient(135deg, #E87E6D, #D4C5E2)',
+                category: 'sustainability',
+                sdgs: [
+                    { number: 8, name: 'Decent Work & Economic Growth', class: 'sdg-8' },
+                    { number: 5, name: 'Gender Equality', class: 'sdg-5' },
+                    { number: 10, name: 'Reduced Inequalities', class: 'sdg-10' }
+                ],
+                overview: 'Flexa is the only platform that verifies companies\' flexible working policies before allowing them to showcase roles. Through their proprietary Flexification® accreditation, they benchmark companies against market standards and survey employees—ensuring job seekers can trust that listed companies genuinely offer flexibility. With 3M+ users and clients including Airbus, Mars, BT, and Verizon, they\'re becoming the gold standard for flexible work verification.',
+                impactStory: {
+                    headline: 'What if you could trust that "flexible" actually meant flexible?',
+                    content: 'Molly Johnson-Jones was fired from her investment banking job just ten days after asking to work from home one day a week to accommodate her autoimmune condition. She realized the job market had a fundamental transparency problem: companies claim flexibility, but job seekers have no way to verify it. Flexa solves this by verifying and benchmarking every company\'s actual policies before they can list jobs.',
+                    impacts: [
+                        { icon: '👩', stat: '67%', description: 'of users are women' },
+                        { icon: '🌍', stat: '30%', description: 'of users are people of colour' },
+                        { icon: '♿', stat: '15%', description: 'have chronic illnesses or disabilities' },
+                        { icon: '👥', stat: '3M+', description: 'users finding flexible work globally' }
+                    ]
+                },
+                fiveDimensions: {
+                    what: 'Brings transparency to job market flexibility. Enables people who need flexible work (parents, disabled, caregivers) to find employers who genuinely offer it. Reduces job-hopping from mismatched expectations.',
+                    who: '67% women, 30% people of colour, 15% with chronic illnesses/disabilities. These groups have historically been excluded by rigid "9-5 in office" requirements. Flexa serves people who NEED flexibility, not just want it.',
+                    howMuch: '3M+ users globally, 200+ verified companies (Airbus, Mars, BT, Verizon). Each successful match = years of employment for someone who might otherwise be excluded. Systemic change: as more companies get Flexified, the standard rises.',
+                    contribution: 'Very high. Created a category that didn\'t exist. LinkedIn, Indeed, Glassdoor don\'t verify flexibility claims. The proprietary Flexification® accreditation (objective benchmarking + employee surveys) is unique.',
+                    risk: 'Medium. Return-to-office mandates could reduce demand. LinkedIn/Indeed could add flexibility filters. Small team (~15 people). May need more capital to scale.'
+                },
+                financial: {
+                    market: '$542B global recruitment market (2024). Employer branding is a growing subset as companies compete for talent in tight labor markets.',
+                    model: 'B2B SaaS: Companies pay subscription to be listed and Flexified. $4.6M revenue in 2024 on just £2.6M raised = highly capital efficient.',
+                    moat: 'Flexification® is proprietary two-stage accreditation. First-mover in verified flexibility. 3M users = growing network effect. Trust layer is hard to replicate quickly.',
+                    team: 'Molly Johnson-Jones (CEO, Oxford, ex-investment banking, personal stake—fired for requesting flexibility). Maurice O\'Brien (Co-founder). Check Warner (Ada Ventures) on board.',
+                    exit: '5-7 year timeline. Logical acquirers: LinkedIn, Indeed, Glassdoor, Workday, or HR tech platforms wanting verified flexibility data.',
+                    returnCategory: 'Market-rate'
+                },
+                scores: { impact: 4, financial: 4 },
+                verdict: 'Strong Conviction',
+                verdictNote: 'Impact is core—if Flexa succeeds commercially, underserved groups get access to flexible work. Revenue and impact are the same thing.',
+                whyThisMatters: 'Flexible work isn\'t a perk—for many people, it\'s the difference between being able to work or not. Parents, people with disabilities, caregivers, those with chronic illnesses—they\'ve been excluded from opportunities by rigid work requirements. Flexa is leveling the playing field by making flexibility transparent and verifiable.',
+                team: 'Molly Johnson-Jones brings a powerful founder story: she was fired from investment banking for asking to work from home one day a week due to her autoimmune condition. She has a first-class degree from Oxford and experience in research strategy. Co-founder Maurice O\'Brien experienced genuinely flexible work and couldn\'t find it again when job hunting. Check Warner from Ada Ventures (lead investor) sits on the board.',
+                funding: '£2.6M total. Seed round led by Ada Ventures, joined by Auxxo Female Catalyst Fund and HERmesa angel syndicate. Over 50% of investors are women.',
+                personalNote: 'What I love about Flexa is that the founder\'s personal pain became the product. Molly didn\'t just see a market opportunity—she lived the problem. And the impact data speaks for itself: 67% women, 30% POC, 15% disabled users. They\'re not targeting underserved groups; those are simply the people who need flexibility most. That\'s impact emerging naturally from a well-designed product.',
+                risks: [
+                    { level: 'Medium', text: 'Return-to-office trend: Big companies mandating office return could reduce demand for flexibility platforms. Counter: workers still prioritize flexibility, and RTO mandates increase need for transparent alternatives.' },
+                    { level: 'Medium', text: 'Competition: LinkedIn or Indeed could add flexibility verification. However, Flexa has first-mover advantage and the trust/verification process is hard to replicate quickly.' },
+                    { level: 'Medium', text: 'Scale: Small team (~15 people) and limited funding (£2.6M). Will likely need to raise more to compete with larger players.' }
+                ]
+            },
+            enough: {
+                name: 'ENOUGH',
+                tagline: 'Sustainable Protein at Scale',
+                logo: 'E',
+                logoGradient: 'linear-gradient(135deg, #7CB342, #558B2F)',
+                category: 'sustainability',
+                sdgs: [
+                    { number: 2, name: 'Zero Hunger', class: 'sdg-2' },
+                    { number: 12, name: 'Responsible Consumption & Production', class: 'sdg-12' },
+                    { number: 13, name: 'Climate Action', class: 'sdg-13' }
+                ],
+                overview: 'ENOUGH produces ABUNDA mycoprotein through zero-waste fermentation, creating sustainable protein that uses 97% less water and feed than beef with 95% lower CO2 emissions. A University of Strathclyde spinout now backed by Cargill, they\'re building one of the world\'s largest protein facilities with customers including Unilever, Marks & Spencer, and major meat companies.',
+                impactStory: {
+                    headline: 'What if we could grow protein like we brew beer?',
+                    content: 'We\'ll need to feed 10 billion people by 2050. Traditional animal agriculture can\'t scale—it already uses 70% of agricultural land and produces 14.5% of global emissions. ENOUGH asks: what if we could grow complete protein through fermentation, the same natural process we\'ve used for thousands of years to make beer, bread, and tofu?',
+                    impacts: [
+                        { icon: '💧', stat: '97%', description: 'less water than beef production' },
+                        { icon: '🌱', stat: '97%', description: 'less feed than beef production' },
+                        { icon: '🌍', stat: '95%', description: 'lower CO2 emissions than beef' },
+                        { icon: '🐄', stat: '5M', description: 'fewer cows by 2032 (at target scale)' }
+                    ]
+                },
+                fiveDimensions: {
+                    what: 'Produces sustainable complete protein (all 9 essential amino acids) via zero-waste fermentation. Enables food manufacturers to create meat alternatives that are nutritious, affordable, and scalable.',
+                    who: 'Global impact: everyone who eats protein, plus the planet. Secondary: fish stocks (reduces overfishing), animals not raised for slaughter, future generations facing food security challenges.',
+                    howMuch: 'Target: 1 million tonnes by 2032 = 5 million fewer cows, 1.25 billion fewer chickens, 5 million tons less CO2. Current capacity: 10,000-20,000 tonnes/year. Second production line produces one cow\'s worth of protein every two minutes.',
+                    contribution: 'High. University of Strathclyde IP integrates production with biorefinery operations for cost efficiency. Zero-waste process is differentiated. One of very few companies actually building large-scale mycoprotein capacity.',
+                    risk: 'Medium-high. Production scaling is challenging (CEO acknowledged "hard 12 months"). Capital intensive. Alt-protein market sentiment mixed. However, Cargill investment + offtake agreement de-risks demand significantly.'
+                },
+                financial: {
+                    market: 'Mycoprotein: $630M (2024) → $1.2B (2032). Alternative protein ingredients: $23B (2024) → $50B (2030), 14% CAGR. Massive TAM as protein demand grows.',
+                    model: 'B2B ingredient supplier—smart positioning. Not competing on consumer brand (expensive), but supplying manufacturers. Recurring revenue, cost advantages from Cargill co-location.',
+                    moat: 'University of Strathclyde IP on integrated production. Zero-waste process. Strategic Cargill partnership (feedstock + investment + offtake). First-mover at scale.',
+                    team: 'Jim Laird (CEO): 30 years food industry, ran Quorn brand internationally—exceptional domain expertise. Co-founders Craig Johnston & David Ritchie: chemical engineering, resource efficiency focus.',
+                    exit: '5-7 years. Strategic acquirers: Cargill (already invested), Nestlé, Unilever, ADM, major meat companies. Large meat companies forecasting 100,000-ton individual demand within 10 years.',
+                    returnCategory: 'Market-rate'
+                },
+                scores: { impact: 4, financial: 4 },
+                verdict: 'Strong Conviction',
+                verdictNote: 'Impact IS the product—every tonne sold directly displaces animal agriculture. Revenue and environmental benefit are perfectly aligned.',
+                whyThisMatters: 'The protein transition isn\'t optional—it\'s essential. We can\'t feed 10 billion people with current agricultural methods without destroying the planet. ENOUGH is one of very few companies actually building the infrastructure to produce sustainable protein at the scale needed. This isn\'t about niche vegan products; it\'s about replacing the commodity protein that feeds the world.',
+                team: 'CEO Jim Laird spent 30 years in food, including running frozen meat factories for Unilever and managing the Quorn brand internationally. He knows exactly how hard it is to scale food production—and exactly what it takes. Co-founders Craig Johnston and David Ritchie developed the core IP at University of Strathclyde, focused on resource efficiency and integrated bioprocessing.',
+                funding: '€110M+ total. Series C with backing from World Fund, CPT Capital, Cargill, AXA IM Alts. Cargill also signed offtake agreement, providing demand certainty.',
+                personalNote: 'What I love about ENOUGH is the B2B strategy. They\'re not trying to build the next Beyond Burger brand—they\'re building the ingredient infrastructure that enables everyone else. Jim Laird\'s Quorn experience means he understands exactly where the bodies are buried in scaling mycoprotein. And Cargill\'s investment + offtake agreement is the ultimate validation: a food giant is betting their supply chain on this.',
+                whyIWouldHaveInvested: 'ENOUGH is now Series C with €110M+ raised—but I\'m including it to show what I look for at earlier stages. At Seed, this had: (1) Exceptional founder-market fit—a CEO who ran Quorn internationally, (2) Differentiated IP from a top university, (3) A clear path to massive impact if successful, and (4) The right strategic insight—B2B ingredients, not consumer brand. These are the signals I look for in early-stage impact companies.',
+                risks: [
+                    { level: 'Medium', text: 'Production scaling: CEO acknowledged "hard 12 months" on efficiency. Manufacturing at scale is genuinely difficult. However, they\'re learning and have experienced team.' },
+                    { level: 'Medium', text: 'Market sentiment: Alt-protein sector has seen struggles (Mycorena bankruptcy, Beyond Meat stock). But B2B ingredients are different from consumer brands.' },
+                    { level: 'Low', text: 'Demand risk: Cargill offtake agreement + customers like Unilever and M&S significantly de-risk this. Major meat companies showing "stunning interest."' }
+                ]
             }
         };
 
@@ -2243,6 +2426,12 @@
                     <h3 class="ic-section-title">💜 My Take</h3>
                     <p>${company.personalNote}</p>
                 </div>
+                ${company.whyIWouldHaveInvested ? `
+                <div class="ic-section" style="background: linear-gradient(135deg, rgba(168, 181, 160, 0.15) 0%, rgba(212, 197, 226, 0.15) 100%); padding: 1.5rem; border-radius: 1rem; border-left: 4px solid var(--sage);">
+                    <h3 class="ic-section-title" style="color: var(--sage-dark);">🎯 Why I Would Have Invested Early</h3>
+                    <p>${company.whyIWouldHaveInvested}</p>
+                </div>
+                ` : ''}
                 <div class="ic-section">
                     <h3 class="ic-section-title">Key Risks</h3>
                     ${company.risks.map(risk => `
