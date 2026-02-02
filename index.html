@@ -569,6 +569,11 @@
             color: #DD1367;
         }
 
+        .sdg-badge.sdg-11 {
+            background: rgba(253, 157, 36, 0.2);
+            color: #E68A00;
+        }
+
         .sdg-badge.sdg-12 {
             background: rgba(158, 119, 66, 0.2);
             color: #795548;
@@ -1613,17 +1618,17 @@
             <p class="hero-eyebrow">Alejandra Mones Colom · Early-Stage Impact Investing</p>
             <h1>Investing in companies that <em>nurture</em> our world</h1>
             <p class="hero-description">
-                A curated portfolio of early-stage investment theses focused on health innovation, 
-                sustainability, and animal welfare. I look for companies building a more compassionate economy, 
-                led by founders who care about mission over buzzwords.
+                A curated portfolio of early-stage investment theses focused on impact-driven companies, 
+                especially in health and climate. While these are my core sectors, I love discovering 
+                exceptional founders across any space solving problems that matter.
             </p>
             <div class="hero-stats">
                 <div class="stat">
-                    <div class="stat-number">4</div>
+                    <div class="stat-number">5</div>
                     <div class="stat-label">Companies Analyzed</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">4</div>
+                    <div class="stat-number">5</div>
                     <div class="stat-label">Focus Sectors</div>
                 </div>
                 <div class="stat">
@@ -1646,19 +1651,19 @@
         </div>
         <div class="thesis-grid">
             <div class="thesis-card">
-                <div class="thesis-icon">🌿</div>
+                <div class="thesis-icon">🏥</div>
                 <h3>Health & Wellbeing</h3>
-                <p>Backing founders who reimagine healthcare—from femtech innovations addressing underserved populations to mental wellness platforms making care accessible. Health is wealth, and everyone deserves access.</p>
+                <p>Backing founders who reimagine healthcare—from deep tech innovations treating neurological conditions to platforms making care more accessible. Health is wealth, and everyone deserves access to it.</p>
             </div>
             <div class="thesis-card">
-                <div class="thesis-icon">♻️</div>
-                <h3>Sustainability</h3>
-                <p>Supporting companies building regenerative systems—circular economy solutions, clean energy innovations, and sustainable consumer goods. Profit and planet protection aren't mutually exclusive.</p>
+                <div class="thesis-icon">🌍</div>
+                <h3>Climate & Sustainability</h3>
+                <p>Supporting companies tackling climate change head-on—from adaptation platforms to sustainable food systems and circular economy solutions. The planet can't wait, and neither should we.</p>
             </div>
             <div class="thesis-card">
-                <div class="thesis-icon">🐾</div>
-                <h3>Animal Welfare</h3>
-                <p>Championing businesses that transform our relationship with animals—from alternative proteins to cruelty-free beauty. A kinder world for all species is a better world for us.</p>
+                <div class="thesis-icon">✨</div>
+                <h3>And Beyond...</h3>
+                <p>Great founders solving meaningful problems can come from anywhere. While health and climate are my core focus, I'm always excited to discover exceptional companies across sectors—future of work, fintech, education, and more.</p>
             </div>
         </div>
         
@@ -1684,9 +1689,8 @@
             <label for="category-filter">Filter by focus area:</label>
             <select id="category-filter" onchange="filterCompanies()">
                 <option value="all">All Companies</option>
-                <option value="health">🌿 Health & Wellbeing</option>
-                <option value="sustainability">♻️ Sustainability</option>
-                <option value="animal">🐾 Animal Welfare</option>
+                <option value="health">🏥 Health & Wellbeing</option>
+                <option value="sustainability">🌍 Climate & Sustainability</option>
             </select>
         </div>
 
@@ -1701,14 +1705,14 @@
                             <div class="company-tagline">Planet-Friendly Beer in Seconds</div>
                         </div>
                     </div>
-                    <span class="sector-icon">♻️</span>
+                    <span class="sector-icon">🌍</span>
                 </div>
                 <div class="portfolio-card-body">
                     <p class="portfolio-description">What if we stopped shipping water around the world? Bar.on's molecular beer technology creates any beer style using tap water and flavor cartridges—potentially reducing beer's carbon footprint by 50-70%.</p>
                     <div class="portfolio-tags">
                         <span class="tag sdg-tag">SDG 12</span>
                         <span class="tag sdg-tag">SDG 13</span>
-                        <span class="tag">Sustainability</span>
+                        <span class="tag">Climate</span>
                         <span class="tag">Consumer Hardware</span>
                         <span class="tag">Series A</span>
                     </div>
@@ -1722,32 +1726,32 @@
                 </div>
             </div>
 
-            <!-- NeuroHarmonics -->
-            <div class="portfolio-card" data-category="health" onclick="openModal('neuroharmonics')">
+            <!-- ENOUGH -->
+            <div class="portfolio-card" data-category="sustainability" onclick="openModal('enough')">
                 <div class="portfolio-card-header">
                     <div class="company-info">
-                        <div class="company-logo" style="background: linear-gradient(135deg, #7B68A6, #A890C4);">N</div>
+                        <div class="company-logo" style="background: linear-gradient(135deg, #7CB342, #558B2F);">E</div>
                         <div>
-                            <div class="company-name">NeuroHarmonics</div>
-                            <div class="company-tagline">Non-Invasive Deep Brain Therapy</div>
+                            <div class="company-name">ENOUGH</div>
+                            <div class="company-tagline">Sustainable Protein at Scale</div>
                         </div>
                     </div>
-                    <span class="sector-icon">🌿</span>
+                    <span class="sector-icon">🌍</span>
                 </div>
                 <div class="portfolio-card-body">
-                    <p class="portfolio-description">What if treating brain disorders didn't require brain surgery? NeuroHarmonics uses focused ultrasound to stimulate deep brain regions with 1000x more precision than conventional methods—no incisions needed.</p>
+                    <p class="portfolio-description">Growing protein like we brew beer. ENOUGH's mycoprotein uses 97% less water and feed than beef, backed by Cargill, supplying Unilever and M&S. This is what I look for at Seed stage.</p>
                     <div class="portfolio-tags">
-                        <span class="tag sdg-tag">SDG 3</span>
-                        <span class="tag sdg-tag">SDG 9</span>
-                        <span class="tag">Health & Wellbeing</span>
-                        <span class="tag">Deep Tech</span>
-                        <span class="tag">Seed</span>
+                        <span class="tag sdg-tag">SDG 2</span>
+                        <span class="tag sdg-tag">SDG 12</span>
+                        <span class="tag sdg-tag">SDG 13</span>
+                        <span class="tag">Climate</span>
+                        <span class="tag">Series C</span>
                     </div>
                 </div>
                 <div class="portfolio-card-footer">
                     <span class="view-thesis">View Full Analysis →</span>
                     <div class="impact-score">
-                        <span class="score-badge impact">Impact: 5/5</span>
+                        <span class="score-badge impact">Impact: 4/5</span>
                         <span class="score-badge financial">Financial: 4/5</span>
                     </div>
                 </div>
@@ -1763,7 +1767,7 @@
                             <div class="company-tagline">Verified Flexible Work Platform</div>
                         </div>
                     </div>
-                    <span class="sector-icon">🌿</span>
+                    <span class="sector-icon">✨</span>
                 </div>
                 <div class="portfolio-card-body">
                     <p class="portfolio-description">The founder was fired for asking to work from home with a chronic illness. Now she's built the only platform that verifies companies' flexibility claims—serving 3M+ users, 67% women.</p>
@@ -1784,26 +1788,56 @@
                 </div>
             </div>
 
-            <!-- ENOUGH -->
-            <div class="portfolio-card" data-category="sustainability" onclick="openModal('enough')">
+            <!-- NeuroHarmonics -->
+            <div class="portfolio-card" data-category="health" onclick="openModal('neuroharmonics')">
                 <div class="portfolio-card-header">
                     <div class="company-info">
-                        <div class="company-logo" style="background: linear-gradient(135deg, #7CB342, #558B2F);">E</div>
+                        <div class="company-logo" style="background: linear-gradient(135deg, #7B68A6, #A890C4);">N</div>
                         <div>
-                            <div class="company-name">ENOUGH</div>
-                            <div class="company-tagline">Sustainable Protein at Scale</div>
+                            <div class="company-name">NeuroHarmonics</div>
+                            <div class="company-tagline">Non-Invasive Deep Brain Therapy</div>
                         </div>
                     </div>
-                    <span class="sector-icon">🌿</span>
+                    <span class="sector-icon">🏥</span>
                 </div>
                 <div class="portfolio-card-body">
-                    <p class="portfolio-description">Growing protein like we brew beer. ENOUGH's mycoprotein uses 97% less water and feed than beef, backed by Cargill, supplying Unilever and M&S. This is what I look for at Seed stage.</p>
+                    <p class="portfolio-description">What if treating brain disorders didn't require brain surgery? NeuroHarmonics uses focused ultrasound to stimulate deep brain regions with 1000x more precision than conventional methods—no incisions needed.</p>
                     <div class="portfolio-tags">
-                        <span class="tag sdg-tag">SDG 2</span>
-                        <span class="tag sdg-tag">SDG 12</span>
+                        <span class="tag sdg-tag">SDG 3</span>
+                        <span class="tag sdg-tag">SDG 9</span>
+                        <span class="tag">Health</span>
+                        <span class="tag">Deep Tech</span>
+                        <span class="tag">Seed</span>
+                    </div>
+                </div>
+                <div class="portfolio-card-footer">
+                    <span class="view-thesis">View Full Analysis →</span>
+                    <div class="impact-score">
+                        <span class="score-badge impact">Impact: 5/5</span>
+                        <span class="score-badge financial">Financial: 4/5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SmartResilience -->
+            <div class="portfolio-card" data-category="sustainability" onclick="openModal('smartresilience')">
+                <div class="portfolio-card-header">
+                    <div class="company-info">
+                        <div class="company-logo" style="background: linear-gradient(135deg, #1E88E5, #0D47A1);">S</div>
+                        <div>
+                            <div class="company-name">SmartResilience</div>
+                            <div class="company-tagline">Climate Risk Intelligence Platform</div>
+                        </div>
+                    </div>
+                    <span class="sector-icon">🌍</span>
+                </div>
+                <div class="portfolio-card-body">
+                    <p class="portfolio-description">What if businesses could see climate disasters coming? SmartResilience gives FTSE 100 clients like Sainsbury's and Bupa the intelligence to prepare. Just raised £1.1M.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag sdg-tag">SDG 11</span>
                         <span class="tag sdg-tag">SDG 13</span>
-                        <span class="tag">Alt Protein</span>
-                        <span class="tag">Series C</span>
+                        <span class="tag">Climate</span>
+                        <span class="tag">Seed</span>
                     </div>
                 </div>
                 <div class="portfolio-card-footer">
@@ -1854,28 +1888,28 @@
             <h2>Hi, I'm Alejandra 👋</h2>
             <p>
                 I'm the COO of a climate tech startup, but my path here was anything but linear. 
-                I studied Medical Sciences and Engineering at UCL (yes, both, I couldn't choose), 
+                I studied Medical Sciences and Engineering at UCL (yes, both—I couldn't choose), 
                 then did my MRes in Medical Device Design and Entrepreneurship at Imperial. There, 
                 I helped develop the business plan for a lateral flow test to detect recurrent ovarian cancer. 
                 Turns out, I really liked the "making science actually reach people" part.
             </p>
             <p>
                 That led me to tech transfer at UCL, where I helped engineering technologies find their 
-                way out of labs and into the real world. Then I joined Economad, and now here I am, obsessed 
+                way out of labs and into the real world. Then I joined Economad, and now here I am—obsessed 
                 with companies that have genuine social impact.
             </p>
             <p>
                 My investment banking days taught me one thing: I care way more about founders' stories 
-                than spreadsheets. I always loved reading about psychology, but I realized what I 
-                actually loved is understanding what people are trying to build, their motivations, and figuring out the 
+                than spreadsheets. I almost became a psychologist (plot twist!), but realized what I 
+                actually love is understanding what people are trying to build and figuring out the 
                 strategy to make it happen. In a world drowning in buzzwords, I hunt for founders who 
                 couldn't care less about trends and just want to solve real problems.
             </p>
             <p style="margin-bottom: 0.5rem;"><strong>Things to know about me:</strong></p>
             <p style="margin-top: 0;">
-                Anyone who knows me knows I am passionate about animals, so you will probably find me dog-sitting every dog in my neighbourhood. A fun fact about me is that I used to volunteer taking care of wounded London's wildlife, aka pigeons, so I've grown into being that weird person that likes birds.
-                I love taking on new challenges and finding out how far I can go, hence why I did a marathon without training (I do not recommend it, I learned that enjoying the process is also fun :)). My new challenge is climbing, so even though I am afraid of heights, you will see me climbing London's highest walls.
-                It might look like I'm adventurous, but I do enjoy a lazy Sunday like anyone else.
+                I like to challenge myself, so you'll probably find me climbing walls (literally), 
+                dog-sitting every pup in my neighbourhood, or enrolling in yet another random course—last 
+                month it was acupuncture, this month it's marketing. I contain multitudes. 🐕 🧗‍♀️ 📚
             </p>
             <div class="about-values">
                 <div class="value-item">
@@ -2284,6 +2318,55 @@
                     { level: 'Medium', text: 'Production scaling: CEO acknowledged "hard 12 months" on efficiency. Manufacturing at scale is genuinely difficult. However, they\'re learning and have experienced team.' },
                     { level: 'Medium', text: 'Market sentiment: Alt-protein sector has seen struggles (Mycorena bankruptcy, Beyond Meat stock). But B2B ingredients are different from consumer brands.' },
                     { level: 'Low', text: 'Demand risk: Cargill offtake agreement + customers like Unilever and M&S significantly de-risk this. Major meat companies showing "stunning interest."' }
+                ]
+            },
+            smartresilience: {
+                name: 'SmartResilience',
+                tagline: 'Climate Risk Intelligence Platform',
+                logo: 'S',
+                logoGradient: 'linear-gradient(135deg, #1E88E5, #0D47A1)',
+                category: 'sustainability',
+                sdgs: [
+                    { number: 11, name: 'Sustainable Cities & Communities', class: 'sdg-11' },
+                    { number: 13, name: 'Climate Action', class: 'sdg-13' }
+                ],
+                overview: 'SmartResilience is a climate adaptation SaaS platform helping organizations quantify, monitor, and mitigate physical climate risks. With 24/7 real-time alerts and long-term forecasting, they serve FTSE 100 clients including Sainsbury\'s, Bupa, and The Crown Estate. Recently raised £1.1M and won Climate Risk Award of the Year 2025.',
+                impactStory: {
+                    headline: 'What if businesses could see climate disasters coming—and actually prepare?',
+                    content: 'Climate change isn\'t a future problem—it\'s happening now. Floods, wildfires, and extreme weather are devastating businesses that didn\'t see it coming. SmartResilience gives organizations the intelligence to understand their exposure, get early warnings, and make strategic decisions before it\'s too late.',
+                    impacts: [
+                        { icon: '🌊', stat: '27%', description: 'increase in flood damage to properties by 2050' },
+                        { icon: '🔥', stat: '50%', description: 'increase in global wildfires predicted by 2100' },
+                        { icon: '💰', stat: '€65B', description: 'annual drought losses without climate action' },
+                        { icon: '🏢', stat: 'FTSE 100', description: 'clients including Sainsbury\'s and Bupa' }
+                    ]
+                },
+                fiveDimensions: {
+                    what: 'Enables businesses to quantify climate risk, receive real-time disaster alerts, and make long-term strategic decisions to protect assets and supply chains. Supports regulatory compliance (TCFD, CSRD, ISSB).',
+                    who: 'Large enterprises with physical assets at climate risk—retailers, food manufacturers, healthcare, real estate. Indirect beneficiaries: employees, communities, and supply chains protected when businesses are prepared.',
+                    howMuch: 'Working with blue-chip FTSE 100 clients globally. Each client = potentially thousands of sites protected. Sainsbury\'s testimonial: "prompted us to put several action plans in place, from long-term flood mitigation investment to enabling sites\' response to evolving flood risks."',
+                    contribution: 'High. Differentiated by user-friendly interface, real-time alert system, and asset-level precision. Winning against larger players (IBM, Moody\'s) on accessibility and actionability. Award-winning platform.',
+                    risk: 'Medium. Early stage with execution risk. Competitive market with well-funded incumbents. However, strong validation (awards, blue-chip clients) and regulatory tailwinds (mandatory climate disclosure) mitigate.'
+                },
+                financial: {
+                    market: 'Climate risk analytics: $9.84B (2024) → $50.62B by 2033 (17.5% CAGR). McKinsey calls climate resilience a $1 trillion market opportunity. Regulatory mandates driving adoption.',
+                    model: 'B2B SaaS with enterprise clients. Recurring revenue, high contract values with FTSE 100 companies. Regulatory compliance (TCFD, CSRD) creates stickiness.',
+                    moat: 'Award-winning platform (Risk Management Product of the Year, Climate Risk Award 2025). First-mover in accessible enterprise climate alerts. Cambridge CISL and UK Space Agency networks.',
+                    team: 'Harish Pesala (CEO): UKRI Young Innovator, Enterprise Fellow at Royal Academy of Engineering, MEng Systems Engineering, British Army veteran. 5+ years building SmartResilience.',
+                    exit: '5-7 years. Strategic acquirers: Insurance (Allianz, AXA, Zurich), data providers (Bloomberg, Moody\'s, S&P), enterprise software (Salesforce, SAP), or tech giants (IBM, Microsoft).',
+                    returnCategory: 'Market-rate'
+                },
+                scores: { impact: 4, financial: 4 },
+                verdict: 'Strong Conviction',
+                verdictNote: 'Impact is core—SmartResilience only succeeds if it helps businesses become more resilient to climate change. Every subscription = one more organization prepared.',
+                whyThisMatters: 'Climate adaptation is shifting from "nice to have" to "mandatory." TCFD, CSRD, and insurance pressure are forcing businesses to understand their climate exposure. The companies that prepare will survive; those that don\'t will face mounting losses. SmartResilience is the intelligence layer that enables this preparation.',
+                team: 'CEO Harish Pesala is a UKRI Young Innovator and Enterprise Fellow at the Royal Academy of Engineering. He holds an MEng in Systems Engineering from Loughborough and served as a British Army Engineering Reservist. He\'s been building SmartResilience for over 5 years, demonstrating exceptional persistence in a complex B2B enterprise sale.',
+                funding: '£1.1M recently raised. Early stage with strong validation from blue-chip clients and award recognition. Part of Cambridge Institute for Sustainability Leadership (CISL) Canopy program and UK Space Agency Accelerator.',
+                personalNote: 'What I love about SmartResilience is that they\'re winning enterprise deals against IBM and Moody\'s—with a fraction of the resources. That\'s product-market fit. Sainsbury\'s isn\'t experimenting; they\'re operationalizing this. And the founder has Royal Academy credentials plus 5 years of persistence. This is the kind of gritty, validated early-stage company I look for.',
+                risks: [
+                    { level: 'Medium', text: 'Competition: Well-funded incumbents (IBM, Moody\'s, Bloomberg) are in this space. However, SmartResilience is winning on accessibility and actionability—evidenced by FTSE 100 clients.' },
+                    { level: 'Medium', text: 'Enterprise sales: Long sales cycles can be brutal for small teams. Mitigant: They\'ve already closed blue-chip clients, proving the GTM works.' },
+                    { level: 'Low', text: 'Market timing: Regulatory tailwinds (TCFD mandatory, CSRD expanding) are driving adoption. Climate disclosure is becoming non-optional.' }
                 ]
             }
         };
