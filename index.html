@@ -1847,6 +1847,37 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Biomarx -->
+            <div class="portfolio-card" data-category="health" onclick="openModal('biomarx')">
+                <div class="portfolio-card-header">
+                    <div class="company-info">
+                        <div class="company-logo" style="background: linear-gradient(135deg, #2E7D32, #66BB6A);">B</div>
+                        <div>
+                            <div class="company-name">Biomarx</div>
+                            <div class="company-tagline">Making Liquid Biopsy Accessible</div>
+                        </div>
+                    </div>
+                    <span class="sector-icon">🏥</span>
+                </div>
+                <div class="portfolio-card-body">
+                    <p class="portfolio-description">Liquid biopsy is a game-changer for early cancer detection—but 80% of lung cancer patients never access it. Biomarx is building an automated platform designed for real NHS workflows, not just specialist research centres.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag sdg-tag">SDG 3</span>
+                        <span class="tag sdg-tag">SDG 10</span>
+                        <span class="tag">Health</span>
+                        <span class="tag">Deep Tech</span>
+                        <span class="tag">Pre-Seed</span>
+                    </div>
+                </div>
+                <div class="portfolio-card-footer">
+                    <span class="view-thesis">View Full Analysis →</span>
+                    <div class="impact-score">
+                        <span class="score-badge impact">Impact: 4/5</span>
+                        <span class="score-badge financial">Financial: 3/5</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2355,6 +2386,65 @@
                     { level: 'Medium', text: 'Competition: Well-funded incumbents (IBM, Moody\'s, Bloomberg) are in this space. However, SmartResilience is winning on accessibility and actionability—evidenced by FTSE 100 clients.' },
                     { level: 'Medium', text: 'Enterprise sales: Long sales cycles can be brutal for small teams. Mitigant: They\'ve already closed blue-chip clients, proving the GTM works.' },
                     { level: 'Low', text: 'Market timing: Regulatory tailwinds (TCFD mandatory, CSRD expanding) are driving adoption. Climate disclosure is becoming non-optional.' }
+                ]
+            },
+            biomarx: {
+                name: 'Biomarx',
+                tagline: 'Making Liquid Biopsy Accessible',
+                logo: 'B',
+                logoGradient: 'linear-gradient(135deg, #2E7D32, #66BB6A)',
+                category: 'health',
+                sdgs: [
+                    { number: 3, name: 'Good Health & Well-being', class: 'sdg-3' },
+                    { number: 10, name: 'Reduced Inequalities', class: 'sdg-10' }
+                ],
+                overview: 'Biomarx is developing an automated, plug-and-play diagnostics platform that makes liquid biopsy testing rapid and accessible. Their first test kit targets non-small cell lung cancer (NSCLC) using circulating tumour DNA (ctDNA) for earlier detection and treatment stratification. The goal: democratise genomic testing by removing the cost, complexity, and infrastructure barriers that keep brilliant science from reaching patients.',
+                impactStory: {
+                    headline: 'The science exists. The access doesn\'t.',
+                    content: 'Liquid biopsy is a game-changer for early cancer detection—a simple blood test instead of invasive tissue biopsies. The problem? High costs, technical complexity, and infrastructure requirements mean most patients never access it. 80% of lung cancer patients are diagnosed at advanced stages when outcomes are far worse. Biomarx is building a platform designed for real-world NHS workflows, not just specialist research centres.',
+                    impacts: [
+                        { icon: '🫁', stat: '48,000', description: 'lung cancer diagnoses per year in the UK' },
+                        { icon: '⏰', stat: '80%', description: 'diagnosed at advanced stages (too late)' },
+                        { icon: '🧬', stat: 'ctDNA', description: 'non-invasive detection from blood sample' },
+                        { icon: '🏥', stat: 'NHS-ready', description: 'designed for clinical workflows, not just labs' }
+                    ]
+                },
+                fiveDimensions: {
+                    what: 'Automated liquid biopsy platform for cancer detection. First focus: non-small cell lung cancer (NSCLC). Uses circulating tumour DNA (ctDNA) for earlier detection and personalised treatment selection. Designed to be rapid, affordable, and accessible.',
+                    who: 'Cancer patients who currently can\'t access genomic testing—either because it\'s too expensive, too slow, or unavailable at their local hospital. NSCLC affects 48,000 people per year in the UK alone, with 35,000 deaths.',
+                    howMuch: 'Transformative if it works. Earlier detection = better outcomes. Personalised treatment = better response rates. The platform approach means impact scales across cancer types, not just lung cancer.',
+                    contribution: 'High. Many liquid biopsy technologies exist, but most are designed for specialist centres. Biomarx\'s contribution is making it work in real-world clinical settings—the gap where most diagnostics innovation fails.',
+                    risk: 'High. Pre-seed stage with proof of concept only. Needs clinical validation, ISO 13485 accreditation, and regulatory approval. Medical device development is capital-intensive and timeline-unpredictable.'
+                },
+                financial: {
+                    market: 'Liquid biopsy: $11.85B (2024) → $22.88B (2030), 11.5% CAGR. Lung cancer diagnostics: $2.98B (2024) → $5.4B (2034). NSCLC represents 81% of all lung cancers.',
+                    model: 'Diagnostic platform + test kits. B2B sales to hospitals and diagnostic labs. Potential for recurring revenue from consumables. NHS adoption critical for UK market.',
+                    moat: 'Early stage—moat still being built. Key differentiator is workflow integration: designed for clinical adoption, not research settings. University of Strathclyde partnership provides R&D capability and credibility.',
+                    team: 'Sean Macfarlane (Founder). Working closely with University of Strathclyde (Entrepreneurial University of the Year 2023). Strong academic foundations in translating in-vitro diagnostics to market.',
+                    exit: '7-10 year timeline (medical device pathway). Acquirers: Roche, Illumina, Guardant Health, Exact Sciences, or diagnostic lab networks. Could also be acquired by pharma companies for companion diagnostics.',
+                    returnCategory: 'Market-rate'
+                },
+                scores: { impact: 4, financial: 3 },
+                verdict: 'Watching Closely',
+                verdictNote: 'Compelling thesis in a massive market. Very early stage—needs clinical validation. If the platform works in real NHS workflows, that\'s the differentiation.',
+                whyThisMatters: 'Cancer management is undergoing a watershed moment: from one-size-fits-all chemotherapy to treatments targeting specific mutations. This shift requires genomic testing at scale. But brilliant science means nothing if patients can\'t access it. The liquid biopsy technology exists—the bottleneck is cost, complexity, and speed. Biomarx is tackling the access problem directly.',
+                team: 'Sean Macfarlane founded Biomarx with a clear mission: democratising cancer diagnostics. The company is based in Glasgow working closely with the University of Strathclyde, which has a strong track record in translating in-vitro diagnostic research into market-ready products. The InterTrade Ireland Seedcorn win in the deep tech category provides early validation.',
+                funding: '£700,000 pre-seed (January 2026). Led by SFC Capital and Clarendon Fund Managers. Additional backing from University of Strathclyde, TechStart Ventures, and angel investors. Previously won £50,000 in InterTrade Ireland\'s Seedcorn competition.',
+                personalNote: 'I\'ve worked in the diagnostics landscape, and it\'s frustrating to see that access remains the main limitation. Brilliant science exists, but it doesn\'t reach patients who need it. Biomarx isn\'t just developing liquid biopsies—they\'re tackling the real barriers: cost, complexity, and speed. Their approach is building an automated plug-and-play platform that makes high-quality liquid biopsy testing rapid and accessible, not just for specialist centres but for wider clinical adoption. This is where most diagnostics innovation fails—it\'s designed for the lab, not for real-world NHS workflows. They\'re starting with NSCLC, but I see this as a smart beachhead rather than a limitation. Lung cancer has massive unmet need, and if the platform works, it\'s inherently scalable to other cancer types. What I want to learn: how they bridge the gap between genomic innovation and real-world clinical use. That\'s where it normally falls apart.',
+                risks: [
+                    { level: 'High', text: 'Very early stage: Pre-seed with proof of concept only. Needs to build MVP, complete clinical studies, and achieve ISO 13485 accreditation. Long road ahead.' },
+                    { level: 'High', text: 'Clinical validation: Liquid biopsy sensitivity and specificity need to be proven in clinical settings, not just lab conditions. False negatives are particularly problematic.' },
+                    { level: 'Medium', text: 'Capital intensity: Medical device development requires significant capital. £700k is a start, but they\'ll need substantially more for clinical trials and regulatory approval.' },
+                    { level: 'Medium', text: 'NHS adoption: Even with a working product, NHS procurement and adoption can be slow and politically complex. Reimbursement pathways are critical.' },
+                    { level: 'Medium', text: 'Competition: Large players (Roche, Illumina, Guardant) have liquid biopsy products. Differentiation through accessibility and workflow integration needs to be proven.' }
+                ],
+                thingsToWatch: [
+                    'MVP development: Can they move from proof of concept to minimum viable product?',
+                    'ISO 13485 accreditation: Key milestone for medical device credibility',
+                    'Clinical study results: What sensitivity/specificity do they achieve in real-world conditions?',
+                    'NHS pilot partnerships: Early adopter hospitals would validate the workflow integration thesis',
+                    'Follow-on funding: Series A size and investor quality will indicate commercial potential',
+                    'Expansion beyond NSCLC: Platform scalability to other cancer types'
                 ]
             }
         };
