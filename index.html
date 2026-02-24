@@ -1848,6 +1848,37 @@
                 </div>
             </div>
 
+            <!-- Isembard -->
+            <div class="portfolio-card" data-category="sustainability" onclick="openModal('isembard')">
+                <div class="portfolio-card-header">
+                    <div class="company-info">
+                        <div class="company-logo" style="background: linear-gradient(135deg, #1565C0, #42A5F5);">I</div>
+                        <div>
+                            <div class="company-name">Isembard</div>
+                            <div class="company-tagline">Reshoring Precision Manufacturing</div>
+                        </div>
+                    </div>
+                    <span class="sector-icon">🏭</span>
+                </div>
+                <div class="portfolio-card-body">
+                    <p class="portfolio-description">UK manufacturing dropped from 18% to 9% of GDP. Isembard is the operating system rebuilding it—MasonOS replaces paper systems and legacy ERP, cutting quote times from weeks to minutes.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag sdg-tag">SDG 9</span>
+                        <span class="tag sdg-tag">SDG 8</span>
+                        <span class="tag sdg-tag">SDG 12</span>
+                        <span class="tag">Manufacturing</span>
+                        <span class="tag">Seed</span>
+                    </div>
+                </div>
+                <div class="portfolio-card-footer">
+                    <span class="view-thesis">View Full Analysis →</span>
+                    <div class="impact-score">
+                        <span class="score-badge impact">Impact: 4/5</span>
+                        <span class="score-badge financial">Financial: 4/5</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Biomarx -->
             <div class="portfolio-card" data-category="health" onclick="openModal('biomarx')">
                 <div class="portfolio-card-header">
@@ -2386,6 +2417,56 @@
                     { level: 'Medium', text: 'Competition: Well-funded incumbents (IBM, Moody\'s, Bloomberg) are in this space. However, SmartResilience is winning on accessibility and actionability—evidenced by FTSE 100 clients.' },
                     { level: 'Medium', text: 'Enterprise sales: Long sales cycles can be brutal for small teams. Mitigant: They\'ve already closed blue-chip clients, proving the GTM works.' },
                     { level: 'Low', text: 'Market timing: Regulatory tailwinds (TCFD mandatory, CSRD expanding) are driving adoption. Climate disclosure is becoming non-optional.' }
+                ]
+            },
+            isembard: {
+                name: 'Isembard',
+                tagline: 'Reshoring Precision Manufacturing',
+                logo: 'I',
+                logoGradient: 'linear-gradient(135deg, #1565C0, #42A5F5)',
+                category: 'sustainability',
+                sdgs: [
+                    { number: 9, name: 'Industry, Innovation & Infrastructure', class: 'sdg-9' },
+                    { number: 8, name: 'Decent Work & Economic Growth', class: 'sdg-8' },
+                    { number: 12, name: 'Responsible Consumption & Production', class: 'sdg-12' }
+                ],
+                overview: 'Isembard is reshoring precision manufacturing for defence, aerospace, and energy through a distributed factory network powered by MasonOS—their proprietary software that replaces the paper-based systems and 30-year-old ERP software most machine shops still run on. MasonOS handles everything from AI-powered quoting (minutes instead of weeks) to scheduling, supply chain, quality control, and robotics integration. The franchise model lets existing shop owners modernise without selling, or entrepreneurs launch new sites with a ready-made order pipeline.',
+                impactStory: {
+                    headline: 'We hollowed out our industrial base. Now we need it back.',
+                    content: 'UK manufacturing dropped from 18% of GDP in 1990 to 9% today. 40% of precision machine shop owners are retiring in the next 5 years. Most shops still run on paper or software from the 1970s—skilled machinists spend 50% of their time on admin, not making parts. Isembard is building the operating system that lets these shops survive and compete.',
+                    impacts: [
+                        { icon: '🏭', stat: '50%', description: 'of machinists\' time currently spent on admin, not machining' },
+                        { icon: '📉', stat: '6-8 wks', description: 'typical quote time → minutes with MasonOS' },
+                        { icon: '⚡', stat: '40-60%', description: 'throughput increase from MasonOS' },
+                        { icon: '🌍', stat: '4→25', description: 'factories now → planned before Europe expansion' }
+                    ]
+                },
+                fiveDimensions: {
+                    what: 'MasonOS is an AI-native operating system for precision manufacturing. It replaces paper systems and legacy ERP with integrated software for: (1) AI-powered quoting from CAD files, (2) automated scheduling and production optimization, (3) supply chain management, (4) real-time quality control via sensor data, (5) robotics integration. Every part made across the network feeds data back, making the system smarter.',
+                    who: 'Two customers: (1) Defence, aerospace, energy companies needing domestic, resilient supply chains with faster turnaround. (2) Machine shop owners who get a path to modernise instead of closing—franchisees receive order pipeline, financing partnerships, MasonOS, and accelerated accreditation.',
+                    howMuch: 'MasonOS claims 40-60% throughput increase and 30% cost reduction by cutting admin from 50% to 10% of machinist time. If the model works at scale, it rebuilds industrial capacity without requiring Hadrian-level capital ($500M+ raised) or new mega-factories.',
+                    contribution: 'High. MasonOS is proprietary and purpose-built—not a generic ERP. The franchise network creates a two-sided marketplace with data network effects: every part made trains the AI quoting and scheduling models. No one else is combining software, franchise rollout, and domestic supply chain aggregation in this way.',
+                    risk: 'Medium. Early stage with execution risk across two complex sides: enterprise defence/aerospace sales and franchise network development. However, the problem is validated (shop owners retiring, defence reshoring mandates), the software wedge is defensible, and the franchise model de-risks capital intensity.'
+                },
+                financial: {
+                    market: 'UK precision manufacturing: £15B market. Defence and aerospace domestic procurement: £10B+. Government reshoring mandates (DSIS, Integrated Review) creating structural demand. Industrial software globally: $400B+ market.',
+                    model: 'Three revenue streams: (1) MasonOS SaaS licensing per franchise site, (2) franchise fees and revenue share, (3) potential marketplace take-rate on orders flowing through the network. SaaS creates recurring revenue; franchise creates capital-light expansion.',
+                    moat: 'Data network effects (every part made improves AI models), franchise switching costs (operators trained on MasonOS), and aggregated order pipeline (harder to replicate than software alone). Defence accreditation status creates regulatory moat.',
+                    team: 'Founded by engineers with manufacturing and software backgrounds. Combining domain expertise with software capability—the rare combination required to build both MasonOS and the franchise model.',
+                    exit: '5-7 years. Strategic acquirers: Defence primes (BAE, Rolls-Royce, Thales) seeking supply chain control; industrial software platforms (PTC, Siemens, Hexagon); or PE consolidation of manufacturing networks.',
+                    returnCategory: 'Market-rate'
+                },
+                scores: { impact: 4, financial: 4 },
+                verdict: 'Strong Conviction',
+                verdictNote: 'Isembard only succeeds if UK manufacturing capacity is rebuilt—the impact and the business model are inseparable. Every franchise site = one more machine shop surviving, one more set of skilled jobs retained.',
+                whyThisMatters: 'The UK has let its industrial base hollow out for 30 years. Defence, aerospace, and energy are now discovering that domestic supply chains don\'t exist when you need them. Isembard is building the infrastructure—software and franchise network—to reverse this. The franchise model is the key insight: it scales without requiring Hadrian-level capital or building factories from scratch.',
+                team: 'Founders combine manufacturing domain expertise with software capability. The ability to sell simultaneously to defence primes and machine shop owners is a non-trivial GTM challenge that requires credibility on both sides.',
+                funding: 'Early stage. Building out franchise network from current 4 sites toward 25 pre-Europe expansion.',
+                personalNote: 'What I find compelling about Isembard is the franchise insight. Most "manufacturing tech" companies try to build new factories (capital-intensive) or sell software to shops (hard GTM). Isembard found a third path: modernise existing shops with software and connect them to a demand pipeline. The 40% of retiring shop owners who want to sell are actually an opportunity—Isembard turns a succession crisis into an expansion lever.',
+                risks: [
+                    { level: 'Medium', text: 'Two-sided marketplace complexity: Isembard must simultaneously build defence/aerospace customer relationships and recruit/onboard franchise operators. Both are long sales cycles.' },
+                    { level: 'Medium', text: 'MasonOS adoption: Machine shop owners are notoriously conservative about software. The franchise model mitigates this (they have to use it), but operator buy-in is critical to productivity gains.' },
+                    { level: 'Low', text: 'Market timing: Defence reshoring mandates (UK DSIS, NATO commitments) are creating structural tailwinds. Government is actively pushing domestic supply chain development.' }
                 ]
             },
             biomarx: {
