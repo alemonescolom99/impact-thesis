@@ -1879,6 +1879,38 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Ovo Labs -->
+            <div class="portfolio-card" data-category="health" onclick="openModal('ovolabs')">
+                <div class="portfolio-card-header">
+                    <div class="company-info">
+                        <div class="company-logo" style="background: linear-gradient(135deg, #880E4F, #E91E63);">O</div>
+                        <div>
+                            <div class="company-name">Ovo Labs</div>
+                            <div class="company-tagline">Therapeutics that boost egg quality to make every IVF attempt count</div>
+                        </div>
+                    </div>
+                    <span class="sector-icon">🔬</span>
+                </div>
+                <div class="portfolio-card-body">
+                    <p class="portfolio-description">1 in 6 couples struggle with infertility, and IVF fails more often than it succeeds. Ovo Labs is developing the first-ever therapeutic to address the root cause — egg quality decline — built on 20 years of foundational research from the Max Planck Institute.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag sdg-tag">SDG 3</span>
+                        <span class="tag sdg-tag">SDG 5</span>
+                        <span class="tag sdg-tag">SDG 10</span>
+                        <span class="tag">Health</span>
+                        <span class="tag">FemTech</span>
+                        <span class="tag">Biotech</span>
+                    </div>
+                </div>
+                <div class="portfolio-card-footer">
+                    <span class="view-thesis">View Full Analysis →</span>
+                    <div class="impact-score">
+                        <span class="score-badge impact">Impact: 5/5</span>
+                        <span class="score-badge financial">Financial: 4/5</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2445,6 +2477,66 @@
                     'NHS pilot partnerships: Early adopter hospitals would validate the workflow integration thesis',
                     'Follow-on funding: Series A size and investor quality will indicate commercial potential',
                     'Expansion beyond NSCLC: Platform scalability to other cancer types'
+                ]
+            },
+            ovolabs: {
+                name: 'Ovo Labs',
+                tagline: 'Therapeutics that boost egg quality to make every IVF attempt count',
+                logo: 'O',
+                logoGradient: 'linear-gradient(135deg, #880E4F, #E91E63)',
+                category: 'health',
+                sdgs: [
+                    { number: 3, name: 'Good Health & Well-being', class: 'sdg-3' },
+                    { number: 5, name: 'Gender Equality', class: 'sdg-5' },
+                    { number: 10, name: 'Reduced Inequalities', class: 'sdg-10' }
+                ],
+                overview: 'Ovo Labs is developing three therapeutic compounds (EmbryoProtect 1, 2, and 3) that reduce genetic errors in eggs during the maturation process. Built on two decades of foundational research from Prof. Melina Schuh\'s lab at the Max Planck Institute, the technology targets the specific molecular mechanisms that cause chromosome missegregation. The therapeutics integrate into existing IVF protocols without additional burden to patients. In preclinical work, Ovo Labs has demonstrated improved egg quality in aging mice and successfully treated isolated human eggs ex vivo — reducing aneuploidy rates and increasing the number of viable eggs available for fertilisation.',
+                impactStory: {
+                    headline: 'IVF has transformed fertility care. The root cause has never been addressed.',
+                    content: '1 in 6 couples worldwide struggle with infertility, and IVF — the gold standard treatment — fails more often than it succeeds. For women under 35, 7 in 10 cycles fail. For women aged 40-42, it\'s 9 in 10. The culprit is egg quality: as women age, chromosome segregation errors accumulate, producing eggs with genetic abnormalities that can\'t develop into healthy embryos. By 40, over 70% of a woman\'s eggs carry these defects. Despite decades of IVF innovation, no therapeutic has ever addressed the root cause — until now.',
+                    impacts: [
+                        { icon: '🌍', stat: '1 in 6', description: 'couples worldwide struggle with infertility' },
+                        { icon: '❌', stat: '70–90%', description: 'IVF cycles fail, especially for women over 35' },
+                        { icon: '🧬', stat: '70%+', description: 'of eggs carry chromosome defects by age 40' },
+                        { icon: '💊', stat: 'First-ever', description: 'therapeutic to target the root cause of egg quality decline' }
+                    ]
+                },
+                fiveDimensions: {
+                    what: 'Therapeutic intervention to improve egg quality and IVF success rates',
+                    who: 'Women experiencing age-related fertility decline (35–45), couples undergoing IVF',
+                    howMuch: 'Potential to increase IVF success by 20–30% for women under 35, and 3–5x for women 35–45',
+                    contribution: 'First therapeutic to address root cause of egg quality decline; current IVF is purely mechanical',
+                    risk: 'Regulatory pathway for reproductive therapeutics is long; clinical translation from ex vivo to in vivo unproven'
+                },
+                financial: {
+                    market: 'Global IVF market valued at ~$25B and growing 8–10% annually. Millions of cycles performed each year with majority failing. Demographic trends (delayed childbearing, declining birth rates) create policy tailwinds.',
+                    model: 'Therapeutic integrated into IVF clinic protocols. Strategic investor Antonio Pellicer (founder of world\'s largest IVF clinic chain) provides distribution pathway.',
+                    moat: 'First-mover in egg quality therapeutics. Strong IP via exclusive Max Planck license. 20+ years of foundational research creates deep scientific moat. Competitors (Gameto, Celmatix) taking different approaches.',
+                    team: 'Prof. Melina Schuh (Co-Founder, Scientific Advisor) — Director at Max Planck Institute, EMBO Gold Medal and Leibniz Prize winner. Dr. Agata Zielinska (Co-Founder, Co-CEO) — Physician-scientist, Cambridge triple degree, Otto Hahn Medal recipient. Dr. Oleksandr Yagensky (Co-Founder, Co-CEO) — PhD molecular biology, former Bain & Company Senior Manager, 45+ healthcare due diligence projects.',
+                    exit: 'Strategic acquisition by large pharma (Ferring, Merck KGaA fertility division) or major IVF clinic groups. Therapeutic approval creates standalone value and partnership optionality.',
+                    returnCategory: 'High Growth'
+                },
+                scores: { impact: 5, financial: 4 },
+                verdict: 'Strong Conviction',
+                verdictNote: 'The science is exceptional — this team literally wrote the textbook on why egg quality declines with age. The investor mix (LocalGlobe + Creator Fund + world\'s largest IVF clinic chain) signals both venture conviction and a clear clinical distribution pathway.',
+                whyThisMatters: 'Ovo Labs sits at the intersection of health and demographic resilience. The science is exceptional — this team literally wrote the textbook on why egg quality declines with age, publishing landmark papers in Nature, Science, and Cell over two decades. Now they\'re translating that knowledge into therapeutics. The investor mix signals strong conviction: LocalGlobe and Creator Fund for venture expertise, plus Antonio Pellicer (world\'s largest IVF clinic chain) for clinical pathway and distribution. If successful, this extends reproductive autonomy for millions of women and addresses a growing demographic crisis in developed economies.',
+                team: 'Prof. Melina Schuh (Co-Founder, Scientific Advisor) — Director at Max Planck Institute, 20+ years in fertility research, EMBO Gold Medal and Leibniz Prize winner, pioneered visualisation of human egg division. Dr. Agata Zielinska (Co-Founder, Co-CEO) — Physician-scientist, Cambridge triple degree, publications in Science and Nature Communications, Otto Hahn Medal recipient. Dr. Oleksandr Yagensky (Co-Founder, Co-CEO) — PhD in molecular biology, former Bain & Company Senior Manager (one of fastest-promoted scientific hires in DACH history), 45+ healthcare due diligence projects.',
+                funding: '£4M seed round (April 2025) led by LocalGlobe and Creator Fund, with participation from Blue Wire Capital, Ahren Innovation Capital, and Antonio Pellicer.',
+                personalNote: 'This one genuinely excites me. IVF has been around for decades, and the entire field has focused on the mechanical and procedural side — better stimulation protocols, better lab conditions, better embryo selection. But no one has ever tried to fix the eggs themselves. Ovo Labs is doing exactly that. The science is built on two decades of meticulous research from one of the world\'s leading fertility scientists, and the team brings together scientific depth, clinical credibility, and commercial experience. The fact that the world\'s largest IVF clinic chain is backing them as a strategic investor isn\'t just validation — it\'s a distribution pathway. This has the potential to genuinely transform IVF outcomes for millions of women, extending reproductive autonomy and addressing a demographic crisis that governments are only beginning to grapple with.',
+                risks: [
+                    { level: 'High', text: 'Regulatory pathway: Reproductive therapeutics face a long and complex regulatory journey. The FDA and EMA have no established precedent for this type of intervention, creating significant timeline uncertainty.' },
+                    { level: 'High', text: 'Clinical translation: Preclinical results in mice and ex vivo human eggs are promising, but the leap to in vivo human trials is significant. Safety data for reproductive applications requires exceptional rigour.' },
+                    { level: 'Medium', text: 'IVF clinic adoption: Even with proven efficacy, integrating a new therapeutic into existing clinic protocols requires behavioural change, regulatory buy-in, and reimbursement pathways.' },
+                    { level: 'Medium', text: 'Competition: While first-mover advantage is strong, well-funded competitors (Gameto, Celmatix) are pursuing adjacent approaches. Continued IP protection is critical.' },
+                    { level: 'Low', text: 'Market timing: Demographic trends and policy tailwinds are favourable, but societal acceptance of reproductive therapeutics can be slow and subject to ethical scrutiny.' }
+                ],
+                thingsToWatch: [
+                    'IND/CTA filing: First regulatory submission will signal the clinical development timeline',
+                    'Phase I safety data: Critical milestone for investor confidence and partnership discussions',
+                    'In vivo human trial results: The leap from ex vivo to in vivo is the key scientific inflection point',
+                    'IVF clinic partnerships: Early adopters beyond Pellicer\'s network would validate the commercial pathway',
+                    'Series A fundraise: Size and investor quality will indicate commercial momentum',
+                    'Competitor developments: Watching Gameto and Celmatix to understand ongoing differentiation'
                 ]
             }
         };
