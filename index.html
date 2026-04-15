@@ -2750,207 +2750,232 @@
         function downloadMemo(companyId) {
             const company = companies[companyId];
             const doc = new jsPDF();
-            
+
             // Colors
             const sage = [122, 139, 114];
             const charcoal = [61, 61, 61];
             const charcoalLight = [90, 90, 90];
             const cream = [253, 248, 243];
-            
+            const warmBrown = [196, 164, 132];
+
             let y = 20;
             const marginLeft = 20;
             const marginRight = 20;
             const pageWidth = doc.internal.pageSize.getWidth();
             const contentWidth = pageWidth - marginLeft - marginRight;
-            
-            // Header bar
+
+            // Helper: check remaining space, add page if needed
+            function checkPage(needed) {
+                if (y + (needed || 20) > 275) { doc.addPage(); y = 20; }
+            }
+
+            // Helper: draw section header with sage accent bar
+            function sectionHeader(title, accentColor) {
+                accentColor = accentColor || sage;
+                checkPage(20);
+                doc.setFillColor(...accentColor);
+                doc.rect(marginLeft, y - 4, 3, 13, 'F');
+                doc.setTextColor(...charcoal);
+                doc.setFontSize(12);
+                doc.setFont('helvetica', 'bold');
+                doc.text(title, marginLeft + 8, y + 5);
+                y += 16;
+            }
+
+            // Helper: body text with word wrap and page breaks
+            function bodyText(text, indent) {
+                indent = indent || 0;
+                doc.setTextColor(...charcoalLight);
+                doc.setFontSize(10);
+                doc.setFont('helvetica', 'normal');
+                const lines = doc.splitTextToSize(String(text), contentWidth - indent);
+                lines.forEach(line => {
+                    checkPage(6);
+                    doc.text(line, marginLeft + indent, y);
+                    y += 5.5;
+                });
+            }
+
+            // Helper: section header + body text
+            function addSection(title, text, accentColor) {
+                sectionHeader(title, accentColor);
+                bodyText(text);
+                y += 6;
+            }
+
+            // Helper: bold label line, then indented body text below
+            function labeledField(label, value) {
+                checkPage(16);
+                doc.setTextColor(...charcoal);
+                doc.setFontSize(10);
+                doc.setFont('helvetica', 'bold');
+                doc.text(label + ':', marginLeft + 3, y);
+                y += 5.5;
+                bodyText(value, 6);
+                y += 2;
+            }
+
+            // ── Header bar ───────────────────────────────────────────────
             doc.setFillColor(...sage);
-            doc.rect(0, 0, pageWidth, 35, 'F');
-            
-            // Company name in header
+            doc.rect(0, 0, pageWidth, 38, 'F');
+
             doc.setTextColor(255, 255, 255);
             doc.setFontSize(22);
             doc.setFont('helvetica', 'bold');
             doc.text(company.name, marginLeft, 18);
-            
-            // Tagline
+
             doc.setFontSize(11);
             doc.setFont('helvetica', 'normal');
             doc.text(company.tagline, marginLeft, 28);
-            
-            y = 50;
-            
-            // Document title
+
+            doc.setFontSize(9);
+            doc.text('Verdict: ' + company.verdict, pageWidth - marginRight, 18, { align: 'right' });
+            doc.text('Impact: ' + company.scores.impact + '/5  |  Financial: ' + company.scores.financial + '/5', pageWidth - marginRight, 26, { align: 'right' });
+
+            y = 52;
+
+            // ── Document title ──────────────────────────────────────────
             doc.setTextColor(...charcoal);
             doc.setFontSize(14);
             doc.setFont('helvetica', 'bold');
             doc.text('INVESTMENT COMMITTEE MEMO', marginLeft, y);
-            
-            // Date
+
             doc.setFontSize(10);
             doc.setFont('helvetica', 'normal');
             doc.setTextColor(...charcoalLight);
             const date = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-            doc.text(`Prepared: ${date}`, marginLeft, y + 7);
-            
-            y += 20;
-            
-            // Helper function for sections
-            function addSection(title, content, isList = false) {
-                if (y > 250) {
-                    doc.addPage();
-                    y = 20;
-                }
-                
-                doc.setFillColor(...sage);
-                doc.rect(marginLeft, y - 4, 3, 12, 'F');
-                
-                doc.setTextColor(...charcoal);
-                doc.setFontSize(12);
-                doc.setFont('helvetica', 'bold');
-                doc.text(title, marginLeft + 8, y + 4);
-                y += 14;
-                
-                doc.setTextColor(...charcoalLight);
-                doc.setFontSize(10);
-                doc.setFont('helvetica', 'normal');
-                
-                if (isList && Array.isArray(content)) {
-                    content.forEach(item => {
-                        if (y > 270) {
-                            doc.addPage();
-                            y = 20;
-                        }
-                        const lines = doc.splitTextToSize(`• ${item}`, contentWidth - 5);
-                        doc.text(lines, marginLeft + 5, y);
-                        y += lines.length * 5 + 3;
-                    });
-                } else {
-                    const lines = doc.splitTextToSize(content, contentWidth);
-                    lines.forEach(line => {
-                        if (y > 275) {
-                            doc.addPage();
-                            y = 20;
-                        }
-                        doc.text(line, marginLeft, y);
-                        y += 5;
-                    });
-                }
-                
-                y += 8;
-            }
-            
+            doc.text('Prepared: ' + date, marginLeft, y + 8);
+
+            y += 22;
+
+            // ── 1. The Impact Question ──────────────────────────────────
             addSection('The Impact Question', company.impactStory.headline);
+
+            // ── 2. Why This Matters ─────────────────────────────────────
             addSection('Why This Matters', company.impactStory.content);
-            
-            if (y > 220) {
-                doc.addPage();
-                y = 20;
-            }
+
+            // ── 3. Impact metrics box (2x2 grid) ────────────────────────
+            checkPage(54);
+            const boxH = 44;
             doc.setFillColor(...cream);
-            doc.roundedRect(marginLeft, y, contentWidth, 35, 3, 3, 'F');
-            
+            doc.roundedRect(marginLeft, y, contentWidth, boxH, 3, 3, 'F');
+
             const metricWidth = contentWidth / 2;
             company.impactStory.impacts.slice(0, 4).forEach((impact, i) => {
-                const row = Math.floor(i / 2);
                 const col = i % 2;
-                const x = marginLeft + (metricWidth * col) + (metricWidth / 2);
-                const yPos = y + 8 + (row * 15);
+                const row = Math.floor(i / 2);
+                const cx = marginLeft + metricWidth * col + metricWidth / 2;
+                const yBase = y + 11 + row * 19;
+
                 doc.setTextColor(...sage);
-                doc.setFontSize(12);
+                doc.setFontSize(13);
                 doc.setFont('helvetica', 'bold');
-                doc.text(`${impact.icon} ${impact.stat}`, x, yPos, { align: 'center' });
+                doc.text(impact.stat, cx, yBase, { align: 'center' });
+
                 doc.setTextColor(...charcoalLight);
-                doc.setFontSize(7);
+                doc.setFontSize(7.5);
                 doc.setFont('helvetica', 'normal');
-                const descLines = doc.splitTextToSize(impact.description, metricWidth - 10);
-                doc.text(descLines[0], x, yPos + 5, { align: 'center' });
+                const descLines = doc.splitTextToSize(impact.description, metricWidth - 12);
+                doc.text(descLines[0], cx, yBase + 5.5, { align: 'center' });
             });
-            y += 45;
-            
+            y += boxH + 10;
+
+            // ── 4. The Company ──────────────────────────────────────────
             addSection('The Company', company.overview);
-            addSection('Team & Funding', company.team + ' Funding: ' + company.funding);
-            addSection('My Take', company.personalNote);
-            
-            if (y > 220) {
-                doc.addPage();
-                y = 20;
-            }
-            
-            doc.setFillColor(...sage);
-            doc.rect(marginLeft, y - 4, 3, 12, 'F');
+
+            // ── 5. Five Dimensions of Impact ────────────────────────────
+            sectionHeader('Five Dimensions of Impact');
+            [
+                ['What', company.fiveDimensions.what],
+                ['Who', company.fiveDimensions.who],
+                ['How Much', company.fiveDimensions.howMuch],
+                ['Contribution', company.fiveDimensions.contribution],
+                ['Risk', company.fiveDimensions.risk]
+            ].forEach(pair => labeledField(pair[0], pair[1]));
+            y += 4;
+
+            // ── 6. Financial Analysis ────────────────────────────────────
+            sectionHeader('Financial Analysis');
+            [
+                ['Market', company.financial.market],
+                ['Model', company.financial.model],
+                ['Moat', company.financial.moat],
+                ['Exit', company.financial.exit]
+            ].forEach(pair => labeledField(pair[0], pair[1]));
+            y += 4;
+
+            // ── 7. Team & Funding ────────────────────────────────────────
+            sectionHeader('Team & Funding');
+            bodyText(company.team);
+            y += 3;
+            checkPage(10);
             doc.setTextColor(...charcoal);
-            doc.setFontSize(12);
+            doc.setFontSize(10);
             doc.setFont('helvetica', 'bold');
-            doc.text('Key Risks & Mitigants', marginLeft + 8, y + 4);
-            y += 14;
-            
+            doc.text('Funding:', marginLeft, y);
+            y += 5.5;
+            bodyText(company.funding);
+            y += 6;
+
+            // ── 8. My Take ───────────────────────────────────────────────
+            sectionHeader('My Take', warmBrown);
+            bodyText(company.whyThisMatters);
+            if (company.personalNote) {
+                y += 3;
+                bodyText(company.personalNote);
+            }
+            y += 6;
+
+            // ── 9. Key Risks & Mitigants ─────────────────────────────────
+            sectionHeader('Key Risks & Mitigants');
             company.risks.forEach(risk => {
-                if (y > 255) {
-                    doc.addPage();
-                    y = 20;
-                }
-                
+                checkPage(16);
                 let badgeColor;
                 if (risk.level === 'High') badgeColor = [200, 100, 100];
                 else if (risk.level === 'Medium') badgeColor = [200, 180, 100];
                 else badgeColor = [168, 181, 160];
-                
+
                 doc.setFillColor(...badgeColor);
-                doc.roundedRect(marginLeft, y, 22, 6, 1, 1, 'F');
+                doc.roundedRect(marginLeft, y - 1, 24, 7, 1, 1, 'F');
                 doc.setTextColor(255, 255, 255);
                 doc.setFontSize(7);
                 doc.setFont('helvetica', 'bold');
-                doc.text(risk.level.toUpperCase(), marginLeft + 11, y + 4.5, { align: 'center' });
-                
+                doc.text(risk.level.toUpperCase(), marginLeft + 12, y + 4, { align: 'center' });
+
                 doc.setTextColor(...charcoalLight);
                 doc.setFontSize(10);
                 doc.setFont('helvetica', 'normal');
                 const riskLines = doc.splitTextToSize(risk.text, contentWidth - 30);
-                doc.text(riskLines, marginLeft + 28, y + 4);
-                y += Math.max(riskLines.length * 5, 8) + 6;
+                doc.text(riskLines, marginLeft + 30, y + 4);
+                y += Math.max(riskLines.length * 5.5, 9) + 5;
             });
-            
+            y += 4;
+
+            // ── 10. Things to Watch ──────────────────────────────────────
             if (company.thingsToWatch && company.thingsToWatch.length > 0) {
-                y += 5;
-                if (y > 240) {
-                    doc.addPage();
-                    y = 20;
-                }
-                
-                doc.setFillColor(196, 164, 132);
-                doc.rect(marginLeft, y - 4, 3, 12, 'F');
-                doc.setTextColor(...charcoal);
-                doc.setFontSize(12);
-                doc.setFont('helvetica', 'bold');
-                doc.text('Things to Watch', marginLeft + 8, y + 4);
-                y += 14;
-                
-                doc.setTextColor(...charcoalLight);
-                doc.setFontSize(10);
-                doc.setFont('helvetica', 'normal');
-                
+                sectionHeader('Things to Watch', warmBrown);
                 company.thingsToWatch.forEach(item => {
-                    if (y > 270) {
-                        doc.addPage();
-                        y = 20;
-                    }
-                    const lines = doc.splitTextToSize(`• ${item}`, contentWidth - 5);
-                    doc.text(lines, marginLeft + 5, y);
-                    y += lines.length * 5 + 3;
+                    checkPage(10);
+                    doc.setTextColor(...charcoalLight);
+                    doc.setFontSize(10);
+                    doc.setFont('helvetica', 'normal');
+                    const lines = doc.splitTextToSize('• ' + item, contentWidth - 5);
+                    doc.text(lines, marginLeft + 4, y);
+                    y += lines.length * 5.5 + 3;
                 });
             }
-            
+
+            // ── Footer: page numbers ─────────────────────────────────────
             const pageCount = doc.internal.getNumberOfPages();
             for (let i = 1; i <= pageCount; i++) {
                 doc.setPage(i);
                 doc.setFontSize(8);
                 doc.setTextColor(...charcoalLight);
                 doc.text('Impact Thesis Portfolio', marginLeft, 287);
-                doc.text(`Page ${i} of ${pageCount}`, pageWidth - marginLeft, 287, { align: 'right' });
+                doc.text('Page ' + i + ' of ' + pageCount, pageWidth - marginRight, 287, { align: 'right' });
             }
-            
-            doc.save(`${company.name.replace(/\s+/g, '-')}-IC-Memo.pdf`);
+
+            doc.save(company.name.replace(/\s+/g, '-') + '-IC-Memo.pdf');
         }
 
         function copyLink(companyId) {
