@@ -1875,6 +1875,39 @@
                 </div>
             </div>
 
+            <!-- RideTandem -->
+            <div class="portfolio-card" data-category="sustainability" onclick="openModal('ridetandem')">
+                <div class="portfolio-card-header">
+                    <div class="company-info">
+                        <div class="company-logo" style="background: linear-gradient(135deg, #E65100, #FF9800);">R</div>
+                        <div>
+                            <div class="company-name">RideTandem</div>
+                            <div class="company-tagline">Solving transport poverty by turning local vehicles into smart shuttles for work and education</div>
+                        </div>
+                    </div>
+                    <span class="sector-icon">🚐</span>
+                </div>
+                <div class="portfolio-card-body">
+                    <p class="portfolio-description">Over 5 million people in the UK are pushed into poverty by transport costs, locked out of jobs and education. RideTandem transforms existing taxi, minibus, and coach fleets into smart shared shuttles — enabling employers to connect workers to opportunities for close to the price of a bus.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag sdg-tag">SDG 8</span>
+                        <span class="tag sdg-tag">SDG 10</span>
+                        <span class="tag sdg-tag">SDG 11</span>
+                        <span class="tag sdg-tag">SDG 13</span>
+                        <span class="tag">Sustainability</span>
+                        <span class="tag">Social Impact</span>
+                        <span class="tag">Mobility</span>
+                    </div>
+                </div>
+                <div class="portfolio-card-footer">
+                    <span class="view-thesis">View Full Analysis →</span>
+                    <div class="impact-score">
+                        <span class="score-badge impact">Impact: 5/5</span>
+                        <span class="score-badge financial">Financial: 3/5</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Ovo Labs -->
             <div class="portfolio-card" data-category="health" onclick="openModal('ovolabs')">
                 <div class="portfolio-card-header">
@@ -2532,6 +2565,67 @@
                     'IVF clinic partnerships: Early adopters beyond Pellicer\'s network would validate the commercial pathway',
                     'Series A fundraise: Size and investor quality will indicate commercial momentum',
                     'Competitor developments: Watching Gameto and Celmatix to understand ongoing differentiation'
+                ]
+            },
+            ridetandem: {
+                name: 'RideTandem',
+                tagline: 'Solving transport poverty by turning local vehicles into smart shuttles for work and education',
+                logo: 'R',
+                logoGradient: 'linear-gradient(135deg, #E65100, #FF9800)',
+                category: 'sustainability',
+                sdgs: [
+                    { number: 8, name: 'Decent Work & Economic Growth', class: 'sdg-8' },
+                    { number: 10, name: 'Reduced Inequalities', class: 'sdg-10' },
+                    { number: 11, name: 'Sustainable Cities & Communities', class: 'sdg-11' },
+                    { number: 13, name: 'Climate Action', class: 'sdg-13' }
+                ],
+                overview: 'RideTandem transforms existing taxi, minibus, and coach fleets into smart shared shuttles. The platform matches passengers going the same way at the same time, enabling shared rides for close to the price of a bus. Employers subsidise or fully cover the cost, solving their recruitment and retention challenges while giving workers reliable transport. The tech stack includes a passenger app with live tracking and secure payments, a driver app for routing, and a B2B dashboard for employers showing usage and carbon savings. Routes operate 24/7 with a support helpline. Average vehicle occupancy is 25+ people vs 1.16 in a typical commuter car. RideTandem has completed over 2 million journeys, enabled an estimated £100 million in wages, and avoided 4,000+ tonnes of carbon emissions.',
+                impactStory: {
+                    headline: 'Transport poverty is invisible but devastating — and it locks people out of everything else.',
+                    content: 'Over 5 million people in the UK — 8% of the population — are pushed into poverty due to transport costs. In rural areas like the Northeast, it\'s as high as 12.5%. Almost 5,000 bus services were axed between 2012 and 2022. Car ownership costs have risen 84% in the last decade. For people without cars in areas with poor public transit, the result is simple: they can\'t get to jobs, healthcare, education, or affordable supermarkets. Unemployed fathers in Rochdale told the founders their biggest barrier to work wasn\'t skills or experience — it was transport. No bus, no job, no way out.',
+                    impacts: [
+                        { icon: '🚌', stat: '5M+', description: 'people in the UK pushed into poverty by transport costs' },
+                        { icon: '🗑️', stat: '5,000', description: 'bus routes axed between 2012 and 2022' },
+                        { icon: '🛣️', stat: '2M+', description: 'journeys completed by RideTandem' },
+                        { icon: '💷', stat: '£100M+', description: 'in wages enabled for transport-poor workers' }
+                    ]
+                },
+                fiveDimensions: {
+                    what: 'Affordable, reliable shared transport connecting underserved communities to jobs and education',
+                    who: 'Low-income workers in rural/peri-urban areas with limited public transport; employers struggling with recruitment',
+                    howMuch: '2M+ journeys completed; £100M+ wages enabled; 250,000+ passenger return trips/year; 4,000+ tonnes CO2 avoided',
+                    contribution: 'Only B Corp certified employee shuttle service; fills gap left by 5,000 axed bus routes since 2012',
+                    risk: 'Dependent on employer subsidies; unit economics in lowest-density areas remain challenging'
+                },
+                financial: {
+                    market: 'UK households spend an average £5,944 annually on transport — second largest expense after housing. Rural transport poverty is a policy priority. Employer-sponsored commuter benefits are growing.',
+                    model: 'B2B SaaS + managed service. Employers pay per passenger or flat route fee. Revenue shared with local transport operators. Gross revenue £4.4M (2022), targeting £105M by 2025.',
+                    moat: 'First and only B Corp certified employee shuttle. Asset-light model using existing fleets. 25 clients including Royal Mail, DPD, and FTSE 100 companies. Expanding to Germany. Sunday Times "Best Places to Work."',
+                    team: 'Alex Shapland-Howes (Co-Founder, CEO) — Former Managing Director at Future First. Tatseng Chiam (Co-Founder) — Former Investment Director at Global Innovation Fund. Huw McLeod (Co-Founder) — Former CTO at Hireup. Team of 48, majority women, Living Wage employer.',
+                    exit: 'Strategic acquisition by large transport or logistics operator, or mobility platform. Strong social enterprise credentials also create pathway to mission-locked structures.',
+                    returnCategory: 'Market-rate'
+                },
+                scores: { impact: 5, financial: 3 },
+                verdict: 'Strong Conviction',
+                verdictNote: 'The employer-pays model aligns incentives beautifully: companies get workers, workers get jobs, communities get connected, and emissions drop. The B Corp certification and Living Wage accreditation aren\'t marketing — they\'re evidence of values embedded in operations.',
+                whyThisMatters: 'This is impact investing at its purest. RideTandem exists because public transport failed and car ownership became unaffordable. The founders didn\'t set out to build a transport company — they met people locked out of work by geography and decided to fix it. The B Corp certification, Living Wage accreditation, and Sunday Times workplace recognition aren\'t marketing — they\'re evidence of values embedded in operations. The employer-pays model aligns incentives beautifully: companies get workers, workers get jobs, communities get connected, and emissions drop.',
+                team: 'Alex Shapland-Howes (Co-Founder, CEO) — Former Managing Director at education charity Future First. Met unemployed fathers in Rochdale whose biggest barrier to work was transport — founded RideTandem to solve it. Tatseng Chiam (Co-Founder) — Former Investment Director at Global Innovation Fund. Met Alex through Zinc venture builder. Huw McLeod (Co-Founder) — Former CTO at Hireup. Built the technology platform in-house. Team of 48, majority women (rare for transport/tech), Living Wage employer.',
+                funding: '£5M+ total raised. Series A (£2.3M, July 2023) led by Blackfinch Ventures with FirstMonday VC and Rainmaking Impact. Previous investors include Ascension, 1818 Venture Capital, Conduit Connect, Low Carbon Innovation Fund, European Space Agency, and Department for Transport grants.',
+                personalNote: 'I care about this one because transport poverty is one of those invisible inequalities that compounds everything else — if you can\'t get to the interview, nothing else matters. The founders started with the people, not the market opportunity, and that founding story runs through everything they\'ve built. The employer-subsidy model is clever: it makes the economics work without requiring government dependency, while also giving employers a genuine tool for recruitment and retention. This isn\'t charity dressed up as a startup — it\'s a real business solving a real problem that the market has consistently ignored.',
+                risks: [
+                    { level: 'High', text: 'Employer subsidy dependency: Revenue relies on employers continuing to fund routes. An economic downturn, cost-cutting cycle, or shift to remote work could reduce demand, particularly among smaller clients.' },
+                    { level: 'High', text: 'Unit economics in low-density areas: The lowest-density rural routes are hardest to fill, and profitability per route is most sensitive to occupancy. Scaling into these areas without diluting margins is the core operational challenge.' },
+                    { level: 'Medium', text: 'Revenue target ambition: The gap between £4.4M gross revenue (2022) and £105M target (2025) is significant. Execution risk is high if client acquisition or route expansion slows.' },
+                    { level: 'Medium', text: 'International expansion: Germany entry adds operational complexity, regulatory burden, and cultural adaptation. Success is not guaranteed, and it diverts management attention from the UK.' },
+                    { level: 'Low', text: 'Policy tailwinds reversing: Rural transport is a political priority, but funding and regulatory support could shift. Re-nationalisation or public investment in bus routes could also reduce employer demand for private solutions.' }
+                ],
+                thingsToWatch: [
+                    'Revenue trajectory: Progress toward the £105M 2025 target will signal whether the growth thesis is intact',
+                    'Germany expansion: Early traction (or lack thereof) will indicate whether the model translates across markets',
+                    'Employer client quality: Adding more FTSE 100 clients would reduce concentration risk and validate enterprise sales motion',
+                    'Unit economics disclosure: Route-level profitability data in low-density areas would test the core scaling thesis',
+                    'Series B fundraising: Size and investor profile will indicate how the market values the impact + commercial combination',
+                    'B Corp recertification: Maintaining certification as the company scales is a leading indicator of values integrity'
                 ]
             }
         };
