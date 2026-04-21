@@ -1908,6 +1908,40 @@
                 </div>
             </div>
 
+            <!-- Amatera -->
+            <div class="portfolio-card" data-category="sustainability" onclick="openModal('amatera')">
+                <div class="portfolio-card-header">
+                    <div class="company-info">
+                        <div class="company-logo" style="background: linear-gradient(135deg, #2E7D32, #66BB6A);">A</div>
+                        <div>
+                            <div class="company-name">Amatera</div>
+                            <div class="company-tagline">Accelerating crop genetics to make coffee, bananas, and grapes climate-resilient</div>
+                        </div>
+                    </div>
+                    <span class="sector-icon">🌱</span>
+                </div>
+                <div class="portfolio-card-body">
+                    <p class="portfolio-description">Our most beloved crops — coffee, bananas, grapes — face existential threats from climate change and disease, but take 20+ years to improve through conventional breeding. Amatera's CellTera platform moves screening from the greenhouse to the cell, delivering crop improvements 10x cheaper and 2x faster.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag sdg-tag">SDG 2</span>
+                        <span class="tag sdg-tag">SDG 12</span>
+                        <span class="tag sdg-tag">SDG 13</span>
+                        <span class="tag sdg-tag">SDG 15</span>
+                        <span class="tag">Sustainability</span>
+                        <span class="tag">AgTech</span>
+                        <span class="tag">Climate</span>
+                        <span class="tag">Food Security</span>
+                    </div>
+                </div>
+                <div class="portfolio-card-footer">
+                    <span class="view-thesis">View Full Analysis →</span>
+                    <div class="impact-score">
+                        <span class="score-badge impact">Impact: 4/5</span>
+                        <span class="score-badge financial">Financial: 4/5</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Ovo Labs -->
             <div class="portfolio-card" data-category="health" onclick="openModal('ovolabs')">
                 <div class="portfolio-card-header">
@@ -2626,6 +2660,67 @@
                     'Unit economics disclosure: Route-level profitability data in low-density areas would test the core scaling thesis',
                     'Series B fundraising: Size and investor profile will indicate how the market values the impact + commercial combination',
                     'B Corp recertification: Maintaining certification as the company scales is a leading indicator of values integrity'
+                ]
+            },
+            amatera: {
+                name: 'Amatera',
+                tagline: 'Accelerating crop genetics to make coffee, bananas, and grapes climate-resilient',
+                logo: 'A',
+                logoGradient: 'linear-gradient(135deg, #2E7D32, #66BB6A)',
+                category: 'sustainability',
+                sdgs: [
+                    { number: 2, name: 'Zero Hunger', class: 'sdg-2' },
+                    { number: 12, name: 'Responsible Consumption & Production', class: 'sdg-12' },
+                    { number: 13, name: 'Climate Action', class: 'sdg-13' },
+                    { number: 15, name: 'Life on Land', class: 'sdg-15' }
+                ],
+                overview: 'Amatera combines cell culture, high-throughput automation, and machine learning to move the screening bottleneck from the greenhouse to the cell. Their CellTera platform develops edited, mutated, and doubled haploid lines 10x cheaper and 2x faster than industry standards. They\'re creating their own products: Robustica (climate-resistant coffee with Arabica-quality taste from hardy Robusta genetics), naturally caffeine-free coffee (eliminating chemical decaffeination), and mildew-resistant Merlot (slashing vineyard pesticide use while preserving grape quality). They also partner with seed companies, agrifood giants, and research institutes to apply the platform across crops.',
+                impactStory: {
+                    headline: 'Our most beloved crops are running out of time.',
+                    content: 'Coffee, bananas, and grapes are perennial crops — they take 20+ years to improve through conventional breeding. But climate change isn\'t waiting. The area suitable for Arabica coffee (70% of global production) will shrink by 50% by 2050. The Cavendish banana, responsible for 660 billion dessert bananas consumed yearly, is being devastated by Panama disease (Fusarium TR4). In 2023, 90% of Bordeaux vineyards were hit by downy mildew, driving intensive pesticide use. While modern breeding methods exist, selection remains the bottleneck — breeders still grow thousands of plants just to find the rare few with desired traits.',
+                    impacts: [
+                        { icon: '☕', stat: '50%', description: 'reduction in Arabica-suitable land projected by 2050' },
+                        { icon: '🍌', stat: '660B', description: 'dessert bananas consumed yearly, threatened by Panama disease' },
+                        { icon: '🍇', stat: '90%', description: 'of Bordeaux vineyards hit by downy mildew in 2023' },
+                        { icon: '🧬', stat: '10x', description: 'cheaper screening than conventional breeding methods' }
+                    ]
+                },
+                fiveDimensions: {
+                    what: 'Platform accelerating development of climate-resilient and disease-resistant crop varieties',
+                    who: 'Coffee farmers facing climate displacement; banana producers fighting Panama disease; vineyards battling mildew; global food supply chains',
+                    howMuch: '50% reduction in Arabica-suitable land by 2050 without intervention; 10x cost reduction and 2x speed improvement vs conventional breeding',
+                    contribution: 'Addresses 20+ year breeding cycle that makes perennial crops uniquely vulnerable to climate change',
+                    risk: 'Regulatory pathways for edited crops vary by jurisdiction; consumer acceptance of biotech crops uncertain in some markets'
+                },
+                financial: {
+                    market: 'Global coffee market ~$500B; banana trade ~$15B annually; wine grapes ~$300B market. All face existential climate/disease threats with no fast solutions. First-mover advantage in perennial crop acceleration.',
+                    model: 'Dual model — (1) Own products (Robustica, caffeine-free coffee, resistant Merlot) for direct commercialisation, (2) CellTera platform licensing to seed companies and agrifood partners.',
+                    moat: 'Cell-based screening is novel approach for perennials. Strong research partnerships (CIRAD). Strategic alignment with Paulig gives coffee market access. Based at Genopole (French biotech hub).',
+                    team: 'Omar Dekkiche (CEO) — Business lead, driving commercialisation and partnerships. Lucie Kriegshauser (CTO) — Science lead, developed the CellTera platform. Entrepreneur First alumni — went through the rigorous co-founder matching and company building programme.',
+                    exit: 'Strategic acquisition by major agrifood company, seed company, or food ingredient giant. Platform licensing model also creates partnership pathways with large agrifood players (Paulig already engaged).',
+                    returnCategory: 'Market-rate'
+                },
+                scores: { impact: 4, financial: 4 },
+                verdict: 'Strong Conviction',
+                verdictNote: 'The dual business model is smart: own products for margin, platform for scale. The Paulig partnership signals commercial credibility in coffee, and CIRAD brings research depth. The naturally caffeine-free coffee alone could be a massive market.',
+                whyThisMatters: 'Amatera sits at the intersection of climate adaptation and food security. What makes them compelling is the focus on perennial crops — the 20+ year breeding cycle is precisely why coffee, bananas, and grapes are so vulnerable to fast-moving climate change. Annual crops can adapt; perennials can\'t keep up. The dual business model is smart: own products for margin, platform for scale. The Paulig partnership signals commercial credibility in coffee, and CIRAD brings research depth. The naturally caffeine-free coffee alone could be a massive market (decaf is a $3B+ segment plagued by chemical processes consumers increasingly dislike). This is patient capital territory — crop development takes time — but the problem is real and the approach is differentiated.',
+                team: 'Omar Dekkiche (CEO) — Business lead, driving commercialisation and partnerships. Lucie Kriegshauser (CTO) — Science lead, developed the CellTera platform. Entrepreneur First alumni — went through the rigorous co-founder matching and company building programme.',
+                funding: '€6M seed round (March 2026). Investors include AgFunder, Exceptional Ventures, Mudcake, Joyance Partners. Strategic partners: Paulig (major coffee company), CIRAD (French agricultural research), EIT Food. Entrepreneur First alumnus.',
+                personalNote: 'I find Amatera compelling because the problem is both urgent and underserved. Everyone talks about climate-proofing annual staples like wheat and rice — but perennial crops like coffee, bananas, and grapes are the ones that truly can\'t adapt fast enough. The 20+ year breeding cycle isn\'t a market inefficiency; it\'s a biological constraint that makes conventional approaches structurally inadequate. Amatera\'s cell-based approach changes the physics of the problem. And the naturally caffeine-free coffee is the kind of product insight that could build a consumer brand — the decaf market is huge and universally despised for taste and chemical processing. Patient capital, yes. But the upside is real.',
+                risks: [
+                    { level: 'High', text: 'Regulatory risk: Edited crop varieties face different regulatory pathways across jurisdictions. EU regulations on gene-edited crops are evolving but still uncertain. This could significantly delay or limit market access for Amatera\'s own products.' },
+                    { level: 'High', text: 'Time to revenue: Crop development is inherently slow. Even with 10x faster screening, bringing a new variety from platform to commercial launch takes years. Cash runway and investor patience will be tested.' },
+                    { level: 'Medium', text: 'Consumer acceptance: Consumer acceptance of biotech crops is uncertain in key markets, particularly in Europe. "Climate-resilient" framing helps, but negative GMO associations could affect commercialisation, especially for premium products like Merlot.' },
+                    { level: 'Medium', text: 'Platform commoditisation: Well-resourced seed companies (Syngenta, Bayer, BASF) could develop competing cell-based screening capabilities. Defensibility relies on proprietary data, speed advantages, and partnership depth.' },
+                    { level: 'Low', text: 'Crop concentration: Initial focus on three crops limits near-term revenue diversification. Platform applicability to broader crops is the long-term thesis — early execution in coffee, bananas, and grapes is essential to prove it.' }
+                ],
+                thingsToWatch: [
+                    'Robustica development milestones: Taste validation and field trials will be the first real proof point of the platform',
+                    'Caffeine-free coffee progress: Consumer brand potential — taste tests and Paulig partnership development signal commercial viability',
+                    'Platform partnerships: First signed licensing deal with a seed company or agrifood giant validates the B2B revenue stream',
+                    'EU regulatory clarity: Any movement on gene-editing regulations in Europe directly affects Amatera\'s home market access',
+                    'Series A fundraise: Size and investor quality will indicate how the market values deep-tech agri platforms',
+                    'CIRAD research outputs: Published results from the research partnership would validate the underlying science'
                 ]
             }
         };
