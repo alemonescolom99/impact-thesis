@@ -1941,6 +1941,37 @@
                 </div>
             </div>
 
+            <!-- Conduit -->
+            <div class="portfolio-card" data-category="health" onclick="openModal('conduit')">
+                <div class="portfolio-card-header">
+                    <div class="company-info">
+                        <div class="company-logo" style="background: linear-gradient(135deg, #1A237E, #5C6BC0);">C</div>
+                        <div>
+                            <div class="company-name">Conduit</div>
+                            <div class="company-tagline">Non-invasive brain-computer interface that reads your thoughts before you type them</div>
+                        </div>
+                    </div>
+                    <span class="sector-icon">🧠</span>
+                </div>
+                <div class="portfolio-card-body">
+                    <p class="portfolio-description">Millions with ALS or locked-in syndrome have no viable path to thought-based communication. Conduit is building thought-to-text: put on a headset and the software predicts what you'll say from your neural activity — before you type it. The world's largest neuro-language dataset, collected 20 hours a day in a San Francisco basement.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag sdg-tag">SDG 3</span>
+                        <span class="tag sdg-tag">SDG 10</span>
+                        <span class="tag">Health</span>
+                        <span class="tag">Frontier Tech</span>
+                        <span class="tag">Neurotech</span>
+                    </div>
+                </div>
+                <div class="portfolio-card-footer">
+                    <span class="view-thesis">View Full Analysis →</span>
+                    <div class="impact-score">
+                        <span class="score-badge impact">Impact: 5/5</span>
+                        <span class="score-badge financial">Financial: 3/5</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Ovo Labs -->
             <div class="portfolio-card" data-category="health" onclick="openModal('ovolabs')">
                 <div class="portfolio-card-header">
@@ -2713,6 +2744,65 @@
                     'EU regulatory clarity: Any movement on gene-editing regulations in Europe directly affects Amatera\'s home market access',
                     'Series A fundraise: Size and investor quality will indicate how the market values deep-tech agri platforms',
                     'CIRAD research outputs: Published results from the research partnership would validate the underlying science'
+                ]
+            },
+            conduit: {
+                name: 'Conduit',
+                tagline: 'Non-invasive brain-computer interface that reads your thoughts before you type them',
+                logo: 'C',
+                logoGradient: 'linear-gradient(135deg, #1A237E, #5C6BC0)',
+                category: 'health',
+                sdgs: [
+                    { number: 3, name: 'Good Health & Well-Being', class: 'sdg-3' },
+                    { number: 10, name: 'Reduced Inequalities', class: 'sdg-10' }
+                ],
+                overview: 'Conduit is building thought-to-text: put on a headset, start typing, and the software completes your sentences from your thoughts — predicting what you\'ll say before you say it. They\'ve collected 10,000+ hours of neuro-language data (the largest dataset in the world), across thousands of unique individuals, running data collection 20 hours a day in their San Francisco basement. They built custom multimodal headsets by buying the best single-modality sensors (EEG, fNIRS, and others), taking them apart, 3D printing parts, and combining them. The model detects semantic content from neural data in the seconds before the subject types or speaks — meaning it reads the idea before it becomes words. Zero-shot examples show the model predicting "there was a breeze even a gentle gust" when the ground truth was "the room seemed colder."',
+                impactStory: {
+                    headline: 'Brain-computer interfaces have a problem: the best ones require surgery.',
+                    content: 'Neuralink, Synchron, and others implant electrodes directly into brain tissue — invasive procedures that cost $100k+, carry surgical risk, and limit adoption to medical necessity cases. Non-invasive alternatives exist (EEG headsets), but they\'re noisy, low-resolution, and can\'t decode complex thoughts. The result: millions of people with ALS, locked-in syndrome, or other conditions that rob them of speech have no viable path to thought-based communication. And for everyone else, the dream of high-bandwidth brain-to-computer interaction remains science fiction.',
+                    impacts: [
+                        { icon: '🧠', stat: '10,000+', description: 'hours of neuro-language data — the world\'s largest dataset' },
+                        { icon: '💰', stat: '$100k+', description: 'cost of invasive BCI surgery that Conduit\'s approach eliminates' },
+                        { icon: '👥', stat: '1000s', description: 'of unique participants in their dataset' },
+                        { icon: '⏱️', stat: '20hrs', description: 'of data collection sessions run every single day' }
+                    ]
+                },
+                fiveDimensions: {
+                    what: 'Non-invasive thought-to-text system that decodes semantic intent from brain activity',
+                    who: 'Initially — people who\'ve lost the ability to speak (ALS, locked-in syndrome, stroke). Eventually — anyone who wants higher-bandwidth human-computer interaction',
+                    howMuch: '10,000+ hours of neuro-language data collected; thousands of unique participants; zero-shot generalisation to new subjects',
+                    contribution: 'Only team building non-invasive thought-to-text at this scale; invasive alternatives require $100k+ surgery',
+                    risk: 'Technical ceiling of non-invasive sensing; consumer adoption requires dramatic headset miniaturisation; regulatory pathway unclear'
+                },
+                financial: {
+                    market: 'BCI market projected to reach $5.5B by 2030. Assistive communication devices alone are a $2B+ market. Long-term consumer BCI potential is enormous if the technology works.',
+                    model: 'Currently R&D stage — building the dataset and training the model. Future model: consumer headset + software for thought-based text input. Medical applications (assistive communication) likely first commercial path.',
+                    moat: 'Largest neuro-language dataset in the world. Custom multimodal headset design. Non-invasive approach vs surgical competitors. Zero-shot generalisation to new users (critical for consumer viability).',
+                    team: 'Clem von Stengel (Co-founder, CEO) — Former researcher at University of Cambridge and AI safety organisations (ACS, PIBBSS). Rio Popper (Co-founder, CFO) — Operations and finance lead. Nicholas Aldrich, Lydia Nottingham. Backed by HF0 accelerator.',
+                    exit: 'Acquisition by major tech platform (Apple, Meta, Google all pursuing BCI), or standalone consumer BCI company if the technology reaches mass-market viability.',
+                    returnCategory: 'Venture-rate (high risk)'
+                },
+                scores: { impact: 5, financial: 3 },
+                verdict: 'Watching Closely',
+                verdictNote: 'The ambition and early results are genuinely remarkable. The dataset alone is a strategic asset. Risk is high — technical and commercial — but this is exactly the frontier bet worth watching.',
+                whyThisMatters: 'Conduit is the kind of company I want in my portfolio even if it fails. The ambition is extraordinary: read thoughts non-invasively, before they become words. The execution is equally extraordinary — they collected 10,000 hours of neural data in a basement, built their own headsets by combining sensors from multiple vendors, and run sessions 20 hours a day. The early results are genuinely surprising: zero-shot semantic prediction to new subjects the model has never seen. If this works, it changes everything — communication for people who\'ve lost speech, cognitive enhancement for everyone else, eventually a new interface paradigm for computing. The team has the obsession and technical depth to figure it out. High risk, but this is exactly the kind of frontier bet I want to make.',
+                team: 'Clem von Stengel (Co-founder, CEO) — Former researcher at University of Cambridge and AI safety organisations (ACS, PIBBSS). Research background in active inference and agency in complex systems. Building telepathy. Rio Popper (Co-founder, CFO/Secretary) — Operations and finance lead. The team runs data collection 20 hours a day, 7 days a week, paying participants $50/session to wear headsets and type. They built custom booking software, multimodal headsets, and an entire data pipeline from scratch.',
+                funding: 'Early stage, backed by HF0 accelerator. Team includes Clem von Stengel, Rio Popper, Nicholas Aldrich, and Lydia Nottingham. Operating lean with high-intensity data collection at their San Francisco base.',
+                personalNote: 'I find Conduit compelling in a way that\'s hard to fully articulate. It\'s not just the technology — it\'s the founders\' relationship to the problem. Clem came from AI safety research and active inference. The team built their own headsets, their own booking system, their own data pipeline. They pay participants $50 a session and run 20 hours a day. That\'s not a startup optimising for optics — that\'s a team that actually believes they\'re building something that matters. The zero-shot results are the detail that stuck with me: predicting semantic content for subjects the model has never seen. If that generalises, the dataset moat becomes a genuine technological moat.',
+                risks: [
+                    { level: 'High', text: 'Technical ceiling: Non-invasive sensors (EEG, fNIRS) have fundamental signal-to-noise limitations. Whether they can achieve sufficient resolution to decode complex thought reliably at scale is an open scientific question.' },
+                    { level: 'High', text: 'Miniaturisation gap: Consumer viability requires headsets that are comfortable, affordable, and socially acceptable. The current research hardware is far from that. Hardware productisation is a separate and difficult challenge.' },
+                    { level: 'High', text: 'Long path to revenue: The company is pre-revenue and pre-product. Medical device regulatory pathways (FDA) are long and expensive. Consumer applications are further still.' },
+                    { level: 'Medium', text: 'Well-resourced competition: Meta (EMG wristband), Apple (rumoured BCI research), Neuralink (invasive but has mindshare), and academic labs all pursuing adjacent problems with more capital.' },
+                    { level: 'Low', text: 'Dataset defensibility: If the model architecture becomes public or replicable, others could attempt to build competing datasets. First-mover advantage in data collection matters but isn\'t permanent.' }
+                ],
+                thingsToWatch: [
+                    'Zero-shot accuracy improvements: Stronger generalisation to new subjects is the key scientific milestone',
+                    'First medical application: Any partnership with ALS or locked-in syndrome organisations would validate the assistive tech pathway',
+                    'Headset miniaturisation: Progress toward a wearable consumer form factor signals hardware viability',
+                    'Seed/Series A fundraise: Investor quality and size will signal how the technical community evaluates the approach',
+                    'Published research: Peer-reviewed results would validate the dataset and model claims',
+                    'HF0 demo day outcomes: Investor and partner interest from the accelerator cohort'
                 ]
             }
         };
