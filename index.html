@@ -1972,6 +1972,39 @@
                     </div>
                 </div>
             </div>
+
+            <!-- OSHEN -->
+            <div class="portfolio-card" data-category="sustainability" onclick="openModal('oshen')">
+                <div class="portfolio-card-header">
+                    <div class="company-info">
+                        <div class="company-logo" style="background: linear-gradient(135deg, #01579B, #00BCD4);">O</div>
+                        <div>
+                            <div class="company-name">Oshen</div>
+                            <div class="company-tagline">Autonomous ocean robots that go where ships, satellites, and people can't</div>
+                        </div>
+                    </div>
+                    <span class="sector-icon">🌊</span>
+                </div>
+                <div class="portfolio-card-body">
+                    <p class="portfolio-description">90% of global trade moves by sea, yet most of the ocean goes unmonitored. Oshen's wind-powered C-Star robots sail autonomously for 100+ days, surviving Category 5 hurricanes and transmitting real-time ocean data used by NOAA, the Met Office, and UK Defence.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag sdg-tag">SDG 13</span>
+                        <span class="tag sdg-tag">SDG 14</span>
+                        <span class="tag sdg-tag">SDG 9</span>
+                        <span class="tag">Climate</span>
+                        <span class="tag">Defence</span>
+                        <span class="tag">Robotics</span>
+                        <span class="tag">Deep Tech</span>
+                    </div>
+                </div>
+                <div class="portfolio-card-footer">
+                    <span class="view-thesis">View Full Analysis →</span>
+                    <div class="impact-score">
+                        <span class="score-badge impact">Impact: 5/5</span>
+                        <span class="score-badge financial">Financial: 4/5</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2713,6 +2746,66 @@
                     'EU regulatory clarity: Any movement on gene-editing regulations in Europe directly affects Amatera\'s home market access',
                     'Series A fundraise: Size and investor quality will indicate how the market values deep-tech agri platforms',
                     'CIRAD research outputs: Published results from the research partnership would validate the underlying science'
+                ]
+            },
+            oshen: {
+                name: 'Oshen',
+                tagline: 'Autonomous ocean robots that go where ships, satellites, and people can\'t',
+                logo: 'O',
+                logoGradient: 'linear-gradient(135deg, #01579B, #00BCD4)',
+                category: 'sustainability',
+                sdgs: [
+                    { number: 13, name: 'Climate Action', class: 'sdg-13' },
+                    { number: 14, name: 'Life Below Water', class: 'sdg-14' },
+                    { number: 9, name: 'Industry, Innovation & Infrastructure', class: 'sdg-9' }
+                ],
+                overview: 'Oshen deploys constellations of autonomous wind-powered micro-robots called C-Stars to monitor the world\'s oceans. Each 1.2-metre robot sails independently for 100+ days, navigates to specific locations, holds station, and transmits data via satellite every two minutes. Small enough to deploy from a beach, rugged enough to survive Category 5 hurricanes, cheap enough to deploy in swarms. In 2025, NOAA commissioned Oshen to fly C-Stars into Hurricane Humberto — they became the first uncrewed surface vessels to collect data from inside a Category 5 hurricane. The Met Office has verified their data matches forecast models. ARIA has funded a £2M project to deploy 50 C-Stars in the North Atlantic to monitor climate tipping points. The UK Ministry of Defence is working with them on maritime surveillance networks.',
+                impactStory: {
+                    headline: 'We built the arteries of the modern world on the ocean — and monitor it less than the surface of distant planets.',
+                    content: '90% of global trade moves by sea. Energy pipelines and data cables run across the seabed. Extreme weather systems form and intensify over open water. Yet most of the ocean remains poorly observed. Crewed patrols are expensive and can\'t stay out long. Drifting sensors can\'t be directed. Satellites see the surface but miss the detail. The result is blind spots that expose governments and economies to growing risk — from poorly forecast hurricanes to unmonitored critical infrastructure. Oshen fills those blind spots with wind-powered robots that go where nothing else can.',
+                    impacts: [
+                        { icon: '🌊', stat: '90%', description: 'of global trade moves by sea — yet most of the ocean is poorly observed' },
+                        { icon: '🌀', stat: 'Cat 5', description: 'first-ever data collected from inside a Category 5 hurricane' },
+                        { icon: '🤖', stat: '100+', description: 'days each C-Star robot can operate autonomously at sea' },
+                        { icon: '📡', stat: '2 min', description: 'satellite data transmission interval from anywhere in the ocean' }
+                    ]
+                },
+                fiveDimensions: {
+                    what: 'Persistent, wide-area ocean intelligence for climate, security, and infrastructure monitoring',
+                    who: 'Meteorologists improving hurricane forecasts; climate scientists monitoring tipping points; navies protecting critical infrastructure; offshore energy operators',
+                    howMuch: 'First-ever data from inside a Cat 5 hurricane; £2M ARIA contract for 50-robot constellation; government contracts with UK MoD, NOAA, Met Office, Météo-France',
+                    contribution: 'Only company with surface robots proven to survive Cat 5 hurricanes; wind-powered (not battery-dependent) enables months-long deployments that no competitor matches',
+                    risk: 'Hardware scaling to 1,000+ robots; unit economics at scale; defence vs. climate market positioning'
+                },
+                financial: {
+                    market: 'Ocean data market is massive and underserved. Hurricane forecasting alone affects billions in economic decisions. Defence maritime surveillance is a multi-billion market. Offshore wind and subsea infrastructure monitoring is growing rapidly as the energy transition accelerates.',
+                    model: 'Hardware + data services. Sell or lease C-Star fleets to government agencies and enterprises. Data-as-a-service for ongoing monitoring contracts. Defence and climate customers have different procurement cycles but both need persistent ocean awareness.',
+                    moat: 'Only company with robots proven to survive Cat 5 hurricanes. Wind-powered versus solar/battery competitors enables longer deployments. Off-the-shelf components keep costs low. Plymouth location gives access to UK\'s marine tech hub and open-water testing. Verified data relationships with NOAA, Met Office, and Météo-France are sticky.',
+                    team: 'Anahita Laverack (Co-founder, CEO) — Imperial College Aeronautical Engineering; storied sailor who entered the Microtransat Challenge and realised the real problem was lack of ocean data. Ciaran Dowds (Co-founder, CTO) — Imperial College Electrical Engineering, Dean\'s List; previously built apps for NHS speech therapists and worked at DSTL (UK defence science lab). Backed by Amar Shar, co-founder of Wayve (British AI unicorn).',
+                    exit: 'Strategic acquisition by defence prime, environmental data company, or offshore energy operator. Government data contracts create recurring revenue and strategic value. Comparables: Saildrone (valued at $400M+), Planet Labs.',
+                    returnCategory: 'High Growth'
+                },
+                scores: { impact: 5, financial: 4 },
+                verdict: 'Strong Conviction',
+                verdictNote: 'Scrappy founders who lived the problem, bootstrapped until they had proof, then landed contracts with NOAA, the Met Office, and UK Defence. The Cat 5 hurricane milestone is the kind of proof point that opens government procurement doors.',
+                whyThisMatters: 'Climate monitoring, hurricane forecasting, and maritime security all need the same thing — persistent ocean awareness. Oshen provides it cheaply and at scale. The ocean is the world\'s most critical and least monitored environment: 90% of global trade, most of our subsea infrastructure, and the engine of our weather systems. Current tools are either too expensive (crewed ships), too limited (drifting sensors), or too shallow (satellites). C-Stars fill a genuine gap — directed, persistent, survivable, and affordable. The dual market of climate and defence gives Oshen multiple paths to revenue and strategic relevance.',
+                team: 'Anahita Laverack (Co-founder, CEO) entered the Microtransat Challenge — an autonomous Atlantic crossing race — and failed. But she realised the real problem wasn\'t crossing the Atlantic; it was that we barely observe our own ocean. She and Ciaran Dowds (Co-founder, CTO) combined their savings to buy a 25-foot sailboat, lived on it at the cheapest marina in the UK, and built prototypes until they had something that worked. Ciaran previously worked at DSTL, the UK\'s defence science and technology laboratory, giving Oshen credibility in military procurement from day one. The company is backed by Amar Shar, co-founder of Wayve (British AI unicorn), signalling serious technical and commercial validation.',
+                funding: 'Bootstrapped initially — founders lived on a 25-foot sailboat at the cheapest UK marina while building prototypes. Now funded: £2M from ARIA (Advanced Research and Inventions Agency), grants from the European Space Agency and Innovate UK, and contracts from NOAA, UK MoD, Met Office, and Météo-France. Planning a venture capital raise to scale production.',
+                personalNote: 'Oshen is exactly the kind of company I love — scrappy founders solving a hard problem in an unsexy domain. Anahita tried to sail an autonomous robot across the Atlantic, failed, and realised the real problem was that we barely observe our own ocean. So she and Ciaran bought a sailboat, lived on it, and built robots in the cheapest marina in the UK until they had something that worked. Now their robots have survived Cat 5 hurricanes, collected data NOAA and the Met Office actually use, and landed contracts with defence ministries. The founding story is perfect: obsessive technical founders who lived the problem, bootstrapped until they had proof, then scaled. Climate monitoring, hurricane forecasting, and maritime security all need the same thing — persistent ocean awareness. Oshen provides it.',
+                risks: [
+                    { level: 'High', text: 'Hardware scaling: Moving from dozens to 1,000+ robots requires manufacturing scale-up, supply chain management, and quality control. Off-the-shelf components help, but execution risk is real.' },
+                    { level: 'High', text: 'Unit economics at scale: Current contracts validate the technology, but profitability at swarm scale — where the real market opportunity lies — is unproven.' },
+                    { level: 'Medium', text: 'Defence vs. climate positioning: Defence and climate customers have very different procurement cycles, relationship requirements, and public perception implications. Serving both well without diluting focus is a strategic challenge.' },
+                    { level: 'Medium', text: 'Government dependency: Current revenue is heavily contract- and grant-based. Transitioning to recurring commercial revenue requires building a different kind of sales motion.' },
+                    { level: 'Low', text: 'Competitive response: Better-funded entrants (Saildrone, Sofar Ocean) are active in adjacent spaces. Oshen\'s Cat 5 survivability is a moat, but incumbents have deeper pockets for a sustained fight.' }
+                ],
+                thingsToWatch: [
+                    'VC raise: Size and investor quality will validate the scaling thesis and signal confidence in the path to commercial revenue',
+                    'ARIA constellation deployment: 50-robot North Atlantic deployment is the first proof point of swarm operations',
+                    'UK MoD contract scope: Defence contract details will indicate how seriously Oshen is being considered for national security applications',
+                    'Unit economics disclosure: Cost per C-Star at production scale versus current prototype costs',
+                    'New customer announcements: Adding non-UK government customers (US Navy, NATO agencies, offshore energy) would reduce concentration risk',
+                    'Météo-France and NOAA data usage: Published results using Oshen data in operational forecasting would validate the climate market thesis'
                 ]
             }
         };
