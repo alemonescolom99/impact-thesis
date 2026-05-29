@@ -2005,6 +2005,39 @@
                     </div>
                 </div>
             </div>
+
+            <!-- BIOORBIT -->
+            <div class="portfolio-card" data-category="health" onclick="openModal('bioorbit')">
+                <div class="portfolio-card-header">
+                    <div class="company-info">
+                        <div class="company-logo" style="background: linear-gradient(135deg, #1A237E, #7B1FA2);">B</div>
+                        <div>
+                            <div class="company-name">BioOrbit</div>
+                            <div class="company-tagline">Manufacturing cancer drugs in space so patients can treat themselves at home</div>
+                        </div>
+                    </div>
+                    <span class="sector-icon">🚀</span>
+                </div>
+                <div class="portfolio-card-body">
+                    <p class="portfolio-description">Cancer patients spend hours in hospital getting IV drips — sometimes weekly for years. BioOrbit crystallises protein drugs in microgravity, producing purer formations that can be reformulated as self-injectable medicines patients administer at home.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag sdg-tag">SDG 3</span>
+                        <span class="tag sdg-tag">SDG 9</span>
+                        <span class="tag sdg-tag">SDG 10</span>
+                        <span class="tag">Health</span>
+                        <span class="tag">Deep Tech</span>
+                        <span class="tag">Space</span>
+                        <span class="tag">Biotech</span>
+                    </div>
+                </div>
+                <div class="portfolio-card-footer">
+                    <span class="view-thesis">View Full Analysis →</span>
+                    <div class="impact-score">
+                        <span class="score-badge impact">Impact: 4/5</span>
+                        <span class="score-badge financial">Financial: 2/5</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2806,6 +2839,65 @@
                     'Unit economics disclosure: Cost per C-Star at production scale versus current prototype costs',
                     'New customer announcements: Adding non-UK government customers (US Navy, NATO agencies, offshore energy) would reduce concentration risk',
                     'Météo-France and NOAA data usage: Published results using Oshen data in operational forecasting would validate the climate market thesis'
+                ]
+            },
+            bioorbit: {
+                name: 'BioOrbit',
+                tagline: 'Manufacturing cancer drugs in space so patients can treat themselves at home',
+                logo: 'B',
+                logoGradient: 'linear-gradient(135deg, #1A237E, #7B1FA2)',
+                category: 'health',
+                sdgs: [
+                    { number: 3, name: 'Good Health', class: 'sdg-3' },
+                    { number: 9, name: 'Industry, Innovation & Infrastructure', class: 'sdg-9' },
+                    { number: 10, name: 'Reduced Inequalities', class: 'sdg-10' }
+                ],
+                overview: 'BioOrbit crystallises protein drugs in microgravity, where molecules settle into purer, more uniform formations. Their product is BOX — a compact, autonomous manufacturing unit the size of a microwave that operates in low-Earth orbit. In May 2026, they launched BOX-E to the International Space Station via SpaceX. The crystallised drugs return to Earth and can be reformulated as self-injectable medicines patients administer at home. This isn\'t a research experiment — they\'re building the infrastructure for industrial-scale pharmaceutical manufacturing in orbit.',
+                impactStory: {
+                    headline: 'Around 70% of the highest-grossing drugs worldwide are administered intravenously in clinical settings — not because patients prefer it, but because physics won\'t allow anything else.',
+                    content: 'Cancer patients on antibody therapies like Herceptin or Keytruda spend hours in hospital getting IV drips — sometimes weekly for months or years. The drugs can\'t be self-injected because high-concentration antibody therapies are too viscous to go through a small needle. This isn\'t a formulation problem that more chemistry can solve — it\'s a physics problem. On Earth, gravity interferes with protein crystallisation, producing irregular, less stable crystals that can\'t be concentrated enough for subcutaneous injection.',
+                    impacts: [
+                        { icon: '💉', stat: '70%', description: 'of highest-grossing drugs are IV-administered in clinical settings' },
+                        { icon: '🚀', stat: 'ISS', description: 'BOX-E launched to the International Space Station via SpaceX in May 2026' },
+                        { icon: '💊', stat: '$400B+', description: 'global biologics market addressable by space-based reformulation' },
+                        { icon: '🏠', stat: 'Home', description: 'target outcome: patients self-injecting cancer drugs at home instead of hospital visits' }
+                    ]
+                },
+                fiveDimensions: {
+                    what: 'Enabling self-injectable cancer drugs via space-based protein crystallisation',
+                    who: 'Cancer patients currently tied to hospital IV infusions; healthcare systems bearing infusion costs',
+                    howMuch: 'Potential to shift treatment for millions of patients from hospital to home; unproven at scale — zero patients treated yet',
+                    contribution: 'High if Earth-based alternatives can\'t match crystal quality; the outcome literally requires microgravity',
+                    risk: 'High — regulatory pathway for space-manufactured drugs is unprecedented; pharma adoption uncertain; technical scaling unproven'
+                },
+                financial: {
+                    market: 'Biologics market exceeds $400B globally. 70% of top-grossing drugs are IV-administered. Reformulating even a fraction as self-injectables is a massive commercial opportunity. Pharma companies want to extend patent life on blockbuster drugs going off-patent.',
+                    model: 'Platform play — BioOrbit provides the manufacturing infrastructure, pharma companies bring the drugs. Revenue from manufacturing contracts, potentially royalties on reformulated drugs.',
+                    moat: 'First to attempt industrial-scale space crystallisation (not just experiments). Hardware already in orbit. Strong advisor network including Paul Reichert (12 Space Shuttle missions, 4 ISS missions). Endorsed by astronaut Tim Peake. The regulatory pathway, if navigated successfully, becomes a moat in itself.',
+                    team: 'Dr Katie King (Founder, CEO) — PhD, Tech Nation Future Fifty, speaker at Slush and London Tech Week, invited to Downing Street. Dr Leonor Teles (Co-Founder) — Oncology researcher. Molly Mulligan (President, BioOrbit Inc.) — 12+ years at intersection of pharma and space, signed first in-orbit pharmaceutical royalty agreement. Dr Ken Savin (CSO) — Former CSO at Redwire, two decades at Eli Lilly, ISS R&D leadership.',
+                    exit: 'Acquisition by major pharma company seeking space-manufacturing capability or patent-life extension platform. Licensing deals with drug manufacturers. IPO if platform scales to multiple drug classes.',
+                    returnCategory: 'Venture / Speculative'
+                },
+                scores: { impact: 4, financial: 2 },
+                verdict: 'Watching Closely',
+                verdictNote: 'The science is compelling and the team has serious credentials at the pharma-space crossover. Hardware is in orbit — this is no longer just a pitch. But the path from successful ISS experiment to millions of patients self-injecting at home has many unproven gates: regulatory approval for space-manufactured drugs (unprecedented), pharma partnership (notoriously slow), and cost competitiveness. Watching for ISS results and a pharma partnership before upgrading conviction.',
+                whyThisMatters: 'BioOrbit is attempting to unlock a drug delivery pathway that physics makes impossible on Earth. If microgravity crystallisation scales, it\'s pure additionality — the outcome doesn\'t happen otherwise. SDG 3 (Good Health): Transforms cancer treatment from hospital burden to home convenience. SDG 9 (Industry, Innovation): First industrial-scale pharmaceutical manufacturing in orbit. SDG 10 (Reduced Inequalities): Home injection improves access for rural, elderly, and mobility-limited patients.',
+                team: 'Dr Katie King (Founder, CEO) — PhD, Tech Nation Future Fifty, speaker at Slush and London Tech Week, invited to Downing Street. Driving the vision of space as pharmaceutical infrastructure. Dr Leonor Teles (Co-Founder) — Oncology researcher, brings deep understanding of cancer drug delivery challenges. Molly Mulligan (President, BioOrbit Inc.) — 12+ years at intersection of pharma and space, signed first in-orbit pharmaceutical royalty agreement. Dr Ken Savin (Chief Science Officer) — Former CSO at Redwire, two decades at Eli Lilly, ISS R&D leadership. Paul Reichert (Principal Consultant) — 12 Space Shuttle and 4 ISS missions, 4 US patents in space biologics.',
+                funding: '£9.8M seed round (world\'s largest for in-space manufacturing), co-led by LocalGlobe and Breega. Participation from Seedcamp, Type One Ventures, Auxxo, 7percent Ventures. Additional £250K contract from UK Space Agency. Tech Nation Future Fifty company.',
+                personalNote: 'BioOrbit is a genuine moonshot — literally. The thesis is compelling: some problems can only be solved in space, and drug viscosity might be one of them. If they\'re right, this is pure additionality — the outcome doesn\'t happen on Earth. The team has serious credentials (pharma + space crossover is rare), the funding is strong, and they\'ve actually put hardware in orbit. But I\'m keeping this as Watching Closely because the path from "successful ISS experiment" to "millions of patients self-injecting at home" has many gates: regulatory approval for space-manufactured drugs (unprecedented), pharma company adoption (notoriously slow), cost competitiveness (unproven), and the risk that Earth-based alternatives catch up. I want to see results from the ISS mission and a pharma partnership before upgrading conviction.',
+                risks: [
+                    { level: 'High', text: 'Regulatory pathway: FDA/EMA have never approved space-manufactured drugs. This is genuinely unprecedented and could take years or fail entirely.' },
+                    { level: 'High', text: 'Pharma adoption: Big pharma is slow and risk-averse. Signing a major licensing deal requires navigating procurement cycles that can take years, even with compelling science.' },
+                    { level: 'High', text: 'Technical scaling: Moving from ISS experiments to industrial-scale orbital manufacturing requires solving enormous engineering and logistics challenges.' },
+                    { level: 'Medium', text: 'Unit economics: Can space manufacturing actually beat hospital IV delivery on cost? The economics at scale are entirely unproven.' },
+                    { level: 'Medium', text: 'Earth-based alternatives: Better formulation chemistry, novel excipients, or alternative delivery technologies could catch up, removing the need for space-based production.' }
+                ],
+                thingsToWatch: [
+                    'ISS mission results: Crystal quality data from BOX-E is the first proof point — does microgravity actually produce meaningfully better crystals?',
+                    'Pharma partnership: A signed deal with a major pharmaceutical company is the real gate to commercial viability',
+                    'Regulatory engagement: Any dialogue with FDA or EMA about the approval pathway for space-manufactured drugs',
+                    'Cost per batch: Unit economics disclosures that compare space manufacturing costs to hospital IV delivery costs',
+                    'Earth-based competitor progress: Advances in subcutaneous formulation chemistry that could make microgravity unnecessary'
                 ]
             }
         };
