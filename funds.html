@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beyond Investment | Impact Thesis</title>
+    <title>Funds | Impact Thesis</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -297,152 +297,85 @@
             margin: 0 auto;
         }
 
-        .org-card {
+        .placeholder-card {
             background: var(--white);
             border-radius: 1.5rem;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
+            padding: 3rem 2.5rem;
             border: 1px solid rgba(168, 181, 160, 0.2);
             box-shadow: 0 2px 20px rgba(61, 61, 61, 0.05);
+            text-align: center;
             animation: fadeInUp 0.8s ease-out both;
         }
 
-        .org-card:nth-child(1) { animation-delay: 0.1s; }
-        .org-card:nth-child(2) { animation-delay: 0.2s; }
-        .org-card:nth-child(3) { animation-delay: 0.3s; }
-
-        .type-badge {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            padding: 0.3rem 0.9rem;
-            border-radius: 2rem;
-            margin-bottom: 1.2rem;
+        .placeholder-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.4;
         }
 
-        .type-bcorp {
-            background: rgba(32, 178, 170, 0.12);
-            color: #1a8f88;
-        }
-
-        .type-fund {
-            background: rgba(232, 120, 100, 0.12);
-            color: #c45a42;
-        }
-
-        .type-charity {
-            background: rgba(140, 100, 180, 0.12);
-            color: #7a4fa0;
-        }
-
-        .org-name {
+        .placeholder-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            font-weight: 500;
+            font-size: 1.6rem;
+            font-weight: 400;
             color: var(--charcoal);
-            margin-bottom: 1rem;
-            line-height: 1.2;
+            margin-bottom: 0.75rem;
         }
 
-        .org-description {
+        .placeholder-text {
             color: var(--charcoal-light);
             font-size: 1rem;
-            margin-bottom: 0.75rem;
+            max-width: 480px;
+            margin: 0 auto;
             line-height: 1.8;
-        }
-
-        .why-box {
-            margin-top: 1.5rem;
-            background: rgba(168, 181, 160, 0.1);
-            border-left: 3px solid var(--sage);
-            border-radius: 0 0.75rem 0.75rem 0;
-            padding: 1.2rem 1.5rem;
-        }
-
-        .why-label {
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--sage-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .why-text {
-            color: var(--charcoal);
-            font-size: 0.975rem;
-            line-height: 1.7;
-        }
-
-        .learn-more {
-            display: inline-block;
-            margin-top: 1.5rem;
-            color: var(--sage-dark);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: gap 0.2s ease, color 0.2s ease;
-        }
-
-        .learn-more:hover {
-            color: var(--charcoal);
-        }
-
-        .learn-more::after {
-            content: ' →';
         }
 
         /* Footer */
         footer {
+            background: var(--charcoal);
+            color: rgba(255, 255, 255, 0.7);
             text-align: center;
             padding: 3rem 2rem;
-            border-top: 1px solid rgba(168, 181, 160, 0.2);
         }
 
         .footer-logo {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            font-weight: 500;
-            color: var(--charcoal);
-            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
         }
 
         .footer-tagline {
-            font-size: 0.95rem;
-            color: var(--charcoal-light);
-            margin-bottom: 2rem;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.6;
         }
 
         .footer-links {
             display: flex;
+            gap: 1.5rem;
             justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .footer-links a {
-            color: var(--charcoal-light);
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: color 0.3s ease;
         }
 
         .footer-links a:hover {
-            color: var(--sage-dark);
+            color: var(--white);
         }
 
         .footer-copy {
             font-size: 0.8rem;
-            color: var(--charcoal-light);
-            opacity: 0.7;
+            opacity: 0.4;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            nav { padding: 1.2rem 1.5rem; }
-            .hero { padding: 7rem 1.5rem 3rem; }
+            nav { padding: 1rem 1.5rem; }
+            .hero { padding: 6rem 1.5rem 3rem; }
             .hero-decoration { display: none; }
             .cards-section { padding: 1.5rem 1.5rem 4rem; }
         }
@@ -459,10 +392,10 @@
                 <a href="index.html#portfolio">Portfolio <span class="dropdown-arrow">▾</span></a>
                 <ul class="dropdown-menu">
                     <li><a href="index.html#portfolio">Companies</a></li>
-                    <li><a href="funds.html">Funds</a></li>
+                    <li><a href="funds.html" class="active">Funds</a></li>
                 </ul>
             </li>
-            <li><a href="beyond-investment.html" class="active">Beyond Investment</a></li>
+            <li><a href="beyond-investment.html">Beyond Investment</a></li>
             <li><a href="index.html#about">About</a></li>
             <li><a href="index.html#contact">Contact</a></li>
         </ul>
@@ -470,10 +403,10 @@
 
     <section class="hero">
         <div class="hero-content">
-            <p class="hero-eyebrow">Alejandra Mones Colom · Worth Knowing About</p>
-            <h1>Beyond <em>Investment</em></h1>
+            <p class="hero-eyebrow">Alejandra Mones Colom · Capital with Conviction</p>
+            <h1><em>Funds</em></h1>
             <p class="hero-description">
-                Not everything worth celebrating takes investment. These are B Corps, funds, and charities doing brilliant work, organizations I admire and think you should know about.
+                Funds and investors shaping the kind of future I want to see. These are the people I'd back — or want to work alongside.
             </p>
         </div>
         <div class="hero-decoration">
@@ -484,20 +417,11 @@
     </section>
 
     <div class="cards-section">
-
-        <!-- DIVINE CHOCOLATE -->
-        <div class="org-card">
-            <span class="type-badge type-bcorp">B Corp</span>
-            <div class="org-name">Divine Chocolate</div>
-            <p class="org-description">Divine was founded by cocoa farmers in 1998 and is still co-owned by the Kuapa Kokoo Farmers' Union in Ghana, 130,000 farmers who each own part of the brand. Every year, 20% of profits go back to the Union, which decides how to spend it themselves.</p>
-            <p class="org-description">In an industry where the average cocoa farmer receives just 6% of the final cost of a chocolate bar, Divine flips the model. They also run literacy and numeracy programmes for farmers, 76% of participants are women, so they can negotiate contracts, run their businesses, and take leadership roles in their communities. Nearly 1,600 farmers have gone through the programme.</p>
-            <div class="why-box">
-                <div class="why-label">Why I love them</div>
-                <p class="why-text">This is what stakeholder capitalism should actually look like. Not a slogan — farmers literally own the company and share in its success. The chocolate is also genuinely good, which helps.</p>
-            </div>
-            <a href="https://www.divinechocolate.com/" target="_blank" rel="noopener" class="learn-more">Learn more</a>
+        <div class="placeholder-card">
+            <div class="placeholder-icon">◎</div>
+            <p class="placeholder-title">Coming soon</p>
+            <p class="placeholder-text">Coming soon — funds I'm watching.</p>
         </div>
-
     </div>
 
     <footer>
@@ -508,6 +432,7 @@
         </div>
         <p class="footer-copy">© 2025 Impact Thesis. Built with purpose.</p>
     </footer>
+
     <script>
         document.querySelectorAll('.nav-dropdown > a').forEach(link => {
             link.addEventListener('click', function(e) {
