@@ -297,36 +297,255 @@
             margin: 0 auto;
         }
 
-        .placeholder-card {
+        /* Fund Card */
+        .fund-card {
             background: var(--white);
             border-radius: 1.5rem;
-            padding: 3rem 2.5rem;
             border: 1px solid rgba(168, 181, 160, 0.2);
             box-shadow: 0 2px 20px rgba(61, 61, 61, 0.05);
-            text-align: center;
+            overflow: hidden;
             animation: fadeInUp 0.8s ease-out both;
+            margin-bottom: 2.5rem;
         }
 
-        .placeholder-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            opacity: 0.4;
+        .fund-card-header {
+            padding: 2.5rem 2.5rem 1.5rem;
+            border-bottom: 1px solid rgba(168, 181, 160, 0.15);
         }
 
-        .placeholder-title {
+        .fund-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.25rem;
+        }
+
+        .fund-tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.28rem 0.85rem;
+            border-radius: 2rem;
+            background: rgba(168, 181, 160, 0.15);
+            color: var(--sage-dark);
+        }
+
+        .fund-tag.tag-climate { background: rgba(122, 139, 114, 0.12); color: #556b4e; }
+        .fund-tag.tag-growth  { background: rgba(196, 164, 132, 0.15); color: var(--terracotta-dark); }
+        .fund-tag.tag-europe  { background: rgba(212, 197, 226, 0.2);  color: #7a6898; }
+
+        .conviction-badge {
+            margin-left: auto;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.28rem 0.9rem;
+            border-radius: 2rem;
+            background: rgba(196, 164, 132, 0.2);
+            color: var(--terracotta-dark);
+        }
+
+        .fund-name {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.6rem;
-            font-weight: 400;
+            font-size: 2.2rem;
+            font-weight: 500;
             color: var(--charcoal);
+            margin-bottom: 0.5rem;
+            line-height: 1.15;
+        }
+
+        .fund-oneliner {
+            font-size: 1rem;
+            color: var(--charcoal-light);
+            line-height: 1.7;
+        }
+
+        .fund-scores {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+        }
+
+        .score-badge {
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 0.3rem 0.85rem;
+            border-radius: 2rem;
+        }
+
+        .score-badge.impact   { background: rgba(168, 181, 160, 0.2); color: var(--sage-dark); }
+        .score-badge.financial { background: rgba(196, 164, 132, 0.2); color: var(--terracotta-dark); }
+
+        .fund-card-body {
+            padding: 2rem 2.5rem 2.5rem;
+        }
+
+        /* IC sections (reused style) */
+        .ic-section {
+            margin-bottom: 2.25rem;
+        }
+
+        .ic-section:last-child { margin-bottom: 0; }
+
+        .ic-section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--charcoal);
+            margin-bottom: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .ic-section-title::before {
+            content: '';
+            width: 4px;
+            height: 18px;
+            border-radius: 2px;
+            background: linear-gradient(180deg, var(--sage), var(--lavender));
+            flex-shrink: 0;
+        }
+
+        .ic-section p {
+            font-size: 0.95rem;
+            color: var(--charcoal-light);
+            line-height: 1.85;
+        }
+
+        .ic-section p + p { margin-top: 0.75rem; }
+
+        .ic-list {
+            list-style: none;
+            margin-top: 0.75rem;
+        }
+
+        .ic-list li {
+            padding: 0.65rem 0 0.65rem 1.5rem;
+            position: relative;
+            font-size: 0.93rem;
+            color: var(--charcoal-light);
+            border-bottom: 1px solid rgba(168, 181, 160, 0.15);
+            line-height: 1.7;
+        }
+
+        .ic-list li:last-child { border-bottom: none; }
+
+        .ic-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--sage-dark);
+        }
+
+        .financial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 0.75rem;
+        }
+
+        .financial-item {
+            background: var(--cream);
+            border-radius: 1rem;
+            padding: 1.1rem 1rem;
+        }
+
+        .financial-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--sage-dark);
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .financial-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--charcoal);
+            line-height: 1.3;
+        }
+
+        .risk-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(232, 196, 184, 0.15);
+            border-radius: 1rem;
             margin-bottom: 0.75rem;
         }
 
-        .placeholder-text {
+        .risk-item:last-child { margin-bottom: 0; }
+
+        .risk-level {
+            padding: 0.22rem 0.7rem;
+            border-radius: 1rem;
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+
+        .risk-medium-high { background: rgba(200, 130, 80, 0.22); color: #8B5A30; }
+        .risk-medium      { background: rgba(200, 180, 100, 0.3); color: #7a6820; }
+
+        .risk-text {
+            font-size: 0.9rem;
             color: var(--charcoal-light);
-            font-size: 1rem;
-            max-width: 480px;
-            margin: 0 auto;
-            line-height: 1.8;
+            line-height: 1.7;
+        }
+
+        .risk-text strong {
+            color: var(--charcoal);
+            font-weight: 600;
+        }
+
+        .personal-note-box {
+            background: rgba(168, 181, 160, 0.1);
+            border-left: 3px solid var(--sage);
+            border-radius: 0 1rem 1rem 0;
+            padding: 1.4rem 1.6rem;
+            margin-top: 0.75rem;
+        }
+
+        .personal-note-box p {
+            font-size: 0.95rem;
+            color: var(--charcoal-light);
+            line-height: 1.85;
+            font-style: italic;
+        }
+
+        .fund-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 1.5rem;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--sage-dark);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(122, 139, 114, 0.35);
+            padding-bottom: 0.1rem;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .fund-link:hover {
+            color: var(--charcoal);
+            border-color: var(--charcoal);
+        }
+
+        @media (max-width: 768px) {
+            .financial-grid { grid-template-columns: repeat(2, 1fr); }
+            .fund-card-header, .fund-card-body { padding: 1.5rem; }
+            .conviction-badge { margin-left: 0; }
         }
 
         /* Footer */
@@ -417,11 +636,132 @@
     </section>
 
     <div class="cards-section">
-        <div class="placeholder-card">
-            <div class="placeholder-icon">◎</div>
-            <p class="placeholder-title">Coming soon</p>
-            <p class="placeholder-text">Coming soon — funds I'm watching.</p>
+
+        <!-- PARTECH IMPACT FUND -->
+        <div class="fund-card">
+            <div class="fund-card-header">
+                <div class="fund-meta">
+                    <span class="fund-tag">Fund</span>
+                    <span class="fund-tag tag-climate">Climate</span>
+                    <span class="fund-tag tag-growth">Growth Equity</span>
+                    <span class="fund-tag tag-europe">Europe</span>
+                    <span class="conviction-badge">Watching Closely</span>
+                </div>
+                <div class="fund-name">Partech Impact Fund</div>
+                <div class="fund-oneliner">Growth-stage impact equity filling the "missing middle" for European B2B tech scale-ups</div>
+                <div class="fund-scores">
+                    <span class="score-badge impact">Impact: 4/5</span>
+                    <span class="score-badge financial">Financial: 4/5</span>
+                </div>
+            </div>
+
+            <div class="fund-card-body">
+
+                <div class="ic-section">
+                    <div class="ic-section-title">The Problem</div>
+                    <p>European impact-native tech companies face a financing desert. At €10M+ revenue, they're too mature for VC but too small for PE or infrastructure funds. These are companies with real traction, real impact — and nowhere to go for growth capital. The result: promising climate, agtech, and healthtech scale-ups either stall, get acquired early, or dilute themselves chasing the wrong investors.</p>
+                </div>
+
+                <div class="ic-section">
+                    <div class="ic-section-title">The Solution</div>
+                    <p>Partech Impact Fund is a €300M growth fund targeting exactly this gap. They write €15–40M checks into European B2B tech companies where the core product intrinsically addresses an environmental or social challenge. Sectors include clean production, climate tech, agtech, mobility, and digital health.</p>
+                    <p>The fund sits within Partech Partners — a 40-year-old firm with ~€3B AUM, 21 unicorns, and offices across Europe, Africa, and the US. Current portfolio includes SustainCERT (carbon verification), Gireve (EV charging interoperability), xFarm (precision agriculture), Makersite (sustainable product design), and FYLD (AI for infrastructure).</p>
+                </div>
+
+                <div class="ic-section">
+                    <div class="ic-section-title">Impact Framework</div>
+                    <p><strong>ABC Classification:</strong> C — Contribute to Solutions. Every portfolio company must have impact embedded in the core product — not a CSR bolt-on. The fund explicitly targets SDGs 7, 9, 11, 12, 13, and 15.</p>
+                    <ul class="ic-list">
+                        <li><strong>What:</strong> Each company mapped to specific outcomes (tCO2e avoided, MWh renewable, hectares of sustainable farming)</li>
+                        <li><strong>Who:</strong> Farmers, EV drivers, infrastructure workers, manufacturers, carbon markets — depending on company</li>
+                        <li><strong>How Much:</strong> Custom KPIs with baselines and targets, monitored quarterly</li>
+                        <li><strong>Contribution:</strong> Capital additionality (genuine funding gap) + active operational value creation</li>
+                        <li><strong>Risk:</strong> Assessed per OPIM framework — execution, evidence, external, stakeholder risk</li>
+                    </ul>
+                    <p style="margin-top:1rem;">Full alignment across all 9 Operating Principles for Impact Management. Annual independent verification.</p>
+                </div>
+
+                <div class="ic-section">
+                    <div class="ic-section-title">What Makes Them Different</div>
+                    <p>50% of carried interest is tied to achieving impact KPIs. This is one of the most aggressive GP–LP alignment mechanisms in European private markets. If they don't hit impact targets, they don't get half their carry. That's not marketing — it's structural.</p>
+                </div>
+
+                <div class="ic-section">
+                    <div class="ic-section-title">Financial Analysis</div>
+                    <div class="financial-grid">
+                        <div class="financial-item">
+                            <div class="financial-label">Fund Size</div>
+                            <div class="financial-value">€300M</div>
+                        </div>
+                        <div class="financial-item">
+                            <div class="financial-label">Vintage</div>
+                            <div class="financial-value">2026</div>
+                        </div>
+                        <div class="financial-item">
+                            <div class="financial-label">Target Portfolio</div>
+                            <div class="financial-value">~15 companies</div>
+                        </div>
+                        <div class="financial-item">
+                            <div class="financial-label">Check Size</div>
+                            <div class="financial-value">€15–40M</div>
+                        </div>
+                        <div class="financial-item">
+                            <div class="financial-label">Deployed</div>
+                            <div class="financial-value">~40%</div>
+                        </div>
+                        <div class="financial-item">
+                            <div class="financial-label">Classification</div>
+                            <div class="financial-value">SFDR Art. 9</div>
+                        </div>
+                    </div>
+                    <p style="margin-top:1.25rem;">LP base: Allianz, European Investment Fund, Bpifrance, British Business Bank, KBC, Neuberger Berman, Visa Foundation — institutional, global, long-term.</p>
+                </div>
+
+                <div class="ic-section">
+                    <div class="ic-section-title">Key Risks</div>
+                    <div class="risk-item">
+                        <span class="risk-level risk-medium-high">Medium–High</span>
+                        <div class="risk-text"><strong>First-time fund team:</strong> Rémi Said and Arnaud Minvielle are first-time GPs, though backed by Partech's 40-year institutional platform.</div>
+                    </div>
+                    <div class="risk-item">
+                        <span class="risk-level risk-medium">Medium</span>
+                        <div class="risk-text"><strong>Key person dependency:</strong> Fund success heavily tied to two partners.</div>
+                    </div>
+                    <div class="risk-item">
+                        <span class="risk-level risk-medium">Medium</span>
+                        <div class="risk-text"><strong>Impact measurement:</strong> Aggregating diverse KPIs into coherent fund-level impact is methodologically challenging.</div>
+                    </div>
+                    <div class="risk-item">
+                        <span class="risk-level risk-medium">Medium</span>
+                        <div class="risk-text"><strong>Exit risk:</strong> Impact-native growth companies may face limited exit options; 10-year fund life provides runway.</div>
+                    </div>
+                    <div class="risk-item">
+                        <span class="risk-level risk-medium">Medium</span>
+                        <div class="risk-text"><strong>Deployment pacing:</strong> 60% (~€180M) still to deploy — execution matters.</div>
+                    </div>
+                </div>
+
+                <div class="ic-section">
+                    <div class="ic-section-title">Team</div>
+                    <ul class="ic-list">
+                        <li><strong>Rémi Said (General Partner)</strong> — ex-Bain Capital, McKinsey. Leads impact strategy and sourcing.</li>
+                        <li><strong>Arnaud Minvielle (General Partner)</strong> — ex-McKinsey, Bridgepoint, Goldman Sachs. Brings PE operational discipline.</li>
+                    </ul>
+                    <p style="margin-top:0.75rem;">First-time fund managers, but they sit within Partech's 40-year institutional infrastructure — LP relationships, back office, and platform support already in place.</p>
+                </div>
+
+                <div class="ic-section">
+                    <div class="ic-section-title">Thesis Alignment</div>
+                    <div class="personal-note-box">
+                        <p>What I like about Partech Impact is the honesty of the thesis. The "missing middle" is real — I've seen it from the operator side. Growth-stage impact companies struggle to find investors who understand both the commercial opportunity and the impact logic. Partech's 50% impact-linked carry is the thing that sets them apart. Most funds talk about impact; this one literally stakes half its economics on it. The first-time team is a risk, but the platform mitigates it. I'd want to see how the remaining 60% deploys and what exits look like before full conviction, but this is exactly the kind of fund I want to exist.</p>
+                    </div>
+                </div>
+
+                <a href="https://partechpartners.com/funds" target="_blank" rel="noopener" class="fund-link">Visit Partech Partners →</a>
+
+            </div>
         </div>
+
     </div>
 
     <footer>
