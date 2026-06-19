@@ -2132,6 +2132,39 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Ascension Earth Resources -->
+            <div class="portfolio-card" data-category="sustainability" onclick="openModal('ascensionearth')">
+                <div class="portfolio-card-header">
+                    <div class="company-info">
+                        <div class="company-logo" style="background: linear-gradient(135deg, #4E342E, #BF360C);">A</div>
+                        <div>
+                            <div class="company-name">Ascension Earth Resources</div>
+                            <div class="company-tagline">Extracting critical minerals from volcanic systems using geothermal heat instead of mining</div>
+                        </div>
+                    </div>
+                    <span class="sector-icon">🌋</span>
+                </div>
+                <div class="portfolio-card-body">
+                    <p class="portfolio-description">China controls ~90% of rare earth processing. Conventional mining is destructive and politically vulnerable. Ascension circulates fluids through volcanic glass to leach critical minerals using geothermal heat — no pits, no tailings, closed loop.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag sdg-tag">SDG 7</span>
+                        <span class="tag sdg-tag">SDG 9</span>
+                        <span class="tag sdg-tag">SDG 12</span>
+                        <span class="tag sdg-tag">SDG 13</span>
+                        <span class="tag">Climate</span>
+                        <span class="tag">Deep Tech</span>
+                        <span class="tag">Critical Minerals</span>
+                    </div>
+                </div>
+                <div class="portfolio-card-footer">
+                    <span class="view-thesis">View Full Analysis →</span>
+                    <div class="impact-score">
+                        <span class="score-badge impact">Impact: 4/5</span>
+                        <span class="score-badge financial">Financial: 3/5</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2933,6 +2966,66 @@
                     'Unit economics disclosure: Cost per C-Star at production scale versus current prototype costs',
                     'New customer announcements: Adding non-UK government customers (US Navy, NATO agencies, offshore energy) would reduce concentration risk',
                     'Météo-France and NOAA data usage: Published results using Oshen data in operational forecasting would validate the climate market thesis'
+                ]
+            },
+            ascensionearth: {
+                name: 'Ascension Earth Resources',
+                tagline: 'Extracting critical minerals from volcanic systems using geothermal heat instead of mining',
+                logo: 'A',
+                logoGradient: 'linear-gradient(135deg, #4E342E, #BF360C)',
+                category: 'sustainability',
+                sdgs: [
+                    { number: 7,  name: 'Affordable and Clean Energy',   class: 'sdg-7'  },
+                    { number: 9,  name: 'Industry, Innovation & Infrastructure', class: 'sdg-9'  },
+                    { number: 12, name: 'Responsible Consumption',        class: 'sdg-12' },
+                    { number: 13, name: 'Climate Action',                 class: 'sdg-13' }
+                ],
+                overview: 'Ascension Earth Resources is an Oxford University spinout developing technology to recover critical minerals from underground volcanic systems. Instead of digging pits, they circulate fluids through volcanic glass formations where geothermal heat naturally leaches rare earths and other minerals. Extract the mineral-rich brine at the surface, process it, re-inject the fluids — closed loop. No mining, no waste rock, no tailings. The same system could generate geothermal energy as a co-product. Volcanic glass is globally distributed across tectonically active regions and has no established supply chain as a critical mineral feedstock.',
+                impactStory: {
+                    headline: 'The clean energy transition runs on critical minerals — but current supply chains are broken, China-controlled, and environmentally destructive.',
+                    content: 'Rare earth elements power wind turbine magnets. Lithium goes into EV batteries. Semiconductors and defence systems depend on a basket of critical metals. China controls ~90% of rare earth processing. Conventional mining is energy-intensive, leaves behind toxic tailings, and is politically vulnerable. Western governments are pouring billions into supply chain security — not because demand is in question, but because how we extract is unsustainable. Ascension\'s thesis: volcanic systems already concentrate these minerals through natural geological processes. They just figured out how to extract them without digging a hole.',
+                    impacts: [
+                        { icon: '🌋', stat: '~90%',     description: 'of rare earth processing currently controlled by China' },
+                        { icon: '♻️', stat: 'Zero',     description: 'tailings, waste rock, or open-pit mining — closed-loop brine system' },
+                        { icon: '⚡', stat: '$69M',      description: 'US DOE announced for critical mineral extraction pilots in April 2026, directly aligned with Ascension\'s approach' },
+                        { icon: '💎', stat: '$15B+',     description: 'rare earth magnet market alone, growing rapidly with EV and wind turbine demand' }
+                    ]
+                },
+                fiveDimensions: {
+                    what: 'Critical mineral extraction without conventional mining; enables clean energy supply chain (EVs, wind turbines, semiconductors)',
+                    who: 'Global population (reduced mining pollution); Western economies (supply chain security); communities near current mines (avoided environmental harm)',
+                    howMuch: 'Lab-scale proven; field pilot next. Rare earth magnet market ~$15B and growing rapidly. Potential is enormous if technology scales.',
+                    contribution: 'Very high — no one else is doing geothermal leaching of volcanic glass for critical minerals. Genuinely additional.',
+                    risk: 'Very high — subsurface chemistry is complex; TRL 3-4; 5–10 years from commercial scale'
+                },
+                financial: {
+                    market: 'Rare earth magnet market ~$15B (2024), lithium market ~$10B, both growing rapidly with EV and wind turbine demand. Western governments investing $5B+ (US IRA) and £1B+ (UK) in supply chain security. In April 2026, the US DOE announced $69M for pilot programmes in critical mineral extraction — with a sub-topic specifically targeting rare earth elements from volcanic-hosted geothermal systems, directly aligned with Ascension\'s approach.',
+                    model: 'Technology licensing or direct extraction operations. Dual revenue potential from minerals + geothermal energy co-product.',
+                    moat: 'Genuinely novel approach — no direct competitor doing geothermal leaching of volcanic glass for critical minerals. Volcanic glass has no established supply chain, so no competitive market pressure for feedstock. Oxford pedigree and two FRS co-founders provide scientific credibility.',
+                    team: 'Prof Jonathan Blundy FRS (Co-founder) — Royal Society Research Professor at Oxford. Prof Mike Kendall FRS (Co-founder) — Chair in Geophysics at Oxford. Motoaki Sumi (CEO) — Entrepreneur-in-Residence at Oxford Science Enterprises.',
+                    exit: 'Strategic acquisition by a mining major, energy company, or government-backed critical minerals entity. Licensing to sovereign wealth funds or national supply chain programmes. Potential for government co-investment given strategic importance.',
+                    returnCategory: 'Venture / Deep Tech'
+                },
+                scores: { impact: 4, financial: 3 },
+                verdict: 'Watching Closely',
+                verdictNote: 'Extraordinary scientific pedigree and a thesis that is genuinely elegant. The US DOE announcement in April 2026 is meaningful external validation. But TRL 3-4 means field pilots haven\'t happened yet — and that\'s where most deep tech dies. Academic founders with day jobs is a real risk. Watching for field pilot results and evidence of subsurface chemistry working at scale before upgrading conviction.',
+                whyThisMatters: 'If Ascension works at scale, it\'s genuinely additional — eliminating the worst environmental impacts of rare earth mining while securing clean energy supply chains. SDG 7 (Clean Energy): Secures mineral supply for EVs and wind turbines. SDG 9 (Innovation): Novel extraction technology with no existing equivalent. SDG 12 (Responsible Consumption): Eliminates mining waste and tailings. SDG 13 (Climate Action): Decarbonises critical mineral supply chain.',
+                team: 'Prof Jonathan Blundy FRS (Co-founder) — Royal Society Research Professor at Oxford, holder of the "From Volcanoes to Green Mining" research fellowship — literally the programme this company spun out of. Murchison Medal (2016), Bigsby Medal (2005). World-leading expert in volcanic systems. Prof Mike Kendall FRS (Co-founder) — Chair in Geophysics at Oxford and Head of the Department of Earth Sciences since 2022. Royal Astronomical Society Gold Medal for Geophysics (2024) — the society\'s highest honour. Motoaki Sumi (CEO) — Entrepreneur-in-Residence at Oxford Science Enterprises, co-founded company in 2021. Having two Fellows of the Royal Society as co-founders is exceptionally rare for any startup.',
+                funding: '£1.7M seed (April 2026): £670K Innovate UK Growth Catalyst grant + £1M from UK Innovation & Science Seed Fund (UKI2S), managed by Future Planet Capital, with co-investment from Oxford Science Enterprises and East X. £6.2M total raised including previous grants.',
+                personalNote: 'Ascension is exactly the kind of deep tech bet I want to make early. The thesis is elegant: volcanic systems already concentrate critical minerals through natural geological processes — Ascension just figured out how to extract them without digging a hole. The Oxford pedigree is extraordinary — both Blundy and Kendall are Fellows of the Royal Society, and Blundy\'s research professorship is literally called "From Volcanoes to Green Mining." The US DOE announcing $69M for exactly this approach is external validation that the thesis is real. Yes, it\'s early — TRL 3-4, pre-field pilot, academic founders with day jobs. But the impact potential is enormous. If this works, it fundamentally changes how we source the materials the clean energy transition depends on.',
+                risks: [
+                    { level: 'High',   text: 'TRL 3-4 transition: Lab to field is where most deep tech dies. Subsurface chemistry is complex and unproven at scale — what works in a lab may not translate underground.' },
+                    { level: 'High',   text: 'Academic founder risk: Both scientific co-founders have day jobs as Oxford professors. Commercial execution requires either their full commitment or exceptional CEO leadership.' },
+                    { level: 'High',   text: 'Capital intensity: Commercialisation likely requires $10–100M+ in follow-on funding. Securing growth capital for pre-revenue deep tech is challenging.' },
+                    { level: 'Medium', text: 'Rare earth price volatility: Critical mineral prices are notoriously cyclical, which affects project economics and investor appetite.' },
+                    { level: 'Medium', text: 'Timeline: 5–10 year path to commercial scale means a long J-curve and significant execution risk before revenue.' }
+                ],
+                thingsToWatch: [
+                    'Field pilot results: The Selective Recovery programme pilots are the critical next proof point — do the subsurface chemistry and brine extraction work at real scale?',
+                    'US DOE grant: Whether Ascension can access the $69M DOE programme specifically targeting volcanic-hosted geothermal mineral systems',
+                    'Founder commitment: Whether Blundy and Kendall move toward full-time involvement or hire a credible deep tech commercialisation team',
+                    'Co-product economics: Whether geothermal energy co-production makes the unit economics viable even before rare earth revenues are certain',
+                    'Partnership with a mining or energy major: A strategic partner would de-risk capital intensity and provide extraction infrastructure'
                 ]
             },
             bioorbit: {
